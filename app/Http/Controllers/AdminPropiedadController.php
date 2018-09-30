@@ -34,7 +34,7 @@
 			$this->col[] = ["label"=>"Titulo","name"=>"titulo"];
 			$this->col[] = ["label"=>"Descripcion","name"=>"descripcion"];
 			$this->col[] = ["label"=>"Imagen","name"=>"imagen","image"=>true];
-			$this->col[] = ["label"=>"Tipooperacion Id","name"=>"tipooperacion_id","join"=>"tipooperacion,name"];
+			$this->col[] = ["label"=>"Tipo Operacion","name"=>"tipooperacion_id","join"=>"tipooperacion,name"];
 			$this->col[] = ["label"=>"Tipopropiedad Id","name"=>"tipopropiedad_id","join"=>"tipopropiedad,name"];
 			$this->col[] = ["label"=>"Precio Compra","name"=>"precio_compra"];
 			$this->col[] = ["label"=>"Precio Alquiler","name"=>"precio_alquiler"];
@@ -44,30 +44,27 @@
 			$this->col[] = ["label"=>"Maps","name"=>"maps"];
 			$this->col[] = ["label"=>"Map Latitude","name"=>"map_latitude"];
 			$this->col[] = ["label"=>"Map Longitude","name"=>"map_longitude"];
-			$this->col[] = ["label"=>"Barrio Propiedad","name"=>"Barrio Propiedad_id","join"=>"barrio_propiedad,name"];
-			$this->col[] = ["label"=>"Localidad Propiedad","name"=>"localidad_propiedad_id","join"=>"localidad_propiedad,name"];
-			$this->col[] = ["label"=>"Provincia Propiedad","name"=>"provincia_propiedad_id","join"=>"provincia_propiedad,name"];
 			# END COLUMNS DO NOT REMOVE THIS LINE
 
 			# START FORM DO NOT REMOVE THIS LINE
 			$this->form = [];
-			$this->form[] = ['label'=>'Publicado','name'=>'publicado','type'=>'checkbox','validation'=>'required|integer|min:0','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Publicado','name'=>'publicado','type'=>'checkbox','validation'=>'required|min:1|max:1','dataenum'=>'1|', 'width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Titulo','name'=>'titulo','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Descripcion','name'=>'descripcion','type'=>'wysiwyg','validation'=>'required|min:1|max:2550','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Imagen','name'=>'imagen','type'=>'upload','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Tipooperacion Id','name'=>'tipooperacion_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'tipooperacion,name'];
-			$this->form[] = ['label'=>'Tipopropiedad Id','name'=>'tipopropiedad_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'tipopropiedad,name'];
+			$this->form[] = ['label'=>'Tipo Operacion','name'=>'tipooperacion_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'tipooperacion,name'];
+			$this->form[] = ['label'=>'Tipo Propiedad Id','name'=>'tipopropiedad_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'tipopropiedad,name'];
 			$this->form[] = ['label'=>'Precio Compra','name'=>'precio_compra','type'=>'money','validation'=>'required|integer|min:0','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Precio Alquiler','name'=>'precio_alquiler','type'=>'money','validation'=>'required|integer|min:0','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Calle','name'=>'calle','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Altura','name'=>'altura','type'=>'number','validation'=>'required|integer|min:0','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Piso','name'=>'piso','type'=>'number','validation'=>'required|min:1|max:5','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Maps','name'=>'maps','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Map Latitude','name'=>'map_latitude','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Map Longitude','name'=>'map_longitude','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Barrio Propiedad Id','name'=>'barrio_propiedad_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'barrio_propiedad,name'];
-			$this->form[] = ['label'=>'Localidad Propiedad Id','name'=>'localidad_propiedad_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'localidad_propiedad,name'];
-			$this->form[] = ['label'=>'Provincia Propiedad Id','name'=>'provincia_propiedad_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'provincia_propiedad,name'];
+			$this->form[] = ['label'=>'Piso','name'=>'piso','type'=>'number','validation'=>'required|min:1|max:500','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Maps','name'=>'maps','type'=>'text','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Map Latitude','name'=>'map_latitude','type'=>'text','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Map Longitude','name'=>'map_longitude','type'=>'text','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Barrio','name'=>'barrio_propiedad_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'barrio_propiedad,name'];
+			$this->form[] = ['label'=>'Localidad','name'=>'localidad_propiedad_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'localidad_propiedad,name'];
+			$this->form[] = ['label'=>'Provincia','name'=>'provincia_propiedad_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'provincia_propiedad,name'];
 			# END FORM DO NOT REMOVE THIS LINE
 
 			# OLD START FORM
@@ -76,19 +73,19 @@
 			//$this->form[] = ['label'=>'Titulo','name'=>'titulo','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
 			//$this->form[] = ['label'=>'Descripcion','name'=>'descripcion','type'=>'wysiwyg','validation'=>'required|min:1|max:2550','width'=>'col-sm-10'];
 			//$this->form[] = ['label'=>'Imagen','name'=>'imagen','type'=>'upload','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			//$this->form[] = ['label'=>'Tipooperacion Id','name'=>'tipooperacion_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'tipooperacion,name'];
-			//$this->form[] = ['label'=>'Tipopropiedad Id','name'=>'tipopropiedad_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'tipopropiedad,name'];
+			//$this->form[] = ['label'=>'Tipo Operacion','name'=>'tipooperacion_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'tipooperacion,name'];
+			//$this->form[] = ['label'=>'Tipo Propiedad Id','name'=>'tipopropiedad_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'tipopropiedad,name'];
 			//$this->form[] = ['label'=>'Precio Compra','name'=>'precio_compra','type'=>'money','validation'=>'required|integer|min:0','width'=>'col-sm-10'];
 			//$this->form[] = ['label'=>'Precio Alquiler','name'=>'precio_alquiler','type'=>'money','validation'=>'required|integer|min:0','width'=>'col-sm-10'];
 			//$this->form[] = ['label'=>'Calle','name'=>'calle','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
 			//$this->form[] = ['label'=>'Altura','name'=>'altura','type'=>'number','validation'=>'required|integer|min:0','width'=>'col-sm-10'];
-			//$this->form[] = ['label'=>'Piso','name'=>'piso','type'=>'number','validation'=>'required|min:1|max:5','width'=>'col-sm-10'];
-			//$this->form[] = ['label'=>'Maps','name'=>'maps','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			//$this->form[] = ['label'=>'Map Latitude','name'=>'map_latitude','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			//$this->form[] = ['label'=>'Map Longitude','name'=>'map_longitude','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			//$this->form[] = ['label'=>'Barrio Propiedad Id','name'=>'barrio_propiedad_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'barrio_propiedad,name'];
-			//$this->form[] = ['label'=>'Localidad Propiedad Id','name'=>'localidad_propiedad_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'localidad_propiedad,name'];
-			//$this->form[] = ['label'=>'Provincia Propiedad Id','name'=>'provincia_propiedad_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'provincia_propiedad,name'];
+			//$this->form[] = ['label'=>'Piso','name'=>'piso','type'=>'number','validation'=>'required|min:1|max:500','width'=>'col-sm-10'];
+			//$this->form[] = ['label'=>'Maps','name'=>'maps','type'=>'text','width'=>'col-sm-10'];
+			//$this->form[] = ['label'=>'Map Latitude','name'=>'map_latitude','type'=>'text','width'=>'col-sm-10'];
+			//$this->form[] = ['label'=>'Map Longitude','name'=>'map_longitude','type'=>'text','width'=>'col-sm-10'];
+			//$this->form[] = ['label'=>'Barrio','name'=>'barrio_propiedad_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'barrio_propiedad,name'];
+			//$this->form[] = ['label'=>'Localidad','name'=>'localidad_propiedad_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'localidad_propiedad,name'];
+			//$this->form[] = ['label'=>'Provincia','name'=>'provincia_propiedad_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'provincia_propiedad,name'];
 			# OLD END FORM
 
 			/* 
