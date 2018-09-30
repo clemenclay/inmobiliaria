@@ -57,8 +57,8 @@
 	<link rel="stylesheet" href="{{asset('frontend/css/style.css')}}">
 	<!-- Modernizr JS -->
 	<script src="{{asset('frontend/js/modernizr-2.6.2.min.js')}}"></script>
-	<script src='https://unpkg.com/sweetalert/dist/sweetalert.min.js'></script>
-    
+	<script src='http://tristanedwards.me/u/SweetAlert/lib/sweet-alert.js'></script>
+    <link rel="stylesheet" href='http://tristanedwards.me/u/SweetAlert/lib/sweet-alert.css'> 
 	<!-- FOR IE9 below -->
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
@@ -89,7 +89,7 @@
 			<div class="row">
 				<div class="col-md-12">
 					<a href="#" class="fh5co-menu-btn js-fh5co-menu-btn">Menu <i class="icon-menu"></i></a>
-					<a class="navbar-brand" href="index.php">{{$title}}</a>		
+					<a class="navbar-brand" href="index.html">{{$title}}</a>		
 				</div>
 			</div>
 		</div>
