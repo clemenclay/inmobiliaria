@@ -48,7 +48,7 @@
 
 			# START FORM DO NOT REMOVE THIS LINE
 			$this->form = [];
-			$this->form[] = ['label'=>'Publicado','name'=>'publicado','type'=>'checkbox','validation'=>'required|min:1|max:1','dataenum'=>'1|', 'width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Publicado','name'=>'publicado','type'=>'checkbox','validation'=>'required|min:1|max:1','dataenum'=>'1|Si;0|No', 'width'=>'col-sm-10']; 
 			$this->form[] = ['label'=>'Titulo','name'=>'titulo','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Descripcion','name'=>'descripcion','type'=>'wysiwyg','validation'=>'required|min:1|max:2550','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Imagen','name'=>'imagen','type'=>'upload','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
