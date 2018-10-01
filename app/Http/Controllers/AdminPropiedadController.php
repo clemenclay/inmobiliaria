@@ -24,7 +24,7 @@
 			$this->button_show = true;
 			$this->button_filter = true;
 			$this->button_import = false;
-			$this->button_export = false;
+			$this->button_export = true;
 			$this->table = "propiedad";
 			# END CONFIGURATION DO NOT REMOVE THIS LINE
 
@@ -48,14 +48,14 @@
 
 			# START FORM DO NOT REMOVE THIS LINE
 			$this->form = [];
-			$this->form[] = ['label'=>'Publicado','name'=>'publicado','type'=>'checkbox','validation'=>'required|min:1|max:1','dataenum'=>'1|', 'width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Titulo','name'=>'titulo','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Publicado','name'=>'publicado','type'=>'radio','validation'=>'required|min:1|max:1','width'=>'col-sm-10','dataenum'=>'0|NO;1|SI'];
+			$this->form[] = ['label'=>'Titulo','name'=>'titulo','type'=>'text','validation'=>'required|min:1|max:2550','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Descripcion','name'=>'descripcion','type'=>'wysiwyg','validation'=>'required|min:1|max:2550','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Imagen','name'=>'imagen','type'=>'upload','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Tipo Operacion','name'=>'tipooperacion_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'tipooperacion,name'];
 			$this->form[] = ['label'=>'Tipo Propiedad Id','name'=>'tipopropiedad_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'tipopropiedad,name'];
-			$this->form[] = ['label'=>'Precio Compra','name'=>'precio_compra','type'=>'money','validation'=>'required|integer|min:0','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Precio Alquiler','name'=>'precio_alquiler','type'=>'money','validation'=>'required|integer|min:0','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Precio Compra','name'=>'precio_compra','type'=>'money','validation'=>'integer|min:0','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Precio Alquiler','name'=>'precio_alquiler','type'=>'money','validation'=>'integer|min:0','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Calle','name'=>'calle','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Altura','name'=>'altura','type'=>'number','validation'=>'required|integer|min:0','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Piso','name'=>'piso','type'=>'number','validation'=>'required|min:1|max:500','width'=>'col-sm-10'];
@@ -69,14 +69,14 @@
 
 			# OLD START FORM
 			//$this->form = [];
-			//$this->form[] = ['label'=>'Publicado','name'=>'publicado','type'=>'checkbox','validation'=>'required|integer|min:0','width'=>'col-sm-10'];
+			//$this->form[] = ['label'=>'Publicado','name'=>'publicado','type'=>'radio','validation'=>'required|min:1|max:1','width'=>'col-sm-10','dataenum'=>'0|NO;1|SI'];
 			//$this->form[] = ['label'=>'Titulo','name'=>'titulo','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
 			//$this->form[] = ['label'=>'Descripcion','name'=>'descripcion','type'=>'wysiwyg','validation'=>'required|min:1|max:2550','width'=>'col-sm-10'];
 			//$this->form[] = ['label'=>'Imagen','name'=>'imagen','type'=>'upload','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
 			//$this->form[] = ['label'=>'Tipo Operacion','name'=>'tipooperacion_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'tipooperacion,name'];
 			//$this->form[] = ['label'=>'Tipo Propiedad Id','name'=>'tipopropiedad_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'tipopropiedad,name'];
-			//$this->form[] = ['label'=>'Precio Compra','name'=>'precio_compra','type'=>'money','validation'=>'required|integer|min:0','width'=>'col-sm-10'];
-			//$this->form[] = ['label'=>'Precio Alquiler','name'=>'precio_alquiler','type'=>'money','validation'=>'required|integer|min:0','width'=>'col-sm-10'];
+			//$this->form[] = ['label'=>'Precio Compra','name'=>'precio_compra','type'=>'money','validation'=>'integer|min:0','width'=>'col-sm-10'];
+			//$this->form[] = ['label'=>'Precio Alquiler','name'=>'precio_alquiler','type'=>'money','validation'=>'integer|min:0','width'=>'col-sm-10'];
 			//$this->form[] = ['label'=>'Calle','name'=>'calle','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
 			//$this->form[] = ['label'=>'Altura','name'=>'altura','type'=>'number','validation'=>'required|integer|min:0','width'=>'col-sm-10'];
 			//$this->form[] = ['label'=>'Piso','name'=>'piso','type'=>'number','validation'=>'required|min:1|max:500','width'=>'col-sm-10'];
