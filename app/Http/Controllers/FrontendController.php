@@ -8,6 +8,22 @@ namespace App\Http\Controllers;
 	use CRUDBooster;
 
 	class FrontendController extends Controller {
+		
+		// index CLEMENCLAY filtro publicado
+		 public function hook_query_index(&$query) {
+	        $title =DB::table('cms_settings')->where('name','appname')->First();
+			$data['title'] = $title->content;
+			$data['active'] = 'index';
+			$data['propiedad'] = DB::table('propiedad')->orderby('id','desc')->get();
+			return view('index',$data);
+	    	if(!Request::get('foreign_key')) {
+	    		$query->where('publicado',1);
+	    	}     
+	    }
+		
+		
+		
+		
 		// index
 		public function getIndex(){
 			$title =DB::table('cms_settings')->where('name','appname')->First();
