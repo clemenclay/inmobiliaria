@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 01-10-2018 a las 00:59:31
+-- Tiempo de generación: 01-10-2018 a las 18:58:23
 -- Versión del servidor: 10.1.31-MariaDB
 -- Versión de PHP: 7.0.29
 
@@ -49,7 +49,8 @@ INSERT INTO `barrio_propiedad` (`id`, `created_at`, `updated_at`, `name`) VALUES
 (7, '2018-10-01 01:21:48', NULL, 'Belgrano'),
 (8, '2018-10-01 01:21:54', NULL, 'Caballito'),
 (9, '2018-10-01 01:22:01', NULL, 'Chacarita'),
-(10, '2018-10-01 01:22:07', NULL, 'Coghlan');
+(10, '2018-10-01 01:22:07', NULL, 'Coghlan'),
+(11, '2018-10-01 02:30:34', NULL, 'Recoleta');
 
 -- --------------------------------------------------------
 
@@ -247,7 +248,32 @@ INSERT INTO `cms_logs` (`id`, `ipaddress`, `useragent`, `url`, `description`, `d
 (68, '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36', 'http://localhost:8000/admin/localidad_propiedad/add-save', 'Add New Data Castelli at localidad', '', 1, '2018-10-01 01:23:03', NULL),
 (69, '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36', 'http://localhost:8000/admin/localidad_propiedad/add-save', 'Add New Data Chacabuco at localidad', '', 1, '2018-10-01 01:23:08', NULL),
 (70, '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36', 'http://localhost:8000/admin/localidad_propiedad/add-save', 'Add New Data Chascomús at localidad', '', 1, '2018-10-01 01:23:13', NULL),
-(71, '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36', 'http://localhost:8000/admin/localidad_propiedad/add-save', 'Add New Data Dolores at localidad', '', 1, '2018-10-01 01:23:17', NULL);
+(71, '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36', 'http://localhost:8000/admin/localidad_propiedad/add-save', 'Add New Data Dolores at localidad', '', 1, '2018-10-01 01:23:17', NULL),
+(72, '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36', 'http://localhost:8000/admin/propiedad/add-save', 'Add New Data  at propiedad', '', 1, '2018-10-01 02:28:03', NULL),
+(73, '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36', 'http://localhost:8000/admin/propiedad/edit-save/1', 'Update data  at propiedad', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>maps</td><td></td><td></td></tr><tr><td>map_latitude</td><td></td><td></td></tr><tr><td>map_longitude</td><td></td><td></td></tr><tr><td>barrio_propiedad_id</td><td>7</td><td>1</td></tr></tbody></table>', 1, '2018-10-01 02:29:49', NULL),
+(74, '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36', 'http://localhost:8000/admin/barrio_propiedad/add-save', 'Add New Data Recoleta at barrio', '', 1, '2018-10-01 02:30:34', NULL),
+(75, '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36', 'http://localhost:8000/admin/propiedad/edit-save/1', 'Update data  at propiedad', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>maps</td><td></td><td></td></tr><tr><td>map_latitude</td><td></td><td></td></tr><tr><td>map_longitude</td><td></td><td></td></tr></tbody></table>', 1, '2018-10-01 02:30:52', NULL),
+(76, '::1', 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36', 'http://localhost/inmobiliaria/public/admin/login', 'Ingreso de admin@crudbooster.com desde la Dirección IP ::1', '', 1, '2018-10-01 14:53:44', NULL),
+(77, '::1', 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36', 'http://localhost/inmobiliaria/public/admin/propiedad/delete-image', 'Eliminar la imagen de  en propiedad', '', 1, '2018-10-01 14:54:01', NULL),
+(78, '::1', 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36', 'http://localhost/inmobiliaria/public/admin/propiedad/edit-save/1', 'Actualizar información  en propiedad', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>imagen</td><td></td><td>uploads/1/2018-10/getimage.gif</td></tr><tr><td>maps</td><td></td><td></td></tr><tr><td>map_latitude</td><td></td><td></td></tr><tr><td>map_longitude</td><td></td><td></td></tr></tbody></table>', 1, '2018-10-01 15:14:38', NULL),
+(79, '::1', 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36', 'http://localhost/inmobiliaria/public/admin/propiedad/edit-save/1', 'Actualizar información  en propiedad', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody></tbody></table>', 1, '2018-10-01 15:22:02', NULL),
+(80, '::1', 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36', 'http://localhost/inmobiliaria/public/admin/propiedad/edit-save/1', 'Actualizar información  en propiedad', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>publicado</td><td></td><td>1</td></tr><tr><td>maps</td><td></td><td></td></tr><tr><td>map_latitude</td><td></td><td></td></tr><tr><td>map_longitude</td><td></td><td></td></tr></tbody></table>', 1, '2018-10-01 15:22:12', NULL),
+(81, '::1', 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36', 'http://localhost/inmobiliaria/public/admin/propiedad/edit-save/1', 'Actualizar información  en propiedad', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody></tbody></table>', 1, '2018-10-01 15:23:49', NULL),
+(82, '::1', 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36', 'http://localhost/inmobiliaria/public/admin/propiedad/edit-save/1', 'Actualizar información  en propiedad', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>publicado</td><td></td><td>1</td></tr><tr><td>maps</td><td></td><td></td></tr><tr><td>map_latitude</td><td></td><td></td></tr><tr><td>map_longitude</td><td></td><td></td></tr></tbody></table>', 1, '2018-10-01 15:28:28', NULL),
+(83, '::1', 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36', 'http://localhost/inmobiliaria/public/admin/propiedad/edit-save/1', 'Actualizar información  en propiedad', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>maps</td><td></td><td></td></tr><tr><td>map_latitude</td><td></td><td></td></tr><tr><td>map_longitude</td><td></td><td></td></tr></tbody></table>', 1, '2018-10-01 15:28:35', NULL),
+(84, '::1', 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36', 'http://localhost/inmobiliaria/public/admin/propiedad/edit-save/1', 'Actualizar información  en propiedad', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>maps</td><td></td><td></td></tr><tr><td>map_latitude</td><td></td><td></td></tr><tr><td>map_longitude</td><td></td><td></td></tr></tbody></table>', 1, '2018-10-01 15:28:54', NULL),
+(85, '::1', 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36', 'http://localhost/inmobiliaria/public/admin/propiedad/edit-save/1', 'Actualizar información  en propiedad', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>maps</td><td></td><td></td></tr><tr><td>map_latitude</td><td></td><td></td></tr><tr><td>map_longitude</td><td></td><td></td></tr><tr><td>barrio_propiedad_id</td><td>11</td><td>1</td></tr></tbody></table>', 1, '2018-10-01 15:31:38', NULL),
+(86, '::1', 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36', 'http://localhost/inmobiliaria/public/admin/users/edit-save/1', 'Actualizar información Super Admin en Users Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>photo</td><td></td><td>uploads/1/2018-10/logo_dot.png</td></tr><tr><td>password</td><td>$2y$10$rFlRVUVH3noz89nMvcuiDezEhWJmS5g7O5QajtDQ0pWtvCvSck5jC</td><td></td></tr><tr><td>id_cms_privileges</td><td>1</td><td></td></tr><tr><td>status</td><td>Active</td><td></td></tr></tbody></table>', 1, '2018-10-01 15:35:27', NULL),
+(87, '::1', 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36', 'http://localhost/inmobiliaria/public/admin/menu_management/edit-save/8', 'Actualizar información propiedad en Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>color</td><td></td><td>normal</td></tr><tr><td>icon</td><td>fa fa-home</td><td>fa fa-photo</td></tr><tr><td>parent_id</td><td>0</td><td></td></tr><tr><td>is_dashboard</td><td>0</td><td>1</td></tr></tbody></table>', 1, '2018-10-01 15:38:40', NULL),
+(88, '::1', 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36', 'http://localhost/inmobiliaria/public/admin/menu_management/add-save', 'Añadir nueva información Detalles Propiedad en Menu Management', '', 1, '2018-10-01 16:20:06', NULL),
+(89, '::1', 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36', 'http://localhost/inmobiliaria/public/admin/menu_management/edit-save/8', 'Actualizar información propiedad en Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>sorting</td><td>2</td><td></td></tr></tbody></table>', 1, '2018-10-01 16:21:03', NULL),
+(90, '::1', 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36', 'http://localhost/inmobiliaria/public/admin/menu_management/edit-save/8', 'Actualizar información Propiedad en Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>name</td><td>propiedad</td><td>Propiedad</td></tr></tbody></table>', 1, '2018-10-01 16:21:17', NULL),
+(91, '::1', 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36', 'http://localhost/inmobiliaria/public/admin/menu_management/edit-save/8', 'Actualizar información Propiedad en Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>icon</td><td>fa fa-photo</td><td>fa fa-home</td></tr></tbody></table>', 1, '2018-10-01 16:21:30', NULL),
+(92, '::1', 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36', 'http://localhost/inmobiliaria/public/admin/menu_management/edit-save/7', 'Actualizar información Tipo Operacion en Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>name</td><td>tipooperacion</td><td>Tipo Operacion</td></tr><tr><td>color</td><td></td><td>normal</td></tr><tr><td>icon</td><td>fa fa-glass</td><td>fa fa-home</td></tr><tr><td>parent_id</td><td>9</td><td></td></tr></tbody></table>', 1, '2018-10-01 16:22:05', NULL),
+(93, '::1', 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36', 'http://localhost/inmobiliaria/public/admin/menu_management/edit-save/3', 'Actualizar información Tipo Propiedad en Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>name</td><td>TipoPropiedad</td><td>Tipo Propiedad</td></tr><tr><td>color</td><td></td><td>normal</td></tr><tr><td>icon</td><td>fa fa-glass</td><td>fa fa-home</td></tr><tr><td>parent_id</td><td>9</td><td></td></tr><tr><td>sorting</td><td>2</td><td></td></tr></tbody></table>', 1, '2018-10-01 16:22:18', NULL),
+(94, '::1', 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36', 'http://localhost/inmobiliaria/public/admin/menu_management/edit-save/6', 'Actualizar información Provincia en Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>name</td><td>provincia</td><td>Provincia</td></tr><tr><td>color</td><td></td><td>normal</td></tr><tr><td>icon</td><td>fa fa-glass</td><td>fa fa-home</td></tr><tr><td>parent_id</td><td>9</td><td></td></tr><tr><td>sorting</td><td>3</td><td></td></tr></tbody></table>', 1, '2018-10-01 16:22:26', NULL),
+(95, '::1', 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36', 'http://localhost/inmobiliaria/public/admin/menu_management/edit-save/5', 'Actualizar información Localidad en Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>name</td><td>localidad</td><td>Localidad</td></tr><tr><td>color</td><td></td><td>normal</td></tr><tr><td>icon</td><td>fa fa-glass</td><td>fa fa-home</td></tr><tr><td>parent_id</td><td>9</td><td></td></tr><tr><td>sorting</td><td>4</td><td></td></tr></tbody></table>', 1, '2018-10-01 16:22:32', NULL),
+(96, '::1', 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36', 'http://localhost/inmobiliaria/public/admin/menu_management/edit-save/4', 'Actualizar información Barrio en Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>name</td><td>barrio</td><td>Barrio</td></tr><tr><td>color</td><td></td><td>normal</td></tr><tr><td>icon</td><td>fa fa-glass</td><td>fa fa-home</td></tr><tr><td>parent_id</td><td>9</td><td></td></tr><tr><td>sorting</td><td>5</td><td></td></tr></tbody></table>', 1, '2018-10-01 16:22:39', NULL);
 
 -- --------------------------------------------------------
 
@@ -276,14 +302,15 @@ CREATE TABLE `cms_menus` (
 --
 
 INSERT INTO `cms_menus` (`id`, `name`, `type`, `path`, `color`, `icon`, `parent_id`, `is_active`, `is_dashboard`, `id_cms_privileges`, `sorting`, `created_at`, `updated_at`) VALUES
-(1, 'Gallery', 'Route', 'AdminGalleryControllerGetIndex', NULL, 'fa fa-photo', 0, 0, 0, 1, 2, '2018-01-09 02:53:20', NULL),
-(2, 'Contact Us', 'Route', 'AdminContactUsControllerGetIndex', NULL, 'fa fa-envelope-o', 0, 0, 0, 1, 1, '2018-01-09 16:06:02', NULL),
-(3, 'TipoPropiedad', 'Route', 'AdminTipopropiedadControllerGetIndex', NULL, 'fa fa-glass', 0, 1, 0, 1, 3, '2018-09-30 21:58:13', NULL),
-(4, 'barrio', 'Route', 'AdminBarrioPropiedadControllerGetIndex', NULL, 'fa fa-glass', 0, 1, 0, 1, 4, '2018-10-01 00:33:40', NULL),
-(5, 'localidad', 'Route', 'AdminLocalidadPropiedadControllerGetIndex', NULL, 'fa fa-glass', 0, 1, 0, 1, 5, '2018-10-01 00:35:56', NULL),
-(6, 'provincia', 'Route', 'AdminProvinciaPropiedadControllerGetIndex', NULL, 'fa fa-glass', 0, 1, 0, 1, 6, '2018-10-01 00:36:26', NULL),
-(7, 'tipooperacion', 'Route', 'AdminTipooperacionControllerGetIndex', NULL, 'fa fa-glass', 0, 1, 0, 1, 7, '2018-10-01 00:37:05', NULL),
-(8, 'propiedad', 'Route', 'AdminPropiedadControllerGetIndex', NULL, 'fa fa-home', 0, 1, 0, 1, 8, '2018-10-01 01:26:39', NULL);
+(1, 'Gallery', 'Route', 'AdminGalleryControllerGetIndex', NULL, 'fa fa-photo', 0, 0, 0, 1, 1, '2018-01-09 02:53:20', NULL),
+(2, 'Contact Us', 'Route', 'AdminContactUsControllerGetIndex', NULL, 'fa fa-envelope-o', 0, 1, 0, 1, 3, '2018-01-09 16:06:02', NULL),
+(3, 'Tipo Propiedad', 'Route', 'AdminTipopropiedadControllerGetIndex', 'normal', 'fa fa-home', 9, 1, 0, 1, 2, '2018-09-30 21:58:13', '2018-10-01 16:22:18'),
+(4, 'Barrio', 'Route', 'AdminBarrioPropiedadControllerGetIndex', 'normal', 'fa fa-home', 9, 1, 0, 1, 3, '2018-10-01 00:33:40', '2018-10-01 16:22:39'),
+(5, 'Localidad', 'Route', 'AdminLocalidadPropiedadControllerGetIndex', 'normal', 'fa fa-home', 9, 1, 0, 1, 4, '2018-10-01 00:35:56', '2018-10-01 16:22:32'),
+(6, 'Provincia', 'Route', 'AdminProvinciaPropiedadControllerGetIndex', 'normal', 'fa fa-home', 9, 1, 0, 1, 5, '2018-10-01 00:36:26', '2018-10-01 16:22:25'),
+(7, 'Tipo Operacion', 'Route', 'AdminTipooperacionControllerGetIndex', 'normal', 'fa fa-home', 9, 1, 0, 1, 1, '2018-10-01 00:37:05', '2018-10-01 16:22:05'),
+(8, 'Propiedad', 'Route', 'AdminPropiedadControllerGetIndex', 'normal', 'fa fa-home', 0, 1, 0, 1, 1, '2018-10-01 01:26:39', '2018-10-01 16:21:30'),
+(9, 'Detalles Propiedad', 'Module', 'propiedad', 'normal', 'fa fa-plus', 0, 1, 0, 1, 2, '2018-10-01 16:20:05', NULL);
 
 -- --------------------------------------------------------
 
@@ -304,15 +331,15 @@ CREATE TABLE `cms_menus_privileges` (
 INSERT INTO `cms_menus_privileges` (`id`, `id_cms_menus`, `id_cms_privileges`) VALUES
 (1, 1, 1),
 (2, 2, 1),
-(3, 3, 1),
 (4, 1, 1),
 (5, 2, 1),
-(6, 3, 1),
-(7, 4, 1),
-(8, 5, 1),
-(9, 6, 1),
-(10, 7, 1),
-(11, 8, 1);
+(12, 9, 1),
+(13, 8, 1),
+(14, 7, 1),
+(15, 3, 1),
+(16, 6, 1),
+(17, 5, 1),
+(18, 4, 1);
 
 -- --------------------------------------------------------
 
@@ -478,9 +505,9 @@ INSERT INTO `cms_settings` (`id`, `name`, `content`, `content_input_type`, `data
 (7, 'smtp_port', '25', 'text', NULL, 'default 25', '2017-11-07 02:05:01', NULL, 'Email Setting', 'SMTP Port'),
 (8, 'smtp_username', '', 'text', NULL, NULL, '2017-11-07 02:05:01', NULL, 'Email Setting', 'SMTP Username'),
 (9, 'smtp_password', '', 'text', NULL, NULL, '2017-11-07 02:05:01', NULL, 'Email Setting', 'SMTP Password'),
-(10, 'appname', 'Gallery', 'text', NULL, NULL, '2017-11-07 02:05:01', NULL, 'Application Setting', 'Application Name'),
+(10, 'appname', 'INMOBILIARIA', 'text', NULL, NULL, '2017-11-07 02:05:01', NULL, 'Application Setting', 'Application Name'),
 (11, 'default_paper_size', 'Legal', 'text', NULL, 'Paper size, ex : A4, Legal, etc', '2017-11-07 02:05:01', NULL, 'Application Setting', 'Default Paper Print Size'),
-(12, 'logo', NULL, 'upload_image', NULL, NULL, '2017-11-07 02:05:01', NULL, 'Application Setting', 'Logo'),
+(12, 'logo', 'uploads/2018-10/f8a114610b57457e57cd83d9f2708e4d.png', 'upload_image', NULL, NULL, '2017-11-07 02:05:01', NULL, 'Application Setting', 'Logo'),
 (13, 'favicon', NULL, 'upload_image', NULL, NULL, '2017-11-07 02:05:01', NULL, 'Application Setting', 'Favicon'),
 (14, 'api_debug_mode', 'true', 'select', 'true,false', NULL, '2017-11-07 02:05:01', NULL, 'Application Setting', 'API Debug Mode'),
 (15, 'google_api_key', NULL, 'text', NULL, NULL, '2017-11-07 02:05:01', NULL, 'Application Setting', 'Google API Key'),
@@ -533,8 +560,10 @@ CREATE TABLE `cms_statistic_components` (
 --
 
 INSERT INTO `cms_statistic_components` (`id`, `id_cms_statistics`, `componentID`, `component_name`, `area_name`, `sorting`, `name`, `config`, `created_at`, `updated_at`) VALUES
-(1, 1, '22e57372f661359bc4741758ec977733', 'smallbox', 'area1', 0, NULL, '{\"name\":\"Request Lagu\",\"icon\":\"ion-ios-musical-notes\",\"color\":\"bg-red\",\"link\":\"http:\\/\\/crocodic.net\\/karaoke_dangdut\\/public\\/admin\\/request_lagu\",\"sql\":\"select count(id) from `request_lagu`\"}', '2017-11-07 07:11:36', NULL),
-(2, 1, 'f7979899979fc8722008d8896b58bf27', 'smallbox', 'area2', 0, NULL, '{\"name\":\"Master Cari Lagu\",\"icon\":\"ion-ios-musical-note\",\"color\":\"bg-red\",\"link\":\"http:\\/\\/crocodic.net\\/karaoke_dangdut\\/public\\/admin\\/cari_lagu\",\"sql\":\"select count(id) from `cari_lagu`\"}', '2017-11-07 07:13:34', NULL);
+(1, 1, '22e57372f661359bc4741758ec977733', 'smallbox', 'area1', 0, NULL, '{\"name\":\"Request Lagu\",\"icon\":\"ion-ios-musical-notes\",\"color\":\"bg-red\",\"link\":\"http:\\/\\/crocodic.net\\/karaoke_dangdut\\/public\\/admin\\/request_lagu\",\"sql\":\"select count(id) from `cms_logs`\"}', '2017-11-07 07:11:36', NULL),
+(2, 1, 'f7979899979fc8722008d8896b58bf27', 'smallbox', 'area2', 0, NULL, '{\"name\":\"Master Cari Lagu\",\"icon\":\"ion-ios-musical-note\",\"color\":\"bg-red\",\"link\":\"http:\\/\\/crocodic.net\\/karaoke_dangdut\\/public\\/admin\\/cari_lagu\",\"sql\":\"select count(id) from `cari_lagu`\"}', '2017-11-07 07:13:34', NULL),
+(3, 1, '56c999851143235776c3343e942688bb', 'table', 'area3', 0, 'Untitled', NULL, '2018-10-01 16:25:44', NULL),
+(4, 1, 'b6e3b6aaf5eca8d8d26f0f6d07ac7a36', 'chartarea', 'area5', 0, 'Untitled', NULL, '2018-10-01 16:25:46', NULL);
 
 -- --------------------------------------------------------
 
@@ -559,7 +588,7 @@ CREATE TABLE `cms_users` (
 --
 
 INSERT INTO `cms_users` (`id`, `name`, `photo`, `email`, `password`, `id_cms_privileges`, `created_at`, `updated_at`, `status`) VALUES
-(1, 'Super Admin', NULL, 'admin@crudbooster.com', '$2y$10$rFlRVUVH3noz89nMvcuiDezEhWJmS5g7O5QajtDQ0pWtvCvSck5jC', 1, '2017-11-07 02:05:00', NULL, 'Active');
+(1, 'Super Admin', 'uploads/1/2018-10/logo_dot.png', 'admin@crudbooster.com', '$2y$10$rFlRVUVH3noz89nMvcuiDezEhWJmS5g7O5QajtDQ0pWtvCvSck5jC', 1, '2017-11-07 02:05:00', '2018-10-01 15:35:27', 'Active');
 
 -- --------------------------------------------------------
 
@@ -687,7 +716,7 @@ CREATE TABLE `propiedad` (
   `id` int(10) UNSIGNED NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
-  `publicado` int(11) NOT NULL DEFAULT '1',
+  `publicado` varchar(11) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '1',
   `titulo` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `descripcion` varchar(3000) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `imagen` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -705,6 +734,13 @@ CREATE TABLE `propiedad` (
   `localidad_propiedad_id` int(11) DEFAULT NULL,
   `provincia_propiedad_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `propiedad`
+--
+
+INSERT INTO `propiedad` (`id`, `created_at`, `updated_at`, `publicado`, `titulo`, `descripcion`, `imagen`, `tipooperacion_id`, `tipopropiedad_id`, `precio_compra`, `precio_alquiler`, `calle`, `altura`, `piso`, `maps`, `map_latitude`, `map_longitude`, `barrio_propiedad_id`, `localidad_propiedad_id`, `provincia_propiedad_id`) VALUES
+(1, '2018-10-01 02:28:03', '2018-10-01 15:31:38', '0', 'Departamento en Venta', '<p><b>Belgrano 3</b> Ambientes con depcia al frente con balcón<br></p>', 'uploads/1/2018-10/getimage.gif', 2, 1, 300000, 0, 'melo', 3017, '10', NULL, NULL, NULL, 1, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -962,7 +998,7 @@ ALTER TABLE `tipopropiedad`
 -- AUTO_INCREMENT de la tabla `barrio_propiedad`
 --
 ALTER TABLE `barrio_propiedad`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT de la tabla `cms_apicustom`
@@ -998,19 +1034,19 @@ ALTER TABLE `cms_email_templates`
 -- AUTO_INCREMENT de la tabla `cms_logs`
 --
 ALTER TABLE `cms_logs`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=72;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=97;
 
 --
 -- AUTO_INCREMENT de la tabla `cms_menus`
 --
 ALTER TABLE `cms_menus`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de la tabla `cms_menus_privileges`
 --
 ALTER TABLE `cms_menus_privileges`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT de la tabla `cms_moduls`
@@ -1052,7 +1088,7 @@ ALTER TABLE `cms_statistics`
 -- AUTO_INCREMENT de la tabla `cms_statistic_components`
 --
 ALTER TABLE `cms_statistic_components`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `cms_users`
@@ -1088,7 +1124,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT de la tabla `propiedad`
 --
 ALTER TABLE `propiedad`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `provincia_propiedad`

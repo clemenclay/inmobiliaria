@@ -1,14 +1,10 @@
 <?php namespace App\Http\Controllers;
-
 	use Session;
 	use Request;
 	use DB;
 	use CRUDBooster;
-
 	class AdminPropiedadController extends \crocodicstudio\crudbooster\controllers\CBController {
-
 	    public function cbInit() {
-
 			# START CONFIGURATION DO NOT REMOVE THIS LINE
 			$this->title_field = "name";
 			$this->limit = "20";
@@ -27,7 +23,6 @@
 			$this->button_export = true;
 			$this->table = "propiedad";
 			# END CONFIGURATION DO NOT REMOVE THIS LINE
-
 			# START COLUMNS DO NOT REMOVE THIS LINE
 			$this->col = [];
 			$this->col[] = ["label"=>"Publicado","name"=>"publicado"];
@@ -45,7 +40,6 @@
 			$this->col[] = ["label"=>"Map Latitude","name"=>"map_latitude"];
 			$this->col[] = ["label"=>"Map Longitude","name"=>"map_longitude"];
 			# END COLUMNS DO NOT REMOVE THIS LINE
-
 			# START FORM DO NOT REMOVE THIS LINE
 			$this->form = [];
 			$this->form[] = ['label'=>'Publicado','name'=>'publicado','type'=>'radio','validation'=>'required|min:1|max:1','width'=>'col-sm-10','dataenum'=>'0|NO;1|SI'];
@@ -66,7 +60,6 @@
 			$this->form[] = ['label'=>'Localidad','name'=>'localidad_propiedad_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'localidad_propiedad,name'];
 			$this->form[] = ['label'=>'Provincia','name'=>'provincia_propiedad_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'provincia_propiedad,name'];
 			# END FORM DO NOT REMOVE THIS LINE
-
 			# OLD START FORM
 			//$this->form = [];
 			//$this->form[] = ['label'=>'Publicado','name'=>'publicado','type'=>'radio','validation'=>'required|min:1|max:1','width'=>'col-sm-10','dataenum'=>'0|NO;1|SI'];
@@ -87,7 +80,6 @@
 			//$this->form[] = ['label'=>'Localidad','name'=>'localidad_propiedad_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'localidad_propiedad,name'];
 			//$this->form[] = ['label'=>'Provincia','name'=>'provincia_propiedad_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'provincia_propiedad,name'];
 			# OLD END FORM
-
 			/* 
 	        | ---------------------------------------------------------------------- 
 	        | Sub Module
@@ -101,8 +93,6 @@
 	        | 
 	        */
 	        $this->sub_module = array();
-
-
 	        /* 
 	        | ---------------------------------------------------------------------- 
 	        | Add More Action Button / Menu
@@ -115,8 +105,6 @@
 	        | 
 	        */
 	        $this->addaction = array();
-
-
 	        /* 
 	        | ---------------------------------------------------------------------- 
 	        | Add More Button Selected
@@ -128,7 +116,6 @@
 	        | 
 	        */
 	        $this->button_selected = array();
-
 	                
 	        /* 
 	        | ---------------------------------------------------------------------- 
@@ -140,7 +127,6 @@
 	        */
 	        $this->alert        = array();
 	                
-
 	        
 	        /* 
 	        | ---------------------------------------------------------------------- 
@@ -152,9 +138,6 @@
 	        | 
 	        */
 	        $this->index_button = array();
-
-
-
 	        /* 
 	        | ---------------------------------------------------------------------- 
 	        | Customize Table Row Color
@@ -164,7 +147,6 @@
 	        | 
 	        */
 	        $this->table_row_color = array();     	          
-
 	        
 	        /*
 	        | ---------------------------------------------------------------------- 
@@ -174,9 +156,6 @@
 	        |
 	        */
 	        $this->index_statistic = array();
-
-
-
 	        /*
 	        | ---------------------------------------------------------------------- 
 	        | Add javascript at body 
@@ -186,8 +165,6 @@
 	        |
 	        */
 	        $this->script_js = NULL;
-
-
             /*
 	        | ---------------------------------------------------------------------- 
 	        | Include HTML Code before index table 
@@ -248,8 +225,6 @@
 	        
 	        
 	    }
-
-
 	    /*
 	    | ---------------------------------------------------------------------- 
 	    | Hook for button selected
@@ -262,8 +237,6 @@
 	        //Your code here
 	            
 	    }
-
-
 	    /*
 	    | ---------------------------------------------------------------------- 
 	    | Hook for manipulate query of index result 
@@ -275,7 +248,6 @@
 	        //Your code here
 	            
 	    }
-
 	    /*
 	    | ---------------------------------------------------------------------- 
 	    | Hook for manipulate row of index table html 
@@ -285,7 +257,6 @@
 	    public function hook_row_index($column_index,&$column_value) {	        
 	    	//Your code here
 	    }
-
 	    /*
 	    | ---------------------------------------------------------------------- 
 	    | Hook for manipulate data input before add data is execute
@@ -295,9 +266,7 @@
 	    */
 	    public function hook_before_add(&$postdata) {        
 	        //Your code here
-
 	    }
-
 	    /* 
 	    | ---------------------------------------------------------------------- 
 	    | Hook for execute command after add public static function called 
@@ -307,9 +276,7 @@
 	    */
 	    public function hook_after_add($id) {        
 	        //Your code here
-
 	    }
-
 	    /* 
 	    | ---------------------------------------------------------------------- 
 	    | Hook for manipulate data input before update data is execute
@@ -320,9 +287,7 @@
 	    */
 	    public function hook_before_edit(&$postdata,$id) {        
 	        //Your code here
-
 	    }
-
 	    /* 
 	    | ---------------------------------------------------------------------- 
 	    | Hook for execute command after edit public static function called
@@ -332,9 +297,7 @@
 	    */
 	    public function hook_after_edit($id) {
 	        //Your code here 
-
 	    }
-
 	    /* 
 	    | ---------------------------------------------------------------------- 
 	    | Hook for execute command before delete public static function called
@@ -344,9 +307,7 @@
 	    */
 	    public function hook_before_delete($id) {
 	        //Your code here
-
 	    }
-
 	    /* 
 	    | ---------------------------------------------------------------------- 
 	    | Hook for execute command after delete public static function called
@@ -356,12 +317,6 @@
 	    */
 	    public function hook_after_delete($id) {
 	        //Your code here
-
 	    }
-
-
-
 	    //By the way, you can still create your own method in here... :) 
-
-
 	}
