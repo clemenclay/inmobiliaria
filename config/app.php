@@ -51,7 +51,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://localhost/inmobiliaria'),
+    'url' => env('APP_URL', 'http://localhost/inmobiliaria/public'),
 
     /*
     |--------------------------------------------------------------------------

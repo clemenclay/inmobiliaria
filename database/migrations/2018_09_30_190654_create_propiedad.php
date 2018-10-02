@@ -16,7 +16,9 @@ class CreatePropiedad extends Migration
         Schema::create('propiedad', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
+			 
 			$table->integer('publicado')->length(1)->default(1);
+			/* Formato correcto/*  $table->boolean('publicado')->default(1);  */
 			$table->string('titulo',100)->nullable();
 			$table->string('descripcion',3000)->nullable();
 			$table->string('imagen')->nullable();
