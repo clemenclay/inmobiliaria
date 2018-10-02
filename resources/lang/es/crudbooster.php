@@ -1,5 +1,6 @@
 <?php 
 return [
+	'text_delete'                 =>'Eliminar',
 	'emaill_footer'               =>'No respondas a este mensaje, es un mensaje generado automáticamente.',
 	'login_message'              =>'Por favor, inicia sesión para comenzar',
 	'text_forgot_password'       =>'¿Olvidaste tu contraseña?',
