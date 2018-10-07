@@ -51,7 +51,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://localhost/inmobiliaria/public'),
+    'url' => env('APP_URL', 'https://propiedades.bluepixel.com.ar'),
 
     /*
     |--------------------------------------------------------------------------
