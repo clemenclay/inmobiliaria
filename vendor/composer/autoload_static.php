@@ -402,11 +402,17 @@ class ComposerStaticInit6f3fa7b2e2cb92eb191967781a7e2247
     );
 
     public static $classMap = array (
+        'AddColumnMonedaPropiedad' => __DIR__ . '/../..' . '/database/migrations/2018_10_10_232713_add_column_moneda_propiedad.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
+        'App\\Http\\Controllers\\AdminBarrioPropiedadController' => __DIR__ . '/../..' . '/app/Http/Controllers/AdminBarrioPropiedadController.php',
         'App\\Http\\Controllers\\AdminCmsUsersController' => __DIR__ . '/../..' . '/app/Http/Controllers/AdminCmsUsersController.php',
         'App\\Http\\Controllers\\AdminContactUsController' => __DIR__ . '/../..' . '/app/Http/Controllers/AdminContactUsController.php',
         'App\\Http\\Controllers\\AdminGalleryController' => __DIR__ . '/../..' . '/app/Http/Controllers/AdminGalleryController.php',
+        'App\\Http\\Controllers\\AdminLocalidadPropiedadController' => __DIR__ . '/../..' . '/app/Http/Controllers/AdminLocalidadPropiedadController.php',
+        'App\\Http\\Controllers\\AdminPropiedadController' => __DIR__ . '/../..' . '/app/Http/Controllers/AdminPropiedadController.php',
+        'App\\Http\\Controllers\\AdminProvinciaPropiedadController' => __DIR__ . '/../..' . '/app/Http/Controllers/AdminProvinciaPropiedadController.php',
+        'App\\Http\\Controllers\\AdminTipooperacionController' => __DIR__ . '/../..' . '/app/Http/Controllers/AdminTipooperacionController.php',
         'App\\Http\\Controllers\\AdminTipopropiedadController' => __DIR__ . '/../..' . '/app/Http/Controllers/AdminTipopropiedadController.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
         'App\\Http\\Controllers\\Auth\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/LoginController.php',
@@ -460,6 +466,7 @@ class ComposerStaticInit6f3fa7b2e2cb92eb191967781a7e2247
         'CreateContactUsTable' => __DIR__ . '/../..' . '/database/migrations/2018_01_15_053227_create_contact_us_table.php',
         'CreateGalleryTable' => __DIR__ . '/../..' . '/database/migrations/2018_01_15_053227_create_gallery_table.php',
         'CreateLocalidadPropiedad' => __DIR__ . '/../..' . '/database/migrations/2018_09_30_203406_create_localidad_propiedad.php',
+        'CreateMoneda' => __DIR__ . '/../..' . '/database/migrations/2018_10_10_233051_create_moneda.php',
         'CreatePropiedad' => __DIR__ . '/../..' . '/database/migrations/2018_09_30_190654_create_propiedad.php',
         'CreateProvinciaPropiedad' => __DIR__ . '/../..' . '/database/migrations/2018_09_30_203913_create_provincia_propiedad.php',
         'CreateTipoOperacion' => __DIR__ . '/../..' . '/database/migrations/2018_09_30_190816_create_tipo_operacion.php',

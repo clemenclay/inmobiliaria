@@ -6,11 +6,17 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'AddColumnMonedaPropiedad' => $baseDir . '/database/migrations/2018_10_10_232713_add_column_moneda_propiedad.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
+    'App\\Http\\Controllers\\AdminBarrioPropiedadController' => $baseDir . '/app/Http/Controllers/AdminBarrioPropiedadController.php',
     'App\\Http\\Controllers\\AdminCmsUsersController' => $baseDir . '/app/Http/Controllers/AdminCmsUsersController.php',
     'App\\Http\\Controllers\\AdminContactUsController' => $baseDir . '/app/Http/Controllers/AdminContactUsController.php',
     'App\\Http\\Controllers\\AdminGalleryController' => $baseDir . '/app/Http/Controllers/AdminGalleryController.php',
+    'App\\Http\\Controllers\\AdminLocalidadPropiedadController' => $baseDir . '/app/Http/Controllers/AdminLocalidadPropiedadController.php',
+    'App\\Http\\Controllers\\AdminPropiedadController' => $baseDir . '/app/Http/Controllers/AdminPropiedadController.php',
+    'App\\Http\\Controllers\\AdminProvinciaPropiedadController' => $baseDir . '/app/Http/Controllers/AdminProvinciaPropiedadController.php',
+    'App\\Http\\Controllers\\AdminTipooperacionController' => $baseDir . '/app/Http/Controllers/AdminTipooperacionController.php',
     'App\\Http\\Controllers\\AdminTipopropiedadController' => $baseDir . '/app/Http/Controllers/AdminTipopropiedadController.php',
     'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
     'App\\Http\\Controllers\\Auth\\LoginController' => $baseDir . '/app/Http/Controllers/Auth/LoginController.php',
@@ -64,6 +70,7 @@ return array(
     'CreateContactUsTable' => $baseDir . '/database/migrations/2018_01_15_053227_create_contact_us_table.php',
     'CreateGalleryTable' => $baseDir . '/database/migrations/2018_01_15_053227_create_gallery_table.php',
     'CreateLocalidadPropiedad' => $baseDir . '/database/migrations/2018_09_30_203406_create_localidad_propiedad.php',
+    'CreateMoneda' => $baseDir . '/database/migrations/2018_10_10_233051_create_moneda.php',
     'CreatePropiedad' => $baseDir . '/database/migrations/2018_09_30_190654_create_propiedad.php',
     'CreateProvinciaPropiedad' => $baseDir . '/database/migrations/2018_09_30_203913_create_provincia_propiedad.php',
     'CreateTipoOperacion' => $baseDir . '/database/migrations/2018_09_30_190816_create_tipo_operacion.php',

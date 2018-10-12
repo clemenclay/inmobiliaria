@@ -1,13 +1,16 @@
 <?php namespace App\Http\Controllers;
+
 	use Session;
 	use Request;
 	use DB;
 	use CRUDBooster;
-	class AdminPropiedadController extends \crocodicstudio\crudbooster\controllers\CBController {
+
+	class AdminMonedaController extends \crocodicstudio\crudbooster\controllers\CBController {
+
 	    public function cbInit() {
 
 			# START CONFIGURATION DO NOT REMOVE THIS LINE
-			$this->title_field = "name";
+			$this->title_field = "id";
 			$this->limit = "20";
 			$this->orderby = "id,desc";
 			$this->global_privilege = false;
@@ -21,73 +24,32 @@
 			$this->button_show = true;
 			$this->button_filter = true;
 			$this->button_import = false;
-			$this->button_export = true;
-			$this->table = "propiedad";
+			$this->button_export = false;
+			$this->table = "moneda";
 			# END CONFIGURATION DO NOT REMOVE THIS LINE
 
 			# START COLUMNS DO NOT REMOVE THIS LINE
 			$this->col = [];
-			$this->col[] = ["label"=>"Publicado","name"=>"publicado"];
-			$this->col[] = ["label"=>"Titulo","name"=>"titulo"];
-			$this->col[] = ["label"=>"Descripcion","name"=>"descripcion"];
-			$this->col[] = ["label"=>"Imagen","name"=>"imagen","image"=>true];
-			$this->col[] = ["label"=>"Tipo Operacion","name"=>"tipooperacion_id","join"=>"tipooperacion,name"];
-			$this->col[] = ["label"=>"Tipopropiedad Id","name"=>"tipopropiedad_id","join"=>"tipopropiedad,name"];
-			$this->col[] = ["label"=>"Precio Compra","name"=>"precio_compra",'callback_php'=>'number_format([precio_compra])'];
-			$this->col[] = ["label"=>"Precio Alquiler","name"=>"precio_alquiler",'callback_php'=>'number_format([precio_alquiler])'];
-			$this->col[] = ["label"=>"Moneda","name"=>"moneda_id","join"=>"moneda,moneda"];
-			$this->col[] = ["label"=>"Calle","name"=>"calle"];
-			$this->col[] = ["label"=>"Altura","name"=>"altura"];
-			$this->col[] = ["label"=>"Piso","name"=>"piso"];
-	#		$this->col[] = ["label"=>"Maps","name"=>"maps"];
-	#		$this->col[] = ["label"=>"Map Latitude","name"=>"map_latitude"];
-	#		$this->col[] = ["label"=>"Map Longitude","name"=>"map_longitude"];
-
+			$this->col[] = ["label"=>"Moneda","name"=>"moneda"];
+			$this->col[] = ["label"=>"Simbolo","name"=>"simbolo"];
+			$this->col[] = ["label"=>"Icono","name"=>"icono"];
+			$this->col[] = ["label"=>"Valor","name"=>"valor"];
 			# END COLUMNS DO NOT REMOVE THIS LINE
 
 			# START FORM DO NOT REMOVE THIS LINE
 			$this->form = [];
-			$this->form[] = ['label'=>'Publicado','name'=>'publicado','type'=>'radio','validation'=>'required|min:1|max:1','width'=>'col-sm-10','dataenum'=>'0|NO;1|SI'];
-			$this->form[] = ['label'=>'Titulo','name'=>'titulo','type'=>'text','validation'=>'required|min:1|max:2550','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Descripcion','name'=>'descripcion','type'=>'wysiwyg','validation'=>'required|min:1|max:2550','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Imagen','name'=>'imagen','type'=>'upload','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Tipo Operacion','name'=>'tipooperacion_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'tipooperacion,name'];
-			$this->form[] = ['label'=>'Tipo Propiedad Id','name'=>'tipopropiedad_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'tipopropiedad,name'];
-			$this->form[] = ['label'=>'Precio Compra','name'=>'precio_compra','type'=>'money','validation'=>'integer|min:0','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Precio Alquiler','name'=>'precio_alquiler','type'=>'money','validation'=>'integer|min:0','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Moneda','name'=>'moneda_id','type'=>'select2','validation'=>'required','width'=>'col-sm-9','datatable'=>'moneda,moneda'];			
-			$this->form[] = ['label'=>'Calle','name'=>'calle','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Altura','name'=>'altura','type'=>'number','validation'=>'required|integer|min:0','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Piso','name'=>'piso','type'=>'number','validation'=>'required|min:1|max:500','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Maps','name'=>'maps','type'=>'text','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Map Latitude','name'=>'map_latitude','type'=>'text','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Map Longitude','name'=>'map_longitude','type'=>'text','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Barrio','name'=>'barrio_propiedad_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'barrio_propiedad,name'];
-			$this->form[] = ['label'=>'Localidad','name'=>'localidad_propiedad_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'localidad_propiedad,name'];
-			$this->form[] = ['label'=>'Provincia','name'=>'provincia_propiedad_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'provincia_propiedad,name'];
-
+			$this->form[] = ['label'=>'Moneda','name'=>'moneda','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Simbolo','name'=>'simbolo','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Icono','name'=>'icono','type'=>'upload','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Valor','name'=>'valor','type'=>'money','validation'=>'required|integer|min:0','width'=>'col-sm-10'];
 			# END FORM DO NOT REMOVE THIS LINE
 
 			# OLD START FORM
 			//$this->form = [];
-			//$this->form[] = ['label'=>'Publicado','name'=>'publicado','type'=>'radio','validation'=>'required|min:1|max:1','width'=>'col-sm-10','dataenum'=>'0|NO;1|SI'];
-			//$this->form[] = ['label'=>'Titulo','name'=>'titulo','type'=>'text','validation'=>'required|min:1|max:2550','width'=>'col-sm-10'];
-			//$this->form[] = ['label'=>'Descripcion','name'=>'descripcion','type'=>'wysiwyg','validation'=>'required|min:1|max:2550','width'=>'col-sm-10'];
-			//$this->form[] = ['label'=>'Imagen','name'=>'imagen','type'=>'upload','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			//$this->form[] = ['label'=>'Tipo Operacion','name'=>'tipooperacion_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'tipooperacion,name'];
-			//$this->form[] = ['label'=>'Tipo Propiedad Id','name'=>'tipopropiedad_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'tipopropiedad,name'];
-			//$this->form[] = ['label'=>'Precio Compra','name'=>'precio_compra','type'=>'money','validation'=>'integer|min:0','width'=>'col-sm-10'];
-			//$this->form[] = ['label'=>'Precio Alquiler','name'=>'precio_alquiler','type'=>'money','validation'=>'integer|min:0','width'=>'col-sm-10'];
-			//$this->form[] = ['label'=>'Moneda','name'=>'moneda_id','type'=>'select2','validation'=>'required','width'=>'col-sm-9'];
-			//$this->form[] = ['label'=>'Calle','name'=>'calle','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'moneda,id'];
-			//$this->form[] = ['label'=>'Altura','name'=>'altura','type'=>'number','validation'=>'required|integer|min:0','width'=>'col-sm-10'];
-			//$this->form[] = ['label'=>'Piso','name'=>'piso','type'=>'number','validation'=>'required|min:1|max:500','width'=>'col-sm-10'];
-			//$this->form[] = ['label'=>'Maps','name'=>'maps','type'=>'text','width'=>'col-sm-10'];
-			//$this->form[] = ['label'=>'Map Latitude','name'=>'map_latitude','type'=>'text','width'=>'col-sm-10'];
-			//$this->form[] = ['label'=>'Map Longitude','name'=>'map_longitude','type'=>'text','width'=>'col-sm-10','datatable'=>'barrio_propiedad,name'];
-			//$this->form[] = ['label'=>'Barrio','name'=>'barrio_propiedad_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'localidad_propiedad,name'];
-			//$this->form[] = ['label'=>'Localidad','name'=>'localidad_propiedad_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'provincia_propiedad,name'];
-			//$this->form[] = ['label'=>'Provincia','name'=>'provincia_propiedad_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10'];
+			//$this->form[] = ["label"=>"Moneda","name"=>"moneda","type"=>"text","required"=>TRUE,"validation"=>"required|min:1|max:255"];
+			//$this->form[] = ["label"=>"Simbolo","name"=>"simbolo","type"=>"text","required"=>TRUE,"validation"=>"required|min:1|max:255"];
+			//$this->form[] = ["label"=>"Icono","name"=>"icono","type"=>"text","required"=>TRUE,"validation"=>"required|min:1|max:255"];
+			//$this->form[] = ["label"=>"Valor","name"=>"valor","type"=>"money","required"=>TRUE,"validation"=>"required|integer|min:0"];
 			# OLD END FORM
 
 			/* 
@@ -103,6 +65,8 @@
 	        | 
 	        */
 	        $this->sub_module = array();
+
+
 	        /* 
 	        | ---------------------------------------------------------------------- 
 	        | Add More Action Button / Menu
@@ -115,6 +79,8 @@
 	        | 
 	        */
 	        $this->addaction = array();
+
+
 	        /* 
 	        | ---------------------------------------------------------------------- 
 	        | Add More Button Selected
@@ -126,6 +92,7 @@
 	        | 
 	        */
 	        $this->button_selected = array();
+
 	                
 	        /* 
 	        | ---------------------------------------------------------------------- 
@@ -137,6 +104,7 @@
 	        */
 	        $this->alert        = array();
 	                
+
 	        
 	        /* 
 	        | ---------------------------------------------------------------------- 
@@ -148,6 +116,9 @@
 	        | 
 	        */
 	        $this->index_button = array();
+
+
+
 	        /* 
 	        | ---------------------------------------------------------------------- 
 	        | Customize Table Row Color
@@ -157,6 +128,7 @@
 	        | 
 	        */
 	        $this->table_row_color = array();     	          
+
 	        
 	        /*
 	        | ---------------------------------------------------------------------- 
@@ -166,6 +138,9 @@
 	        |
 	        */
 	        $this->index_statistic = array();
+
+
+
 	        /*
 	        | ---------------------------------------------------------------------- 
 	        | Add javascript at body 
@@ -175,6 +150,8 @@
 	        |
 	        */
 	        $this->script_js = NULL;
+
+
             /*
 	        | ---------------------------------------------------------------------- 
 	        | Include HTML Code before index table 
@@ -235,6 +212,8 @@
 	        
 	        
 	    }
+
+
 	    /*
 	    | ---------------------------------------------------------------------- 
 	    | Hook for button selected
@@ -247,6 +226,8 @@
 	        //Your code here
 	            
 	    }
+
+
 	    /*
 	    | ---------------------------------------------------------------------- 
 	    | Hook for manipulate query of index result 
@@ -258,6 +239,7 @@
 	        //Your code here
 	            
 	    }
+
 	    /*
 	    | ---------------------------------------------------------------------- 
 	    | Hook for manipulate row of index table html 
@@ -267,6 +249,7 @@
 	    public function hook_row_index($column_index,&$column_value) {	        
 	    	//Your code here
 	    }
+
 	    /*
 	    | ---------------------------------------------------------------------- 
 	    | Hook for manipulate data input before add data is execute
@@ -276,7 +259,9 @@
 	    */
 	    public function hook_before_add(&$postdata) {        
 	        //Your code here
+
 	    }
+
 	    /* 
 	    | ---------------------------------------------------------------------- 
 	    | Hook for execute command after add public static function called 
@@ -286,7 +271,9 @@
 	    */
 	    public function hook_after_add($id) {        
 	        //Your code here
+
 	    }
+
 	    /* 
 	    | ---------------------------------------------------------------------- 
 	    | Hook for manipulate data input before update data is execute
@@ -297,7 +284,9 @@
 	    */
 	    public function hook_before_edit(&$postdata,$id) {        
 	        //Your code here
+
 	    }
+
 	    /* 
 	    | ---------------------------------------------------------------------- 
 	    | Hook for execute command after edit public static function called
@@ -307,7 +296,9 @@
 	    */
 	    public function hook_after_edit($id) {
 	        //Your code here 
+
 	    }
+
 	    /* 
 	    | ---------------------------------------------------------------------- 
 	    | Hook for execute command before delete public static function called
@@ -317,7 +308,9 @@
 	    */
 	    public function hook_before_delete($id) {
 	        //Your code here
+
 	    }
+
 	    /* 
 	    | ---------------------------------------------------------------------- 
 	    | Hook for execute command after delete public static function called
@@ -327,6 +320,12 @@
 	    */
 	    public function hook_after_delete($id) {
 	        //Your code here
+
 	    }
+
+
+
 	    //By the way, you can still create your own method in here... :) 
+
+
 	}
