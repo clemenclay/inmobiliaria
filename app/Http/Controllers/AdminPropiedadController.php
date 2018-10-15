@@ -27,14 +27,15 @@
 
 			# START COLUMNS DO NOT REMOVE THIS LINE
 			$this->col = [];
-			$this->col[] = ["label"=>"Publicado","name"=>"publicado"];
+			$this->col[] = ["label"=>"Publicado","name"=>"publicado",'dataenum'=>'0|NO;1|SI'];
 			$this->col[] = ["label"=>"Titulo","name"=>"titulo"];
 			$this->col[] = ["label"=>"Descripcion","name"=>"descripcion"];
 			$this->col[] = ["label"=>"Imagen","name"=>"imagen","image"=>true];
+			
 			$this->col[] = ["label"=>"Tipo Operacion","name"=>"tipooperacion_id","join"=>"tipooperacion,name"];
 			$this->col[] = ["label"=>"Tipopropiedad Id","name"=>"tipopropiedad_id","join"=>"tipopropiedad,name"];
-			$this->col[] = ["label"=>"Precio Compra","name"=>"precio_compra",'callback_php'=>'number_format([precio_compra])'];
-			$this->col[] = ["label"=>"Precio Alquiler","name"=>"precio_alquiler",'callback_php'=>'number_format([precio_alquiler])'];
+			$this->col[] = ["label"=>"Precio Compra","name"=>"precio_compra",'callback_php'=>'number_format([precio_compra])','decimals'=>'2','dec_point'=>'.'];
+			$this->col[] = ["label"=>"Precio Alquiler","name"=>"precio_alquiler",'callback_php'=>'number_format([precio_alquiler])','decimals'=>'2','dec_point'=>'.'];
 			$this->col[] = ["label"=>"Moneda","name"=>"moneda_id","join"=>"moneda,moneda"];
 			$this->col[] = ["label"=>"Calle","name"=>"calle"];
 			$this->col[] = ["label"=>"Altura","name"=>"altura"];
@@ -53,8 +54,12 @@
 			$this->form[] = ['label'=>'Imagen','name'=>'imagen','type'=>'upload','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Tipo Operacion','name'=>'tipooperacion_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'tipooperacion,name'];
 			$this->form[] = ['label'=>'Tipo Propiedad Id','name'=>'tipopropiedad_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'tipopropiedad,name'];
-			$this->form[] = ['label'=>'Precio Compra','name'=>'precio_compra','type'=>'money','validation'=>'integer|min:0','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Precio Alquiler','name'=>'precio_alquiler','type'=>'money','validation'=>'integer|min:0','width'=>'col-sm-10'];
+			
+			$this->form[] = ['label'=>'<br/><br/>'];
+			$this->form[] = ['label'=>'Precio Compra','name'=>'precio_compra','type'=>'money','validation'=>'integer|min:0','width'=>'col-sm-4'];
+			$this->form[] = ['label'=>'Precio Alquiler','name'=>'precio_alquiler','type'=>'money','validation'=>'integer|min:0','width'=>'col-sm-4'];
+			$this->form[] = ['label'=>'<br/><br/>'];
+			
 			$this->form[] = ['label'=>'Moneda','name'=>'moneda_id','type'=>'select2','validation'=>'required','width'=>'col-sm-9','datatable'=>'moneda,moneda'];			
 			$this->form[] = ['label'=>'Calle','name'=>'calle','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Altura','name'=>'altura','type'=>'number','validation'=>'required|integer|min:0','width'=>'col-sm-10'];

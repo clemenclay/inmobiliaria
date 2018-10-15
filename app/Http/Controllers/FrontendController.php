@@ -14,9 +14,24 @@ namespace App\Http\Controllers;
 			$title =DB::table('cms_settings')->where('name','appname')->First();
 			$data['title'] = $title->content;
 			$data['active'] = 'index';
-			$data['propiedad'] = DB::table('propiedad')->where('publicado',1)->orderby('id','desc')->get();
+			$data['propiedad'] = DB::table('propiedad')
+			->join('moneda','propiedad.moneda_id','=','moneda.id')
+			->where('publicado',1)
+			->orderby('propiedad.id','desc')->get();
 			return view('index',$data);
 		}
+	
+
+//		DB::table('table1')
+//		->select('data.ID') // Add a select so only one column shows up.
+//		->join('table2','table1.table2ID','=','table2.ID')
+//		->join('thisTable', 'table2.thisTableID', '=', 'thisTable.ID')
+//		->lists('ID'); // Now list that one column
+
+
+
+	//	select * from propiedad inner join moneda on propiedad.moneda_id = moneda.id
+
 		// about
 		public function getAbout(){
 			$title =DB::table('cms_settings')->where('name','appname')->First();

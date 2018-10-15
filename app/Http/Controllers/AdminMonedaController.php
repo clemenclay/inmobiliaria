@@ -32,7 +32,7 @@
 			$this->col = [];
 			$this->col[] = ["label"=>"Moneda","name"=>"moneda"];
 			$this->col[] = ["label"=>"Simbolo","name"=>"simbolo"];
-			$this->col[] = ["label"=>"Icono","name"=>"icono"];
+			$this->col[] = ["label"=>"Icono","name"=>"icono","image"=>true];
 			$this->col[] = ["label"=>"Valor","name"=>"valor"];
 			# END COLUMNS DO NOT REMOVE THIS LINE
 

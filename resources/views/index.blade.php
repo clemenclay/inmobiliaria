@@ -12,12 +12,14 @@
 		        			<img src="{{asset('/')}}{{$q->imagen}}" alt="">
 		        		</a>
 	        		</div>
-					<div class="fh5co-desc">{!! $q->titulo !!}</div>
-	        		<div class="fh5co-desc">{!! $q->descripcion !!}</div>
+	        		<div class="fh5co-desc">
+						<h4>{!! $q->titulo !!}</h4>
+						{!! $q->descripcion !!}
+					</div>
 					<div class="fh5co-desc">{{$q->tipopropiedad}}</div>
-					<div class="fh5co-desc">{{ $q->precio_compra }}</div>
-					
-					
+					<div class="col-md-offset-4">
+						{{ $q->precio_compra }}{{ $q->precio_alquiler }} <b>{{ $q->moneda }}</b>
+					</div>
 	        	</div>  
 	        	@endforeach	
 	        </div>
