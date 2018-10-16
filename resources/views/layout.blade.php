@@ -64,7 +64,8 @@
 						<div class="navbar-header">
 							<a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"></a>
 							<a href="javascript:void(0);" class="bars" style="display: block;"></a>
-							<a class="navbar-brand" href="../../index.html">ADMINBSB - MATERIAL DESIGN</a>
+							<img class="logo" src="{{asset('/')}}frontend/images/logo.png" alt="">
+							<a class="navbar-brand" href="{{url('/')}}">{{$title}}</a>
 						</div>
 						<div class="collapse navbar-collapse" id="navbar-collapse">
 							<ul class="nav navbar-nav navbar-right">
@@ -264,7 +265,21 @@
 					</div>
 				</nav>		
 
+				<aside id="leftsidebar" class="sidebar">
+						<!-- Menu -->
+						<div class="menu">
+							<div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 582px;"><ul class="list" style="overflow: hidden; width: auto; height: 582px;">
 
+								<li <?php if($active == 'index'){ echo 'class="active"'; } ?> ><a href="{{url('/')}}">Inicio</a></li>
+								<li <?php if($active == 'about'){ echo 'class="active"'; } ?> ><a href="{{url('about')}}">sobre</a></li>
+								<li <?php if($active == 'contact'){ echo 'class="active"'; } ?> ><a href="{{url('contact')}}">Contact</a></li>
+
+								
+							</ul><div class="slimScrollBar" style="background: rgba(0, 0, 0, 0.5); width: 4px; position: absolute; top: 84.6484px; opacity: 0.4; display: none; border-radius: 0px; z-index: 99; right: 1px; height: 197.853px;"></div><div class="slimScrollRail" style="width: 4px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 0px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div></div>
+						</div>
+						<!-- #Menu -->
+
+					</aside>
 
 
 
@@ -277,12 +292,8 @@
 
 	<div >
 		<a href="#" class="fh5co-offcanvass-close js-fh5co-offcanvass-close">Menu <i class="icon-cross"></i> </a>
-		<h1 class="fh5co-logo"><a class="navbar-brand" href="index.html">{{$title}}</a></h1>
-		<ul>
-			<li <?php if($active == 'index'){ echo 'class="active"'; } ?> ><a href="{{url('/')}}">Home</a></li>
-			<li <?php if($active == 'about'){ echo 'class="active"'; } ?> ><a href="{{url('about')}}">About</a></li>
-			<li <?php if($active == 'contact'){ echo 'class="active"'; } ?> ><a href="{{url('contact')}}">Contact</a></li>
-		</ul>
+
+		
 		<h3 class="fh5co-lead">Connect with us</h3>
 		<p class="fh5co-social-icons">
 			<a href="#"><i class="icon-twitter"></i></a>
@@ -292,21 +303,12 @@
 			<a href="#"><i class="icon-youtube"></i></a>
 		</p>
 	</div>
-	<header id="fh5co-header" role="banner">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<a href="#" class="fh5co-menu-btn js-fh5co-menu-btn">Menu <i class="icon-menu"></i></a>
-					<a class="navbar-brand" href="index.html">{{$title}}</a>		
-				</div>
-			</div>
-		</div>
-	</header>
+
 	<!-- END .header -->
 	<!-- content -->
-	
+	<section class="content">	
 	@yield('content')
-
+	</section>
 	<!-- end content -->
 	<footer id="fh5co-footer">
 		
@@ -320,7 +322,7 @@
 						<a href="#"><i class="icon-dribbble"></i></a>
 						<a href="#"><i class="icon-youtube"></i></a>
 					</p>
-					<p><small>&copy; {{$title}} is FREE Template. All Rights Reserved. </small></p>
+					<p><small>&copy; {{$title}} bluepixel. All Rights Reserved. </small></p>
 				</div>
 			</div>
 		</div>

@@ -1,3 +1,17 @@
 img.card-img-top {
   width: 100%;
 }
+
+img.logo {
+  margin-left: 28px;
+  float: left;
+  height: 52px;
+}
+
+section.content {
+  margin-top: 0;
+}
+
+.sidebar .menu {
+  overflow-y: hidden;
+}
