@@ -28,7 +28,9 @@ namespace App\Http\Controllers;
 			$data['active'] = 'listado';
 			$data['propiedad'] = DB::table('propiedad')
 			->join('moneda','propiedad.moneda_id','=','moneda.id')
+			->join('localidad_propiedad','propiedad.localidad_propiedad_id','=','localidad_propiedad.id')
 			->where('publicado',1)
+			->where('localidad_propiedad.id',5)
 			->orderby('propiedad.id','desc')->get();
 			return view('listado',$data);
 		}

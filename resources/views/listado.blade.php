@@ -9,7 +9,7 @@
 
 
 
-				@foreach($listado as $q)
+				@foreach($propiedad as $q)
 				
 				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
 						<div class="card">
