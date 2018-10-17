@@ -3,7 +3,7 @@
 
 
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-<h2>Listado</h2>
+<h2>Listado Alquiler</h2>
 </div>
 <!-- start content -->
 
@@ -21,7 +21,14 @@
 										</div>
 										<div class="fh5co-desc">{{$q->tipopropiedad}}</div>
 										<div class="col-md-offset-4">
-											{{ $q->precio_compra }}{{ $q->precio_alquiler }} <b>{{ $q->moneda }}</b>
+
+										@if($q->precio_compra != 0 )
+											<b>{{ $q->precio_compra }}</b>
+										@else
+											<b>{{ $q->precio_alquiler }}</b>
+										@endif
+												
+											<b>{{ $q->moneda }}</b>
 										</div>
 							</div>
 						</div>
