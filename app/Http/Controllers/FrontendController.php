@@ -22,17 +22,31 @@ namespace App\Http\Controllers;
 		}
 
 
-		public function getListado(){
+		public function getListadoventa(){
 			$title =DB::table('cms_settings')->where('name','appname')->First();
 			$data['title'] = $title->content;
-			$data['active'] = 'listado';
+			$data['active'] = 'listadoventa';
+			$data['propiedad'] = DB::table('propiedad')
+			->join('moneda','propiedad.moneda_id','=','moneda.id')
+			->join('localidad_propiedad','propiedad.localidad_propiedad_id','=','localidad_propiedad.id')
+			->join('tipooperacion','propiedad.tipooperacion_id','=','tipooperacion.id')
+			->where('publicado',1)
+			->where('tipooperacion_id',1)
+			->orderby('propiedad.id','desc')->get();
+			return view('listadoventa',$data);
+		}
+
+		public function getListadoalquiler(){
+			$title =DB::table('cms_settings')->where('name','appname')->First();
+			$data['title'] = $title->content;
+			$data['active'] = 'listadoalquiler';
 			$data['propiedad'] = DB::table('propiedad')
 			->join('moneda','propiedad.moneda_id','=','moneda.id')
 			->join('localidad_propiedad','propiedad.localidad_propiedad_id','=','localidad_propiedad.id')
 			->where('publicado',1)
-			->where('localidad_propiedad.id',5)
+			->where('tipooperacion_id',2)
 			->orderby('propiedad.id','desc')->get();
-			return view('listado',$data);
+			return view('listadoalquiler',$data);
 		}
 
 //		DB::table('table1')
