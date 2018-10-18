@@ -23,9 +23,9 @@
 										<div class="col-md-offset-4">
 
 										@if($q->precio_compra != 0 )
-											<b>{{ $q->precio_compra }}</b>
+											<b>{{ number_format($q->precio_compra, 0, ".", ".") }}</b>
 										@else
-											<b>{{ $q->precio_alquiler }}</b>
+											<b>{{ number_format($q->precio_alquiler, 0, ".", ".") }}</b>
 										@endif
 												
 											<b>{{ $q->moneda }}</b>

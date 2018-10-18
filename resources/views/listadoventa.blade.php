@@ -7,13 +7,6 @@
 </div>
 <!-- start content -->
 
-<?
-$precio_compraVar = '$q->precio_compra';
-$precio_alquierVar = '$q->precio_alquiler';
-number_format($precio_compraVar, 2, ",", ".");
-number_format($precio_alquierVar, 2, ",", ".");
-?>
-
 				@foreach($propiedad as $q)
 				
 				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
@@ -29,9 +22,9 @@ number_format($precio_alquierVar, 2, ",", ".");
 										<div class="col-md-offset-4">
 
 										@if($q->precio_compra != 0 )
-											<b>{{ $q->precio_compra }}</b>
+											<b>{{ number_format($q->precio_compra, 0, ".", ".") }}</b>
 										@else
-											<b>{{ $q->precio_alquiler }}</b>
+											<b>{{ number_format($q->precio_alquiler, 0, ".", ".") }}</b>
 										@endif
 
 

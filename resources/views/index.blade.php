@@ -21,7 +21,14 @@
 										</div>
 										<div class="fh5co-desc">{{$q->tipopropiedad}}</div>
 										<div class="col-md-offset-4">
-											{{ $q->precio_compra }}{{ $q->precio_alquiler }} <b>{{ $q->moneda }}</b>
+										
+										@if($q->precio_compra != 0 )
+											<b>{{ number_format($q->precio_compra, 0, ".", ".") }}</b>
+										@else
+											<b>{{ number_format($q->precio_alquiler, 0, ".", ".") }}</b>
+										@endif
+										
+										<b>{{ $q->moneda }}</b>
 										</div>
 							</div>
 						</div>
