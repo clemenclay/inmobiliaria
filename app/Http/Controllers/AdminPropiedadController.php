@@ -20,7 +20,7 @@
 			$this->button_detail = true;
 			$this->button_show = true;
 			$this->button_filter = true;
-			$this->button_import = false;
+			$this->button_import = true;
 			$this->button_export = true;
 			$this->table = "propiedad";
 			# END CONFIGURATION DO NOT REMOVE THIS LINE
@@ -40,9 +40,14 @@
 			$this->col[] = ["label"=>"Calle","name"=>"calle"];
 			$this->col[] = ["label"=>"Altura","name"=>"altura"];
 			$this->col[] = ["label"=>"Piso","name"=>"piso"];
-	#		$this->col[] = ["label"=>"Maps","name"=>"maps"];
-	#		$this->col[] = ["label"=>"Map Latitude","name"=>"map_latitude"];
-	#		$this->col[] = ["label"=>"Map Longitude","name"=>"map_longitude"];
+
+			$this->col[] = ["label"=>"barrio_propiedad_id","name"=>"tipopropiedad_id","join"=>"barrio_propiedad,name"];
+			$this->col[] = ["label"=>"localidad_propiedad_id","name"=>"tipopropiedad_id","join"=>"localidad_propiedad,name"];
+			$this->col[] = ["label"=>"provincia_propiedad_id","name"=>"tipopropiedad_id","join"=>"provincia_propiedad,name"];
+
+			$this->col[] = ["label"=>"Maps","name"=>"maps"];
+			$this->col[] = ["label"=>"Map Latitude","name"=>"map_latitude"];
+			$this->col[] = ["label"=>"Map Longitude","name"=>"map_longitude"];
 
 			# END COLUMNS DO NOT REMOVE THIS LINE
 
@@ -63,7 +68,7 @@
 			$this->form[] = ['label'=>'Moneda','name'=>'moneda_id','type'=>'select2','validation'=>'required','width'=>'col-sm-9','datatable'=>'moneda,moneda'];			
 			$this->form[] = ['label'=>'Calle','name'=>'calle','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Altura','name'=>'altura','type'=>'number','validation'=>'required|integer|min:0','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Piso','name'=>'piso','type'=>'number','validation'=>'required|min:1|max:500','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Piso','name'=>'piso','type'=>'number','validation'=>'min:1|max:500','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Maps','name'=>'maps','type'=>'text','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Map Latitude','name'=>'map_latitude','type'=>'text','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Map Longitude','name'=>'map_longitude','type'=>'text','width'=>'col-sm-10'];
