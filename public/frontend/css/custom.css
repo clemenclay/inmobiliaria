@@ -15,3 +15,14 @@ section.content {
 .sidebar .menu {
   overflow-y: hidden;
 }
+
+.img-responsive, .thumbnail > img, .thumbnail a > img, .carousel-inner > .item > img, .carousel-inner > .item > a > img { 
+  width: 100%;
+}
+
+.carousel-inner {
+  position: relative;
+  width: calc(~'100% + 15px') !important;
+  overflow: hidden;
+  margin-left: -15px;
+}

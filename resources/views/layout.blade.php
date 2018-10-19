@@ -368,7 +368,7 @@
 	<script src="{{asset('frontend/material/js/demo.js')}}"></script>
 
 <script>
-  $('body').addClass('ls-closed');
+ // $('body').addClass('ls-closed');
   $('#carousel-example-generic').find('.item').first().addClass('active');
   
 </script>
