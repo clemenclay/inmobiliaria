@@ -14,10 +14,7 @@ namespace App\Http\Controllers;
 			$title =DB::table('cms_settings')->where('name','appname')->First();
 			$data['title'] = $title->content;
 			$data['active'] = 'index';
-			$data['propiedad'] = DB::table('propiedad')
-			->join('moneda','propiedad.moneda_id','=','moneda.id')
-			->where('publicado',1)
-			->orderby('propiedad.id','desc')->get();
+			$data['gallery'] = DB::table('gallery')->orderby('id','desc')->get();
 			return view('index',$data);
 		}
 

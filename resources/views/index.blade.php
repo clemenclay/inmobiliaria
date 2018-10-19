@@ -1,43 +1,39 @@
 @extends('layout')
 @section('content')
+                            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                                <!-- Indicators 
 
-
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-<h2>Propiedades</h2>
-</div>
-<!-- start content -->
-
-
-
-				@foreach($propiedad as $q)
-				
-				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-						<div class="card">
-								<img class="card-img-top" src="{{asset('/')}}{{$q->imagen}}" alt="">		
-							<div class="body">
-									<div class="fh5co-desc">
-											<h4>{!! $q->titulo !!}</h4>
-											{!! $q->descripcion !!}
+                                <ol class="carousel-indicators">
+								@foreach($gallery as $q)
+                                    <li data-target="#carousel-example-generic" data-slide-to="{{$q->id}}" class=""></li>
+								@endforeach
+                                </ol>
+-->
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner" role="listbox">
+								@foreach($gallery as $q)
+									<div class="item id-{{$q->id}}">
+										<img src="{{asset('/')}}{{$q->image}}">
+										<div class="carousel-caption">
+												<h3>{!! $q->description !!}</h3>
+												
 										</div>
-										<div class="fh5co-desc">{{$q->tipopropiedad}}</div>
-										<div class="col-md-offset-4">
-										
-										@if($q->precio_compra != 0 )
-											<b>{{ number_format($q->precio_compra, 0, ".", ".") }}</b>
-										@else
-											<b>{{ number_format($q->precio_alquiler, 0, ".", ".") }}</b>
-										@endif
-										
-										<b>{{ $q->moneda }}</b>
-										</div>
-							</div>
-						</div>
-				</div>
+                                    </div>
+									
+									
+								@endforeach
+                                </div>
 
-	        	@endforeach	
-
-
+                                <!-- Controls -->
+                                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
 
 
-<!-- end content -->
 @endsection
