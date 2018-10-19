@@ -27,6 +27,19 @@ namespace App\Http\Controllers;
 			->join('moneda','propiedad.moneda_id','=','moneda.id')
 			->join('localidad_propiedad','propiedad.localidad_propiedad_id','=','localidad_propiedad.id')
 			->join('tipooperacion','propiedad.tipooperacion_id','=','tipooperacion.id')
+	
+			->select(
+				'propiedad.*',
+				'imagen',
+				'titulo',
+				'descripcion',
+				'precio_compra',
+				'precio_compra',
+				'moneda',
+				'localidad_propiedad.name as localidad',
+				'tipooperacion.name as operacion'
+			)
+
 			->where('publicado',1)
 			->where('tipooperacion_id',1)
 			->orderby('propiedad.id','desc')->get();

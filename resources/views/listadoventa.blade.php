@@ -16,19 +16,19 @@
 									<div class="fh5co-desc">
 											<h4>{!! $q->titulo !!}</h4>
 											{!! $q->descripcion !!}
-											<b>operacion: {{ $q->tipooperacion }}</b>
+											<br>
+											<b>Localidad: {{ $q->localidad }}</b>
+											<br>
+											<b>Operacion: {{ $q->operacion }}</b>
 										</div>
-										<div class="fh5co-desc">{{$q->tipopropiedad}}</div>
 										<div class="col-md-offset-4">
 
-										@if($q->precio_compra != 0 )
-											<b>{{ number_format($q->precio_compra, 0, ".", ".") }}</b>
-										@else
-											<b>{{ number_format($q->precio_alquiler, 0, ".", ".") }}</b>
-										@endif
-
-
-											<b>{{ $q->moneda }}</b>
+											@if($q->precio_compra != 0 )
+												<b>{{ number_format($q->precio_compra, 0, ".", ".") }}</b>
+											@else
+												<b>{{ number_format($q->precio_alquiler, 0, ".", ".") }}</b>
+											@endif
+												<b>{{ $q->moneda }}</b>
 										
 										</div>
 							</div>
