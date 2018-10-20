@@ -34,6 +34,8 @@
                                     <span class="sr-only">Next</span>
                                 </a>
                             </div>
-
+                        
 
 @endsection
+
+<?php // include '{{url('/')}}listadoalquiler.blade.php'; ?> 
