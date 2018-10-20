@@ -8,7 +8,6 @@
 <!-- start content -->
 
 
-
 				@foreach($propiedad as $q)
 				
 				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
@@ -18,6 +17,10 @@
 									<div class="fh5co-desc">
 											<h4>{!! $q->titulo !!}</h4>
 											{!! $q->descripcion !!}
+											<br>
+											<b>Localidad: {{ $q->barrio }}</b>
+											<br>
+											<b>Operacion: {{ $q->operacion }}</b>
 										</div>
 										<div class="fh5co-desc">{{$q->tipopropiedad}}</div>
 										<div class="col-md-offset-4">

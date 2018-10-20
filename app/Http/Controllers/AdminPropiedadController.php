@@ -29,7 +29,7 @@
 			$this->col = [];
 			$this->col[] = ["label"=>"Publicado","name"=>"publicado",'dataenum'=>'0|NO;1|SI'];
 			$this->col[] = ["label"=>"Titulo","name"=>"titulo"];
-			$this->col[] = ["label"=>"Descripcion","name"=>"descripcion"];
+#			$this->col[] = ["label"=>"Descripcion","name"=>"descripcion"];
 			$this->col[] = ["label"=>"Imagen","name"=>"imagen","image"=>true];
 			
 			$this->col[] = ["label"=>"Tipo Operacion","name"=>"tipooperacion_id","join"=>"tipooperacion,name"];
@@ -37,17 +37,17 @@
 			$this->col[] = ["label"=>"Precio Compra","name"=>"precio_compra",'callback_php'=>'number_format([precio_compra])','decimals'=>'2','dec_point'=>'.'];
 			$this->col[] = ["label"=>"Precio Alquiler","name"=>"precio_alquiler",'callback_php'=>'number_format([precio_alquiler])','decimals'=>'2','dec_point'=>'.'];
 			$this->col[] = ["label"=>"Moneda","name"=>"moneda_id","join"=>"moneda,moneda"];
-			$this->col[] = ["label"=>"Calle","name"=>"calle"];
-			$this->col[] = ["label"=>"Altura","name"=>"altura"];
-			$this->col[] = ["label"=>"Piso","name"=>"piso"];
+#			$this->col[] = ["label"=>"Calle","name"=>"calle"];
+#			$this->col[] = ["label"=>"Altura","name"=>"altura"];
+#			$this->col[] = ["label"=>"Piso","name"=>"piso"];
 
 			$this->col[] = ["label"=>"barrio_propiedad_id","name"=>"tipopropiedad_id","join"=>"barrio_propiedad,name"];
 			$this->col[] = ["label"=>"localidad_propiedad_id","name"=>"tipopropiedad_id","join"=>"localidad_propiedad,name"];
 			$this->col[] = ["label"=>"provincia_propiedad_id","name"=>"tipopropiedad_id","join"=>"provincia_propiedad,name"];
 
-			$this->col[] = ["label"=>"Maps","name"=>"maps"];
-			$this->col[] = ["label"=>"Map Latitude","name"=>"map_latitude"];
-			$this->col[] = ["label"=>"Map Longitude","name"=>"map_longitude"];
+#			$this->col[] = ["label"=>"Maps","name"=>"maps"];
+#			$this->col[] = ["label"=>"Map Latitude","name"=>"map_latitude"];
+#			$this->col[] = ["label"=>"Map Longitude","name"=>"map_longitude"];
 
 			# END COLUMNS DO NOT REMOVE THIS LINE
 

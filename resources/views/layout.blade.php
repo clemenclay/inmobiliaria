@@ -270,11 +270,11 @@
 						<div class="menu">
 							<div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 582px;"><ul class="list" style="overflow: hidden; width: auto; height: 582px;">
 
-								<li <?php if($active == 'index'){ echo 'class="active"'; } ?> ><a href="{{url('/')}}">Inicio</a></li>
-								<li <?php if($active == 'listadoventa'){ echo 'class="active"'; } ?> ><a href="{{url('listadoventa')}}">Venta</a></li>
-								<li <?php if($active == 'listadoalquiler'){ echo 'class="active"'; } ?> ><a href="{{url('listadoalquiler')}}">Alquiler</a></li>
-								<li <?php if($active == 'about'){ echo 'class="active"'; } ?> ><a href="{{url('about')}}">Sobre</a></li>
-								<li <?php if($active == 'contact'){ echo 'class="active"'; } ?> ><a href="{{url('contact')}}">Contacto</a></li>
+								<li <?php if($active == 'index'){ echo 'class="active"'; } ?> ><a class=" waves-effect waves-block" href="{{url('/')}}"><i class="material-icons">home</i><span>Inicio</span></a></li>
+								<li <?php if($active == 'listadoventa'){ echo 'class="active"'; } ?> ><a class=" waves-effect waves-block" href="{{url('listadoventa')}}"><i class="material-icons">store</i><span>Venta</span></a></li>
+								<li <?php if($active == 'listadoalquiler'){ echo 'class="active"'; } ?> ><a class=" waves-effect waves-block" href="{{url('listadoalquiler')}}"><i class="material-icons">event</i><span>Alquiler</span></a></li>
+								<li <?php if($active == 'about'){ echo 'class="active"'; } ?> ><a class=" waves-effect waves-block" href="{{url('about')}}"><i class="material-icons">info</i><span>Sobre</span></a></li>
+								<li <?php if($active == 'contact'){ echo 'class="active"'; } ?> ><a class=" waves-effect waves-block" href="{{url('contact')}}"><i class="material-icons">mail</i><span>Contacto</span></a></li>
 
 								
 							</ul><div class="slimScrollBar" style="background: rgba(0, 0, 0, 0.5); width: 4px; position: absolute; top: 84.6484px; opacity: 0.4; display: none; border-radius: 0px; z-index: 99; right: 1px; height: 197.853px;"></div><div class="slimScrollRail" style="width: 4px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 0px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div></div>
@@ -367,10 +367,22 @@
 	<!-- Main JS -->
 	<script src="{{asset('frontend/material/js/demo.js')}}"></script>
 
+	<script>
+
+		$('#carousel-example-generic').find('.item').first().addClass('active');
+	
+	</script>
+
+
 <script>
- // $('body').addClass('ls-closed');
-  $('#carousel-example-generic').find('.item').first().addClass('active');
-  
+
+var FuncionBorrarDatosDenunciante = function()
+	{
+	if($( "h3:contains('Casa 1')").length !== 0){
+		$('.content').addClass('sin-borde');
+	}
+	}();
+
 </script>
 
 	</body>

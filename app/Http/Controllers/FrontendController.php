@@ -27,6 +27,7 @@ namespace App\Http\Controllers;
 			->join('moneda','propiedad.moneda_id','=','moneda.id')
 			->join('localidad_propiedad','propiedad.localidad_propiedad_id','=','localidad_propiedad.id')
 			->join('tipooperacion','propiedad.tipooperacion_id','=','tipooperacion.id')
+			->join('barrio_propiedad','propiedad.barrio_propiedad_id','=','barrio_propiedad.id')
 	
 			->select(
 				'propiedad.*',
@@ -36,6 +37,7 @@ namespace App\Http\Controllers;
 				'precio_compra',
 				'precio_compra',
 				'moneda',
+				'barrio_propiedad.name as barrio',
 				'localidad_propiedad.name as localidad',
 				'tipooperacion.name as operacion'
 			)
@@ -53,6 +55,20 @@ namespace App\Http\Controllers;
 			$data['propiedad'] = DB::table('propiedad')
 			->join('moneda','propiedad.moneda_id','=','moneda.id')
 			->join('localidad_propiedad','propiedad.localidad_propiedad_id','=','localidad_propiedad.id')
+			->join('tipooperacion','propiedad.tipooperacion_id','=','tipooperacion.id')
+			->join('barrio_propiedad','propiedad.barrio_propiedad_id','=','barrio_propiedad.id')
+			->select(
+				'propiedad.*',
+				'imagen',
+				'titulo',
+				'descripcion',
+				'precio_compra',
+				'precio_compra',
+				'moneda',
+				'barrio_propiedad.name as barrio',
+				'localidad_propiedad.name as localidad',
+				'tipooperacion.name as operacion'
+			)
 			->where('publicado',1)
 			->where('tipooperacion_id',2)
 			->orderby('propiedad.id','desc')->get();

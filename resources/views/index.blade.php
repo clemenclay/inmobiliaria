@@ -37,10 +37,3 @@
 
 
 @endsection
-
-<script>
-$(function(){
-    $('.content').addClass('sin-borde');
-});
-
-</script>
