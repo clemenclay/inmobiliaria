@@ -16,9 +16,9 @@
 					  <img class="activator" src="{{asset('/')}}{{$q->imagen}}">
 					</div>
 					<div class="card-content">
-					  <h5 class="card-title activator indigo-text">
+					  <span class="card-title activator indigo-text">
 							<i class="material-icons right">more_vert</i>
-							{!! $q->titulo !!}</h5>
+							{!! $q->titulo !!}</span>
 						<b>Localidad: {{ $q->barrio }}</b>
 						<br>
 						<b>Operacion: {{ $q->operacion }}</b>
@@ -30,9 +30,9 @@
 							<b>{{ $q->moneda }}</b>
 					</div>
 					<div class="card-reveal">
-					  <h5 class="card-title indigo-text">
+					  <span class="card-title indigo-text">
 							<i class="material-icons right">close</i>
-							{!! $q->titulo !!}</h5>
+							{!! $q->titulo !!}</span>
 					  <p>{!! $q->descripcion !!}</p>
 					</div>
 				  </div>
