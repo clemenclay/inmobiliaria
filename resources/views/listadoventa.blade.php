@@ -11,12 +11,14 @@
 	
 				
 				<div class="col s12 m6 l3">
-				<div class="card">
+				<div class="card hoverable">
 					<div class="card-image waves-effect waves-block waves-light">
 					  <img class="activator" src="{{asset('/')}}{{$q->imagen}}">
 					</div>
 					<div class="card-content">
-					  <span class="card-title activator grey-text text-darken-4">{!! $q->titulo !!}<i class="material-icons right">more_vert</i></span>
+					  <h5 class="card-title activator indigo-text">
+							<i class="material-icons right">more_vert</i>
+							{!! $q->titulo !!}</h5>
 						<b>Localidad: {{ $q->barrio }}</b>
 						<br>
 						<b>Operacion: {{ $q->operacion }}</b>
@@ -28,7 +30,9 @@
 							<b>{{ $q->moneda }}</b>
 					</div>
 					<div class="card-reveal">
-					  <span class="card-title grey-text text-darken-4">{!! $q->titulo !!}<i class="material-icons right">close</i></span>
+					  <h5 class="card-title indigo-text">
+							<i class="material-icons right">close</i>
+							{!! $q->titulo !!}</h5>
 					  <p>{!! $q->descripcion !!}</p>
 					</div>
 				  </div>

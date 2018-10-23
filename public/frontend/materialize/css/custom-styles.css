@@ -9060,6 +9060,7 @@ img.card-img-top {
     /* margin-left: 41px; */
     float: left;
     height: 44px;
+    margin: 8px;
   }
   
   section.content {
@@ -9144,4 +9145,18 @@ nav div div a.active  {
 nav div div a:hover {
     background: #0277bd !important;
     color: #ffffff !important;
+}
+
+.botones-centrados {
+    display: inline-flex;
+}
+
+.card .card-title {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.card .card-content {
+    padding: 10px;
+    border-radius: 0 0 2px 2px;
 }
