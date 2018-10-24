@@ -147,3 +147,18 @@ nav div div a:hover {
 }
 
 
+.tabs-cards {
+    position: absolute;
+    background-color: transparent;
+    float: left;
+    right: 0;
+    top: 56px;
+    z-index: 99999;
+    width: 60px;
+    height: 108px;
+    overflow: hidden;
+}
+
+.tabs-cards li.tab {
+    display: grid;
+}

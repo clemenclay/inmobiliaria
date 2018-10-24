@@ -51,9 +51,9 @@
 <div class="row">				
 		<div class="col s12 m6 l3">
 		<div class="card hoverable">
-				<ul class="tabs tabs-fixed-width tab-demo z-depth-1">
-						<li class="tab"><a href="#test1">mapa</a></li>
-						<li class="tab"><a class="active" href="#test2">fotos</a></li>
+				<ul class="tabs tabs-cards">
+						<li class="tab"><a href="#test1"><i class="material-icons">place</i></a></li>
+						<li class="tab"><a class="active" href="#test2"><i class="material-icons">photo_camera</i></a></li>
 					</ul>
 					<div id="test1" class=""><iframe width="100%" height="350" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=-34.564415,-58.462908&amp;zoom=15&amp;key=AIzaSyAOCzRBIJRykPBCzw_F1eggTD4uCxCwVRg" allowfullscreen=""></iframe></div>
 					<div id="test2" class="">
