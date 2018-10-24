@@ -153,45 +153,7 @@
 		
 		
 		
-		<footer class="page-footer light-primary-color">
-			<div class="footer-copyright">
-				<div class="container">
-				  <span>Copyright ©
-					<script type="text/javascript">
-					  document.write(new Date().getFullYear());
-					</script> <a class="grey-text default-text-primary-color" href="http://bluepixel.com.ar" target="_blank">BLUEPIXEL</a> All rights reserved.</span>
-					<span class="right hide-on-small-only"> Design and Developed by <a class="grey-text default-text-primary-color" href="http://bluepixel.com.ar/">BLUEPIXEL</a></span>
-				</div>
-			</div>
-		</footer>
-
-
-
-
-		<script src="{{asset('frontend/materialize/js/main.js')}}"></script>
-		<script src="{{asset('frontend/materialize/js/rotate.js')}}"></script>
-		<script src="{{asset('frontend/materialize/js/twitter-feed.js')}}"></script>
-		<script type="text/javascript" src="{{asset('frontend/materialize/js/menu.js')}}"></script>
-		
-		<script src="{{asset('frontend/materialize/js/angular.js')}}"></script>
-		<script src="{{asset('frontend/materialize/js/app.js')}}"></script>
-		<script src="{{asset('frontend/materialize/js/controllers.js')}}"></script>
-		
-		<script src="{{asset('frontend/materialize/js/materialize.js')}}"></script>
-		<script src="{{asset('frontend/materialize/js/init.js')}}"></script>
-		
-		<script src="//code.tidio.co/sk4iuwxfeabvtqpwirjoll7s1ln6uxbd.js')}}"></script>
-
-
-
-
-<script>
-	$('.carousel.carousel-slider').carousel({fullWidth: true},setTimeout(autoplay, 4500000000000000000000));
-	function autoplay() {
-		$('.carousel').carousel('next');
-		setTimeout(autoplay, 4500000000000000000);
-	}
-</script>
+		@include('footer')	
 
 	</body>
 </html>

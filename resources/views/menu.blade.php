@@ -1,6 +1,5 @@
-<nav class="navbar-fixed">
+<nav class="navbar-fixed indigo darken-4">
 
-	
 			<!--   MENU ARRIBA -->
 				<div class="categories-wrapper light-blue darken-4">
 				<div class="categories-container pin-top" style="top: 0px;">
@@ -30,7 +29,8 @@
 					</div>
 				</div>
 			</div>
-		</nav>
+
+</nav>
 		<!--   MENU izquierda mobil -->
 	<ul class="side-nav" id="nav-mobile" style="transform: translateX(-100%);">
 		<li><a <?php if($active == 'index'){ echo 'class="collapsible-header waves-effect waves-teal active"'; } ?> class="collapsible-header waves-effect waves-teal" href="{{url('/')}}"><i class="material-icons">home</i> Inicio</a></li>
@@ -38,3 +38,5 @@
 		<li><a <?php if($active == 'listadoalquiler'){ echo 'class="collapsible-header waves-effect waves-teal active"'; } ?> class="collapsible-header waves-effect waves-teal" href="{{url('listadoalquiler')}}"><i class="material-icons">event</i> Alquiler</a></li>
 		<li><a <?php if($active == 'contact'){ echo 'class="collapsible-header waves-effect waves-teal active"'; } ?> class="collapsible-header waves-effect waves-teal" href="{{url('contact')}}"><i class="material-icons">email</i> Contacto</a></li>
 	</ul>
+
+
