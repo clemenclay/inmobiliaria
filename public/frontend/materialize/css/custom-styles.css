@@ -162,3 +162,11 @@ nav div div a:hover {
 .tabs-cards li.tab {
     display: grid;
 }
+
+@media only screen and (max-width: 992px){.tabs {
+  display: grid !important;
+}}
+
+.tabs .indicator {
+  display: none;
+}
