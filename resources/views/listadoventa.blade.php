@@ -3,7 +3,7 @@
 
 
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-<h2>Listado Venta</h2>
+<h5>Listado Venta</h5>
 </div>
 <!-- start content -->
 <div class="row">	
@@ -44,4 +44,96 @@
 				
 </div>
 <!-- end content -->
+
+
+
+
+<div class="row">				
+		<div class="col s12 m6 l3">
+		<div class="card hoverable">
+				<ul class="tabs tabs-cards">
+					
+				
+						
+			
+
+
+					<li id="mapaid" class="tab btn-floating waves-effect waves-light btn-large blue scale-transition"><a class="" href="#test1"><i class=" material-icons">place</i></a></li>
+					
+					
+					<li id="fotoid" class="tab btn-floating waves-effect waves-light btn-large blue scale-transition hide"><a class="active" href="#test2"><i class="material-icons">photo_camera</i></a></li>
+					
+				
+				</ul>
+					<div id="test1" class="tabs-content carousel carousel-slider">
+						<div class="carousel-item">
+								<iframe width="100%" height="310" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=-34.564415,-58.462908&amp;zoom=15&amp;key=AIzaSyAOCzRBIJRykPBCzw_F1eggTD4uCxCwVRg" allowfullscreen=""></iframe>
+						</div>	
+					</div>
+					
+					<div id="test2" class="tabs-content carousel carousel-slider">
+						<div class="carousel-item">	
+							<div class="carousel carousel-slider">
+									<a class="carousel-item" href="#one!"><img src="{{asset('/')}}/uploads/1/2018-10/descarga_1.jpg"></a>
+									<a class="carousel-item" href="#two!"><img src="{{asset('/')}}/uploads/1/2018-10/descarga_15.jpg"></a>
+									<a class="carousel-item" href="#three!"><img src="{{asset('/')}}/uploads/1/2018-10/descarga_13.jpg"></a>
+							</div>
+						</div>	
+					</div>
+
+
+				
+				
+
+
+
+			<div class="card-content">
+				<span class="card-title activator indigo-text">
+					<i class="material-icons right">more_vert</i>
+					Cochera en Venta | Capital Federal | Belgrano | Cnel J Moldes al 2200</span>
+				<b>Localidad: Belgrano</b>
+				<br>
+				<b>Operacion: Venta</b>
+											<b>27.500</b>
+											<b>Dolares</b>
+			</div>
+			<div class="card-reveal">
+				<span class="card-title indigo-text">
+					<i class="material-icons right">close</i>
+					Cochera en Venta | Capital Federal | Belgrano | Cnel J Moldes al 2200</span>
+				<p>Cochera fija cubierta, en 1º Subsuelo, acceso por portón automatizado, cómoda rampa, el espacio es amplio y no queda pegado a otro vehiculo, ya que de un lateral posee pared y del otro lateral se encuentra una columna que la separa de la cochera contigua. inmejorable ubicación.</p>
+			</div>
+			</div>
+		</div>
+</div>
+
+<script>
+$(document).ready(function() {
+	
+	$("#fotoid").click(function(){
+
+	$("#fotoid").addClass("scale-out");
+	$("#mapaid").removeClass("scale-out").removeClass("hide");
+	$("#mapaid").show();
+});
+
+	$("#mapaid").click(function(){
+
+	$("#mapaid").addClass("scale-out");
+	$("#fotoid").removeClass("scale-out").removeClass("hide");
+	$("#fotoid").show();
+
+});
+
+
+
+});
+</script>
+
 @endsection
+
+
+	
+
+
+	
