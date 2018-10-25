@@ -170,3 +170,26 @@ nav div div a:hover {
 .tabs .indicator {
   display: none;
 }
+
+
+.card-mapa-imagen {
+  display: block;
+  border-radius: 2px 2px 0 0;
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 250px;
+  width: 100% !important;
+}
+
+.card .card-image img {
+  height: 250px;
+  width: 100% !important;
+  object-fit: cover;
+}
+
+.carousel .carousel-item>img {height: 250px;
+  width: 100% !important;
+  object-fit: cover;}

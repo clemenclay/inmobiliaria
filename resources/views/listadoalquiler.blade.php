@@ -103,12 +103,7 @@
 
 
 				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-					<a href="#13" data-toggle="tab" aria-expanded="true" style="
-position: absolute;
-top: 93px;
-right: 21px;
-z-index: 9999999999;
-">
+					<a href="#13" data-toggle="tab" aria-expanded="true" style="">
 														<i class="material-icons btn btn-primary btn-circle waves-effect waves-circle waves-float">place</i></a><div class="card">
 
 <div class="tab-content">
