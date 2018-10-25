@@ -148,19 +148,21 @@ nav div div a:hover {
 
 
 .tabs-cards {
-    position: absolute;
-    background-color: transparent;
-    float: left;
-    right: 0;
-    top: 56px;
-    z-index: 99999;
-    width: 60px;
-    height: 108px;
-    overflow: hidden;
+  position: absolute;
+  background-color: transparent;
+  float: left;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  width: 60px;
+  height: 250px;
+  overflow: hidden;
 }
 
 .tabs-cards li.tab {
-    display: grid;
+  display: grid;
+  position: absolute;
+  margin: 100px 10px;
 }
 
 @media only screen and (max-width: 992px){.tabs {
@@ -193,3 +195,17 @@ nav div div a:hover {
 .carousel .carousel-item>img {height: 250px;
   width: 100% !important;
   object-fit: cover;}
+
+  .card-mapa-imagen  div {
+    height: 250px !important;
+}
+
+.btn-floating a {
+  line-height: 40px !important;
+  padding: 0px !important;
+}
+
+.btn-floating {
+  height: 40px !important;}
+
+

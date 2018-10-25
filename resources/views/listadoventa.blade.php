@@ -51,36 +51,36 @@
 <div class="row">				
 		<div class="col s12 m6 l3">
 		<div class="card hoverable">
+				{{-- <div class="btn green prev waves-effect">Prev</div>
+				<div class="btn green next waves-effect">Next</div> --}}
 
-
-			<div class="card-mapa-imagen">
-				<ul class="tabs tabs-cards">
-					<li id="mapaid" class="tab btn-floating waves-effect waves-light btn-large blue scale-transition">
-						<a class="" href="#test1"><i class=" material-icons">place</i></a>
-					</li>
-					<li id="fotoid" class="tab btn-floating waves-effect waves-light btn-large blue scale-transition hide">
-						<a class="active" href="#test2"><i class="material-icons">photo_camera</i></a>
-					</li>
-				</ul>
-				<div id="test1" class="tabs-content carousel carousel-slider">
-						<div class="carousel-item">
-								<iframe width="100%" height="250px" frameborder="0" style="border:0" 
-								src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=244+5th+Avenue,+New+York,+NY&amp;aq=t&amp;sll=37.0625,-95.677068&amp;sspn=48.956293,107.138672&amp;ie=UTF8&amp;hq=&amp;hnear=244+5th+Ave,+New+York,+10016&amp;ll=40.744556,-73.987378&amp;spn=0.005763,0.013078&amp;t=m&amp;z=14&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=244+5th+Avenue,+New+York,+NY&amp;aq=t&amp;sll=37.0625,-95.677068&amp;sspn=48.956293,107.138672&amp;ie=UTF8&amp;hq=&amp;hnear=244+5th+Ave,+New+York,+10016&amp;ll=40.744556,-73.987378&amp;spn=0.005763,0.013078&amp;t=m&amp;z=14"
-								 allowfullscreen="">
-								</iframe>
-						</div>	
-				</div>
-				<div id="test2" class="tabs-content carousel carousel-slider">
-						<div class="carousel-item">	
-							<div class="carousel carousel-slider">
-									<a class="carousel-item" href="#one!"><img src="{{asset('/')}}uploads/1/2018-10/descarga_1.jpg"></a>
-									<a class="carousel-item" href="#two!"><img src="{{asset('/')}}uploads/1/2018-10/descarga_15.jpg"></a>
-									<a class="carousel-item" href="#three!"><img src="{{asset('/')}}uploads/1/2018-10/descarga_13.jpg"></a>
-							</div>
-						</div>	
+			<div class="card-image waves-effect waves-block waves-light">
+				<div class="card-mapa-imagen">
+					<ul class="tabs tabs-cards">
+						<li id="mapaid" class="tab btn-floating waves-effect waves-light btn blue scale-transition">
+							<a class="" href="#test1"><i class=" material-icons">place</i></a>
+						</li>
+						<li id="fotoid" class="tab btn-floating waves-effect waves-light btn blue scale-transition hide">
+							<a class="active" href="#test2"><i class="material-icons">photo_camera</i></a>
+						</li>
+					</ul>
+					<ul class="indicators"><li class="indicator-item"></li><li class="indicator-item active"></li><li class="indicator-item"></li><li class="indicator-item"></li></ul>
+					<div id="test1" class="tabs-content carousel carousel-slider">
+							<div class="carousel-item">
+								<iframe width="100%" height="250" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=-34.564415,-58.462908&amp;zoom=15&amp;key=AIzaSyAOCzRBIJRykPBCzw_F1eggTD4uCxCwVRg" allowfullscreen=""></iframe>
+							</div>	
+					</div>
+					<div id="test2" class="tabs-content carousel carousel-slider">
+							<div class="carousel-item">	
+								<div class="carousel carousel-slider">
+										<a class="carousel-item" href="#one!"><img src="{{asset('/')}}uploads/1/2018-10/descarga_1.jpg"></a>
+										<a class="carousel-item" href="#two!"><img src="{{asset('/')}}uploads/1/2018-10/descarga_15.jpg"></a>
+										<a class="carousel-item" href="#three!"><img src="{{asset('/')}}uploads/1/2018-10/descarga_13.jpg"></a>
+								</div>
+							</div>	
+					</div>
 				</div>
 			</div>
-
 				
 				
 
@@ -132,12 +132,28 @@ $(document).ready(function() {
 
 });
 
-
-
-
-
 </script>
 
+
+
+
+{{-- <script>
+	$(document).ready(function(){
+		$('.carousel').carousel();
+
+
+    // function for next slide
+		$('.next').click(function(){
+			$('.carousel').carousel('next');
+		});
+    
+    // function for prev slide
+		$('.prev').click(function(){
+			$('.carousel').carousel('prev');
+		});
+	});
+	
+</script> --}}
 @endsection
 
 
