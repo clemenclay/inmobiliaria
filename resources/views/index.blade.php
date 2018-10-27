@@ -1,40 +1,23 @@
 @extends('layout')
 @section('content')
 
-
-<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-	<!-- Indicators 
-	<ol class="carousel-indicators">
-	@foreach($gallery as $q)
-		<li data-target="#carousel-example-generic" data-slide-to="{{$q->id}}" class=""></li>
-	@endforeach
-	</ol>
--->
-	<!-- Wrapper for slides -->
-	<div class="carousel-inner" role="listbox">
-	@foreach($gallery as $q)
-		<div class="item id-{{$q->id}}">
+<br>
+<div id="home-slider" class="carousel carousel-slider">
+    @foreach($gallery as $q)
+		<div class="carousel-item item id-{{$q->id}}">
 			<img src="{{asset('/')}}{{$q->image}}">
 			<div class="carousel-caption">
 					<h3>{!! $q->description !!}</h3>
 					
 			</div>
 		</div>
-		
-		
 	@endforeach
-	</div>
-
-	<!-- Controls -->
-	<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-		<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-		<span class="sr-only">Previous</span>
-	</a>
-	<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-		<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-		<span class="sr-only">Next</span>
-	</a>
 </div>
+<br>    
+<div class="prev btn-floating waves-effect waves-light btn white scale-transition"><i class="material-icons blue-text text-darken-2">navigate_before</i></div>
+<div class="next btn-floating waves-effect waves-light btn white scale-transition"><i class="material-icons blue-text text-darken-2">navigate_next</i></div>
+
+
 
 
 
@@ -248,21 +231,21 @@
 
 
 
-{{-- <script>
+<script>
 	$(document).ready(function(){
-		$('.carousel').carousel();
+		
 
 
     // function for next slide
 		$('.next').click(function(){
-			$('.carousel').carousel('next');
+			$('#home-slider').carousel('next');
 		});
     
     // function for prev slide
 		$('.prev').click(function(){
-			$('.carousel').carousel('prev');
+			$('#home-slider').carousel('prev');
 		});
 	});
 	
-</script> --}}
+</script>
 @endsection
