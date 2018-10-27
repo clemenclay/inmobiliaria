@@ -116,7 +116,7 @@
 	@yield('content')
 	</section>
 	<!-- end content -->
-	<style>
+	{{-- <style>
 		#logoAnimago{
 		width: 30px;
 		height: 30px;
@@ -149,7 +149,7 @@
 			
 		
 		});
-		</script>
+		</script> --}}
 		
 		
 		

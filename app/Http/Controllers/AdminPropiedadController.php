@@ -43,8 +43,6 @@
 
 
 
-			$this->col[] = ["label"=>"Donor","name"=>"donor","join"=>"reg_users_full,email","callback"=>function($row) { return '<a href="#" id="donor" data-type="select" data-pk="'.$row->donor.'" data-value="" data-title="Select Donor" class="editable editable-click" style="color: gray;" data-original-title="" title="">not selected</a>'; }];
-
 			$this->col[] = ["label"=>"barrio_propiedad_id","name"=>"tipopropiedad_id","join"=>"barrio_propiedad,name"];
 			$this->col[] = ["label"=>"localidad_propiedad_id","name"=>"tipopropiedad_id","join"=>"localidad_propiedad,name"];
 			$this->col[] = ["label"=>"provincia_propiedad_id","name"=>"tipopropiedad_id","join"=>"provincia_propiedad,name"];
