@@ -63,22 +63,22 @@
 						<div class="card-image waves-effect waves-block waves-light">
 								<div class="card-mapa-imagen">
 									<ul class="tabs tabs-cards">
-										<li id="mapaid" class="tab btn-floating waves-effect waves-light btn blue scale-transition">
-											<a class="" href="#test1"><i class=" material-icons">place</i></a>
+										<li id="ver-mapa-alquiler-{{ $q->id }}" class="tab btn-floating waves-effect waves-light btn white scale-transition">
+											<a class="" href="#mapa-alquiler-{{ $q->id }}"><i class="material-icons blue-text text-darken-2">place</i></a>
 										</li>
-										<li id="fotoid" class="tab btn-floating waves-effect waves-light btn blue scale-transition hide">
-											<a class="active" href="#test2"><i class="material-icons">photo_camera</i></a>
+										<li id="ver-fotos-alquiler-{{ $q->id }}" class="tab btn-floating waves-effect waves-light btn white scale-transition scale-out">
+											<a class="active" href="#fotos-alquiler-{{ $q->id }}"><i class="material-icons blue-text text-darken-2">photo_camera</i></a>
 										</li>
 									</ul>
-									<div id="test1" class="tabs-content carousel carousel-slider">
+									<div id="mapa-alquiler-{{ $q->id }}" class="tabs-content carousel carousel-slider">
 											<div class="carousel-item">
-												<iframe width="100%" height="250" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=-34.564415,-58.462908&amp;zoom=15&amp;key=AIzaSyAOCzRBIJRykPBCzw_F1eggTD4uCxCwVRg" allowfullscreen=""></iframe>
+												<iframe width="100%" height="250" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q={{ $q->map_latitude }},{{ $q->map_longitude }}&zoom=15&key=AIzaSyAOCzRBIJRykPBCzw_F1eggTD4uCxCwVRg" allowfullscreen="false"></iframe>
 											</div>	
 									</div>
-									<div id="test2" class="tabs-content carousel carousel-slider">
+									<div id="fotos-alquiler-{{ $q->id }}" class="tabs-content carousel carousel-slider">
 											<div class="carousel-item">	
 												<div class="carousel carousel-slider">
-														<a class="carousel-item" href="#one!"><img src="{{asset('/')}}{{$q->imagen}}"></a>
+														<a class="carousel-item" href=""><img src="{{asset('/')}}{{$q->imagen}}"></a>
 												</div>
 											</div>	
 									</div>
@@ -108,7 +108,31 @@
 					  </div>
 					</div>
 	
+					<script>
 	
+	
+	
+		
+						$(document).ready(function() {
+						
+							$("#ver-mapa-alquiler-{{ $q->id }}").click(function(){
+							$("#ver-mapa-alquiler-{{ $q->id }}").addClass("scale-out");
+							$("#ver-fotos-alquiler-{{ $q->id }}").removeClass("scale-out");
+							// $('mapa-{{ $q->id }}').addClass('animated bounceOutLeft');
+							// $('mapa-{{ $q->id }}').addClass('animated bounceInRight');					
+						});
+						
+							$("#ver-fotos-alquiler-{{ $q->id }}").click(function(){	
+							$("#ver-fotos-alquiler-{{ $q->id }}").addClass("scale-out");
+							$("#ver-mapa-alquiler-{{ $q->id }}").removeClass("scale-out");
+							// $('fotos-{{ $q->id }}').addClass('animated bounceOutLeft');
+							// $('fotos-{{ $q->id }}').addClass('animated bounceInRight');		
+						});
+						
+						
+						});
+						
+						</script>
 	
 					@endforeach	
 					
