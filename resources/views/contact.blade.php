@@ -36,7 +36,7 @@
 									<input type="email" class="form-control" placeholder="Email Address" name="email" required="">
 								</div> --}}
 								<div class="row">
-									<form class="col s12">
+									
 									  <div class="row">
 										<div class="input-field col s12">
 										  <input id="email" type="email" class="validate">
@@ -44,18 +44,18 @@
 										  <span class="helper-text" data-error="wrong" data-success="right">czzxcz</span>
 										</div>
 									  </div>
-									</form>
+									
 								</div>
 
 								<div class="row">
-									<form class="col s12">
+									
 									  <div class="row">
 										<div class="input-field col s12">
 										  <textarea name="message" id="message" id="message" class="materialize-textarea" type="text" class="validate"></textarea>
 										  <label for="message">Escriba su mensaje aquí</label>
 										</div>
 									  </div>
-									</form>
+									
 								</div>
 								{{-- <div class="form-group">
 									<textarea name="message" id="message" cols="30" class="form-control" rows="10" required=""></textarea>
