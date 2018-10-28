@@ -2,22 +2,24 @@
 @section('content')
 
 <br>
-<div id="home-slider" class="carousel carousel-slider">
+<div id="home-slider" class="card hoverable carousel carousel-slider">
     @foreach($gallery as $q)
 		<div class="carousel-item item id-{{$q->id}}">
 			<img src="{{asset('/')}}{{$q->image}}">
 			<div class="carousel-caption">
-					<h3>{!! $q->description !!}</h3>
+					<h5>{!! $q->description !!}</h5>
 					
 			</div>
 		</div>
 	@endforeach
+<div class="botonera-home-slider">
+	<div class="left prev btn-floating waves-effect waves-light btn white scale-transition"><i class="material-icons blue-text text-darken-2">navigate_before</i></div>
+	<div class="right next btn-floating waves-effect waves-light btn white scale-transition"><i class="material-icons blue-text text-darken-2">navigate_next</i></div>
+</div>
+
+
 </div>
 <br>    
-<div class="prev btn-floating waves-effect waves-light btn white scale-transition"><i class="material-icons blue-text text-darken-2">navigate_before</i></div>
-<div class="next btn-floating waves-effect waves-light btn white scale-transition"><i class="material-icons blue-text text-darken-2">navigate_next</i></div>
-
-
 
 
 
@@ -233,8 +235,11 @@
 
 <script>
 	$(document).ready(function(){
+		$('#home-slider').carousel();
 		
-
+		setInterval(function(){
+			$('#home-slider').carousel('next');
+		}, 2000);
 
     // function for next slide
 		$('.next').click(function(){
