@@ -212,7 +212,7 @@ nav div div a:hover {
 
 
 #home-slider.carousel .carousel-item>img {
-    height: 350px;
+    height: 450px;
     width: 100% !important;
     object-fit: cover;
 }
@@ -227,8 +227,9 @@ nav div div a:hover {
   color: #3f51b5;
 }
 
-/* .container {
+.container {
   width: calc(100% - 15px)!important;
-} */
+  max-width: 90%;
+}
 
 .botonera-home-slider{margin: 150px 15px}

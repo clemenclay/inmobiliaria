@@ -78,7 +78,7 @@ namespace App\Http\Controllers;
 			$title =DB::table('cms_settings')->where('name','appname')->First();
 			$data['title'] = $title->content;
 			$data['active'] = 'listadoventa';
-			$data['propiedad'] = DB::table('propiedad')
+			$data['listadoventa'] = DB::table('propiedad')
 			->join('moneda','propiedad.moneda_id','=','moneda.id')
 			->join('localidad_propiedad','propiedad.localidad_propiedad_id','=','localidad_propiedad.id')
 			->join('tipooperacion','propiedad.tipooperacion_id','=','tipooperacion.id')

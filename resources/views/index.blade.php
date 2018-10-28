@@ -1,7 +1,7 @@
 @extends('layout')
 @section('content')
 
-<br>
+
 <div id="home-slider" class="card hoverable carousel carousel-slider">
     @foreach($gallery as $q)
 		<div class="carousel-item item id-{{$q->id}}">
@@ -35,7 +35,7 @@
 
 
 
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+	<div class="l12">
 	<h5>Listado Alquiler</h5>
 	</div>
 	<!-- start content -->
@@ -43,7 +43,7 @@
 					@foreach($listadoalquiler as $q)
 		
 					
-					<div class="col s12 m6 l3">
+					<div class="col s12 m6 l4">
 					<div class="card hoverable">
 						<div class="card-image waves-effect waves-block waves-light">
 								<div class="card-mapa-imagen">
@@ -147,7 +147,7 @@
 				@foreach($listadocompleto as $q)
 	
 				
-				<div class="col s12 m6 l3">
+				<div class="col s12 m6 l4">
 				<div class="card hoverable">
 					<div class="card-image waves-effect waves-block waves-light">
 							<div class="card-mapa-imagen">
@@ -239,7 +239,7 @@
 		
 		setInterval(function(){
 			$('#home-slider').carousel('next');
-		}, 2000);
+		}, 4000);
 
     // function for next slide
 		$('.next').click(function(){
