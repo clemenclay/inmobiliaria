@@ -1,11 +1,11 @@
 <div class="navbar-fixed">
 <nav class="blue darken-3" role="navigation">
 		<div class="nav-wrapper container">
-				<ul class="left">  
+			<ul class="left" style="width: 285px;">     
 				<a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 				<a href="{{url('/')}}">
 					<img class="logo" src="{{asset('/')}}frontend/images/logo.png" alt="">
-					<div class="left">{{$title}}</div>
+					<div class="logo-texto">{{$title}}</div>
 				</a>
 				</ul>
 

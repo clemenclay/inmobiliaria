@@ -23,11 +23,21 @@ img.card-img-top {
   }
   
   img.logo {
-    /* margin-left: 41px; */
+    margin-left: 41px;
     float: left;
-    height: 44px;
-    margin: 8px;
-  }
+    margin: 0px;
+    height: 64px;
+    padding: 9px;
+}
+
+.logo-texto{
+  
+  margin: 0;
+  height: 64px;
+  line-height: 64px;
+  font-weight: bold;
+  font-size: 1.3em;
+  text-align: center;}
   
   section.content {
     margin-top: 0;
@@ -37,8 +47,14 @@ img.card-img-top {
     overflow-y: hidden;
   }
 
-.navbar-fixed {
+  .navbar-fixed {
     z-index: 9999;
+    height: 64px;
+}
+
+nav .sidenav-trigger i {
+  height: 64px;
+  line-height: 64px;
 }
 
   .side-nav {
@@ -238,4 +254,18 @@ nav div div a.active, nav div div a:hover {
   margin-left: -50vw;
   margin-top: 0;
   left: calc(50% - 9px);
+}
+
+nav .sidenav-trigger {
+  margin: 0;
+  height: 64px;
+}
+
+nav {
+  height: 64px;
+  line-height: 64px;
+}
+
+.sidenav {
+  top: 64px;
 }

@@ -28,14 +28,14 @@
 
 
 
-		{{-- <script src="{{asset('frontend/materialize/js/main.js')}}"></script>
+		<script src="{{asset('frontend/materialize/js/main.js')}}"></script>
 		<script src="{{asset('frontend/materialize/js/rotate.js')}}"></script>
 		<script src="{{asset('frontend/materialize/js/twitter-feed.js')}}"></script>
 		<script type="text/javascript" src="{{asset('frontend/materialize/js/menu.js')}}"></script>
 		
 		<script src="{{asset('frontend/materialize/js/angular.js')}}"></script>
 		<script src="{{asset('frontend/materialize/js/app.js')}}"></script>
-		<script src="{{asset('frontend/materialize/js/controllers.js')}}"></script> --}}
+		<script src="{{asset('frontend/materialize/js/controllers.js')}}"></script> 
 		
 		<script src="{{asset('frontend/materialize/js/materialize.js')}}"></script>
 		<script src="{{asset('frontend/materialize/js/init.js')}}"></script>
@@ -53,5 +53,7 @@ M.AutoInit()
 	function autoplay() {
 		$('.carousel').carousel('next');
 		setTimeout(autoplay, 4500000000000000000);
+		
 	}
+	
 </script>
