@@ -1,7 +1,6 @@
 @extends('layout')
 @section('content')
 
-
 <div id="home-slider" class="card hoverable carousel carousel-slider">
     @foreach($gallery as $q)
 		<div class="carousel-item item id-{{$q->id}}">
@@ -28,14 +27,7 @@
 
 
 
-
-
-
-
-
-
-
-	<div class="l12">
+	<div class="col l12">
 	<h5>Listado Alquiler</h5>
 	</div>
 	<!-- start content -->
@@ -43,7 +35,7 @@
 					@foreach($listadoalquiler as $q)
 		
 					
-					<div class="col s12 m6 l4">
+					<div class="col s12 m6 l3">
 					<div class="card hoverable">
 						<div class="card-image waves-effect waves-block waves-light">
 								<div class="card-mapa-imagen">
@@ -130,6 +122,32 @@
 
 
 
+	<div id="index-banner" class="parallax-container">
+			<div class="section no-pad-bot">
+			  <div class="container">
+				<br><br>
+				<h1 class="header center teal-text text-lighten-2">Parallax Template</h1>
+				<div class="row center">
+				  <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+				</div>
+				<div class="row center">
+				  <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Get Started</a>
+				</div>
+				<br><br>
+		
+			  </div>
+			</div>
+			<div class="parallax">
+				
+		
+						<img src="{{asset('/')}}/uploads/1/2018-10/descarga_1.jpg">
+		
+		
+		
+		
+			</div>
+		  </div>
+		
 
 
 
@@ -138,8 +156,7 @@
 
 
 
-
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+<div class="l12">
 <h5>Listado Completo</h5>
 </div>
 <!-- start content -->
@@ -147,7 +164,7 @@
 				@foreach($listadocompleto as $q)
 	
 				
-				<div class="col s12 m6 l4">
+				<div class="col s12 m6 l3">
 				<div class="card hoverable">
 					<div class="card-image waves-effect waves-block waves-light">
 							<div class="card-mapa-imagen">

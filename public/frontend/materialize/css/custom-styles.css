@@ -15,8 +15,8 @@
 
 body {
   font-family: 'Poppins', sans-serif;
+  background: #eee;
 }
-
 
 img.card-img-top {
     width: 100%;
@@ -112,16 +112,10 @@ img.card-img-top {
     box-shadow: none !important;
   }
 
-nav div div a.active  {
-    background: #0277bd !important;
-    color: #ffffff !important;
+nav div div a.active, nav div div a:hover {
+  background: #077cdd !important;
+  color: #ffffff !important;
 }
-
-nav div div a:hover {
-    background: #0277bd !important;
-    color: #ffffff !important;
-}
-
 .botones-centrados {
     display: inline-flex;
 }
@@ -233,3 +227,15 @@ nav div div a:hover {
 }
 
 .botonera-home-slider{margin: 150px 15px}
+
+
+.parallax-container {
+  position: relative;
+  overflow: hidden;
+  height: 500px;
+  width: 100vw;
+  position: relative;
+  margin-left: -50vw;
+  margin-top: 0;
+  left: calc(50% - 9px);
+}

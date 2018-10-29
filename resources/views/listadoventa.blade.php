@@ -10,7 +10,7 @@
 					@foreach($listadoventa as $q)
 		
 					
-					<div class="col s12 m6 l4">
+					<div class="col s12 m6 l3">
 					<div class="card hoverable">
 						<div class="card-image waves-effect waves-block waves-light">
 								<div class="card-mapa-imagen">
