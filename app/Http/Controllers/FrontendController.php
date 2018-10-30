@@ -12,7 +12,11 @@ namespace App\Http\Controllers;
 		// index
 		public function getIndex(){
 			$title =DB::table('cms_settings')->where('name','appname')->First();
+			$googleapikey =DB::table('cms_settings')->where('name','google_api_key')->First();
+
 			$data['title'] = $title->content;
+			$data['googleapikey'] = $googleapikey->content;
+			
 			$data['active'] = 'index';
 			$data['gallery'] = DB::table('gallery')->orderby('id','desc')->get();
 
@@ -39,14 +43,6 @@ namespace App\Http\Controllers;
 
 			->where('publicado',1)
 			->orderby('propiedad.id','desc')->get();
-
-
-
-
-
-
-
-
 
 
 			$data['listadoalquiler'] = DB::table('propiedad')

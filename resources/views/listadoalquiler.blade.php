@@ -24,7 +24,7 @@
 									</ul>
 									<div id="mapa-alquiler-{{ $q->id }}" class="tabs-content carousel carousel-slider">
 											<div class="carousel-item">
-												<iframe width="100%" height="250" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q={{ $q->map_latitude }},{{ $q->map_longitude }}&zoom=15&key=AIzaSyAOCzRBIJRykPBCzw_F1eggTD4uCxCwVRg" allowfullscreen="false"></iframe>
+												<iframe width="100%" height="250" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q={{ $q->map_latitude }},{{ $q->map_longitude }}&zoom=15&key={{$googleapikey}}" allowfullscreen="false"></iframe>
 											</div>	
 									</div>
 									<div id="fotos-alquiler-{{ $q->id }}" class="tabs-content carousel carousel-slider">

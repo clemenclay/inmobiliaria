@@ -1,7 +1,7 @@
 <div class="navbar-fixed">
 <nav class="blue darken-3" role="navigation">
 		<div class="nav-wrapper container">
-			<ul class="left" style="width: 285px;">     
+			<ul class="left waves-effect" style="width: 285px;">     
 				<a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 				<a href="{{url('/')}}">
 					<img class="logo" src="{{asset('/')}}frontend/images/logo.png" alt="">
@@ -10,20 +10,20 @@
 				</ul>
 
 		  <ul class="left hide-on-med-and-down">
-							<li <?php if($active == 'listadoventa'){ echo 'class="active"'; } ?> ><a class="waves-effect waves-teal" href="{{url('listadoventa')}}"><i class="material-icons left">store</i> Venta</a></li>
-							<li <?php if($active == 'listadoalquiler'){ echo 'class="active"'; } ?> ><a class="waves-effect waves-teal" href="{{url('listadoalquiler')}}"><i class="material-icons left">event</i> Alquiler</a></li>
+							<li <?php if($active == 'listadoventa'){ echo 'class="active"'; } ?> ><a class="waves-effect" href="{{url('listadoventa')}}"><i class="material-icons left">store</i> Venta</a></li>
+							<li <?php if($active == 'listadoalquiler'){ echo 'class="active"'; } ?> ><a class="waves-effect" href="{{url('listadoalquiler')}}"><i class="material-icons left">event</i> Alquiler</a></li>
 		  </ul>
 
 		 <ul class="right hide-on-med-and-down">
-			<li <?php if($active == 'contact'){ echo 'class="active"'; } ?> ><a  class="waves-effect waves-teal" href="{{url('contact')}}"><i class="material-icons left">email</i> Contacto</a></li>
+			<li <?php if($active == 'contact'){ echo 'class="active"'; } ?> ><a  class="waves-effect" href="{{url('contact')}}"><i class="material-icons left">email</i> Contacto</a></li>
 		</ul>
 
 		  <!--   MENU izquierda mobil -->
 		  <ul id="nav-mobile" class="sidenav" style="transform: translateX(-105%);">
-				<li <?php if($active == 'index'){ echo 'class="active"'; } ?> ><a class="collapsible-header waves-effect waves-teal" href="{{url('/')}}"><i class="material-icons">home</i> Inicio</a></li>
-				<li <?php if($active == 'listadoventa'){ echo 'class="active"'; } ?> ><a class="collapsible-header waves-effect waves-teal" href="{{url('listadoventa')}}"><i class="material-icons">store</i> Venta</a></li>
-				<li <?php if($active == 'listadoalquiler'){ echo 'class="active"'; } ?> ><a class="collapsible-header waves-effect waves-teal" href="{{url('listadoalquiler')}}"><i class="material-icons">event</i> Alquiler</a></li>
-				<li <?php if($active == 'contact'){ echo 'active"'; } ?> ><a class="collapsible-header waves-effect waves-teal" href="{{url('contact')}}"><i class="material-icons">email</i> Contacto</a></li>
+				<li <?php if($active == 'index'){ echo 'class="active"'; } ?> ><a class="collapsible-header waves-effect" href="{{url('/')}}"><i class="material-icons">home</i> Inicio</a></li>
+				<li <?php if($active == 'listadoventa'){ echo 'class="active"'; } ?> ><a class="collapsible-header waves-effect" href="{{url('listadoventa')}}"><i class="material-icons">store</i> Venta</a></li>
+				<li <?php if($active == 'listadoalquiler'){ echo 'class="active"'; } ?> ><a class="collapsible-header waves-effect" href="{{url('listadoalquiler')}}"><i class="material-icons">event</i> Alquiler</a></li>
+				<li <?php if($active == 'contact'){ echo 'active"'; } ?> ><a class="collapsible-header waves-effect" href="{{url('contact')}}"><i class="material-icons">email</i> Contacto</a></li>
 		  </ul>
 		  
 		</div>
