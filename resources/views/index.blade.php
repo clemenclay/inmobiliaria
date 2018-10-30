@@ -5,6 +5,7 @@
     @foreach($gallery as $q)
 		<div class="carousel-item item id-{{$q->id}}">
 			<img src="{{asset('/')}}{{$q->image}}">
+			<div id="blur-bg"><h5>{!! $q->description !!}</h5></div>
 			<div class="carousel-caption">
 					<h5>{!! $q->description !!}</h5>
 					
