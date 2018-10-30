@@ -212,17 +212,7 @@ nav div div a.active, nav div div a:hover {
     object-fit: cover;
 }
 
-.carousel-caption {
-  position: absolute;
-  top: 10%;
-  left: 10%;
-  background: #ffffff3b;
-  padding: 16px 40px;
-  /* text-shadow: 0px 2px 3px #ffffff; */
-  color: #135bac;
-  z-index: 2;
-  border: 2px solid #ffffff24;
-}
+
 
 .container {
   width: calc(100% - 15px)!important;
@@ -258,14 +248,25 @@ nav {
 }
 
 #blur-bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #ffffffc2;
+    padding: 11px 36px;
+    z-index: 1;
+    background-position: center -70px;
+    -webkit-filter: blur(10px);
+    filter: blur(18px);
+    border-radius: 12%;
+}
+
+.carousel-caption {
   position: absolute;
-  top: 10%;
-  left: 10%;
-  background: #ffffffd6;
-  padding: 20px 49px;
-  z-index: 1;
-  background-position: center -70px;
-  -webkit-filter: blur(10px);
-  filter: blur(24px);
-  border-radius: 20%;
+  bottom: 0;
+  background: #ffffff3b;
+  padding: 16px 40px;
+  color: #135bac;
+  z-index: 2;
+  border-top: 2px solid #ffffff24;
+  width: 100%;
 }

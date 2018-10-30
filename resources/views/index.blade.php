@@ -253,7 +253,7 @@
 
 <script>
 	$(document).ready(function(){
-		$('#home-slider').carousel();
+		$('#home-slider').carousel({fullWidth: true});
 		
 		setInterval(function(){
 			$('#home-slider').carousel('next');
