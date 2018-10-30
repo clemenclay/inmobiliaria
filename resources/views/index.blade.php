@@ -253,7 +253,17 @@
 
 <script>
 	$(document).ready(function(){
-		$('#home-slider').carousel({fullWidth: true});
+		$('#home-slider').carousel(
+			
+	{
+    dist: 0,
+    padding: 0,
+    fullWidth: true,
+    indicators: true,
+    duration: 100,
+  	}
+
+		);
 		
 		setInterval(function(){
 			$('#home-slider').carousel('next');
