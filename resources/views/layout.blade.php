@@ -113,9 +113,11 @@
 
 	<!-- END .header -->
 	<!-- content -->
+	<main>
 	<section class="container">	
 	@yield('content')
 	</section>
+	</main>
 	<!-- end content -->
 	{{-- <style>
 		#logoAnimago{

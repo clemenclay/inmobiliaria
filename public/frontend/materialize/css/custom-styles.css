@@ -3,6 +3,8 @@ body {
   background: #eee;
 }
 
+main {min-height: calc(100vh - 332px);}
+
 img.card-img-top {
     width: 100%;
   }
@@ -301,4 +303,10 @@ input:not([type]):focus:not([readonly])+label, input[type=text]:not(.browser-def
   height: 40px;
   width: 40px;
   border-radius: 50%;
+}
+
+.page-footer {
+  padding-top: 0;
+  float: left;
+  width: 100%;
 }
