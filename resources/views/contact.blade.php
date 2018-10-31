@@ -3,8 +3,8 @@
 	<div id="fh5co-main">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-8 col-md-offset-2">
-					<h2>Contact</h2>
+				<div class="col l6">
+					<h2>Contacto</h2>
 					<div class="fh5co-spacer fh5co-spacer-sm"></div>
 					<form class="float-label" spellcheck="false" action="{{ action('FrontendController@postContact') }}" method="post">       
 	                <input type="hidden" name="_token" value="{{ csrf_token() }}" />      
@@ -64,12 +64,15 @@
 									<textarea name="message" id="message" cols="30" class="form-control" rows="10" required=""></textarea>
 								</div> --}}
 								<div class="form-group">
-									<button type="submit" class="btn btn-primary">Send Message</button>
+									<button type="submit" class="btn blue darken-3 waves-effect">Send Message</button>
 								</div>
 							
 				
 					</form>
 					
+				</div>
+				<div class="col l6">
+						<iframe width="100%" height="250" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=-34.626039,-58.38654&amp;zoom=15&amp;key=AIzaSyAOCzRBIJRykPBCzw_F1eggTD4uCxCwVRg" allowfullscreen="false"></iframe>
 				</div>
         		
         	</div>
