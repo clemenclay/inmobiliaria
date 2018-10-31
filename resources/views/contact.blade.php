@@ -4,7 +4,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2">
-					<h2>Contact</h2>
+					<h2>Contacto</h2>
 					<div class="fh5co-spacer fh5co-spacer-sm"></div>
 					<form class="float-label" spellcheck="false" action="{{ action('FrontendController@postContact') }}" method="post">       
 	                <input type="hidden" name="_token" value="{{ csrf_token() }}" />      
