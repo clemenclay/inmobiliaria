@@ -56,7 +56,7 @@
 									<div id="fotos-alquiler-{{ $q->id }}" class="tabs-content carousel carousel-slider">
 											<div class="carousel-item">	
 												<div class="carousel carousel-slider">
-														<a class="carousel-item" href=""><img src="{{asset('/')}}{{$q->imagen}}"></a>
+														<a class="carousel-item modal-trigger" href="#fotos-modal-{{ $q->id }}"><img src="{{asset('/')}}{{$q->imagen}}"></a>
 												</div>
 											</div>	
 									</div>
