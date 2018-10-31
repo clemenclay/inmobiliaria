@@ -279,3 +279,26 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
 input:not([type]):focus:not([readonly])+label, input[type=text]:not(.browser-default):focus:not([readonly])+label, input[type=password]:not(.browser-default):focus:not([readonly])+label, input[type=email]:not(.browser-default):focus:not([readonly])+label, input[type=url]:not(.browser-default):focus:not([readonly])+label, input[type=time]:not(.browser-default):focus:not([readonly])+label, input[type=date]:not(.browser-default):focus:not([readonly])+label, input[type=datetime]:not(.browser-default):focus:not([readonly])+label, input[type=datetime-local]:not(.browser-default):focus:not([readonly])+label, input[type=tel]:not(.browser-default):focus:not([readonly])+label, input[type=number]:not(.browser-default):focus:not([readonly])+label, input[type=search]:not(.browser-default):focus:not([readonly])+label, textarea.materialize-textarea:focus:not([readonly])+label {
   color: #1565C0;
 }
+
+.modalfullwidth{width: 100% !important;}
+
+.modalfullheigth{
+    max-height: 100%;
+    overflow-y: hidden;
+    z-index: 9999 !important;
+    top: 20px !important;
+  }
+
+.modalfullwidth.material-placeholder img {height: 100% !important;}
+
+.modalfullheigth a.modal-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 999999999999999;
+  float: right;
+  padding: 8px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}

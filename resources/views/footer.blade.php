@@ -58,3 +58,13 @@ M.AutoInit()
 	
 </script>
 
+<script>
+	$(document).ready(function(){
+		$('.modal').modal({
+					fullWidth: true,
+					dismissible: true
+
+					});
+	});
+	</div>
+</script>

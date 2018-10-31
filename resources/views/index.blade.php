@@ -24,6 +24,10 @@
 
 
 
+
+
+
+
 	<div class="col l12">
 	<h5>Listado Alquiler</h5>
 	</div>
@@ -46,7 +50,7 @@
 									</ul>
 									<div id="mapa-alquiler-{{ $q->id }}" class="tabs-content carousel carousel-slider">
 											<div class="carousel-item">
-												<iframe width="100%" height="250" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q={{ $q->map_latitude }},{{ $q->map_longitude }}&zoom=15&key={{$googleapikey}}" allowfullscreen="false"></iframe>
+												<iframe width="100%" height="250" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q={{ $q->map_latitude }},{{ $q->map_longitude }}&zoom=15&key=AIzaSyAOCzRBIJRykPBCzw_F1eggTD4uCxCwVRg" allowfullscreen="false"></iframe>
 											</div>	
 									</div>
 									<div id="fotos-alquiler-{{ $q->id }}" class="tabs-content carousel carousel-slider">
@@ -175,13 +179,20 @@
 								</ul>
 								<div id="mapa-{{ $q->id }}" class="tabs-content carousel carousel-slider">
 										<div class="carousel-item">
-											<iframe width="100%" height="250" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q={{ $q->map_latitude }},{{ $q->map_longitude }}&zoom=15&key={{$googleapikey}}" allowfullscreen="false"></iframe>
+											<iframe width="100%" height="250" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q={{ $q->map_latitude }},{{ $q->map_longitude }}&zoom=15&key=AIzaSyAOCzRBIJRykPBCzw_F1eggTD4uCxCwVRg" allowfullscreen="false"></iframe>
 										</div>	
 								</div>
 								<div id="fotos-{{ $q->id }}" class="tabs-content carousel carousel-slider">
 										<div class="carousel-item">	
 											<div class="carousel carousel-slider">
-													<a class="carousel-item" href=""><img src="{{asset('/')}}{{$q->imagen}}"></a>
+													<a class="carousel-item modal-trigger" href="#fotos-modal-{{ $q->id }}"><img src="{{asset('/')}}{{$q->imagen}}"></a>
+
+
+													
+
+													
+
+
 											</div>
 										</div>	
 								</div>
@@ -236,7 +247,14 @@
 					});
 					
 					</script>
-
+<!-- Modal Structure -->
+<div id="fotos-modal-{{ $q->id }}" class="modal modalfullheigth">
+	
+	
+	  <a href="#!" class="modal-close waves-effect"><i class="material-icons blue-text text-darken-2">close</i></a>
+	  <img style="width: 100%;" src="{{asset('/')}}{{$q->imagen}}">
+	
+  </div>
 				@endforeach	
 				
 </div>
@@ -256,14 +274,14 @@
     padding: 0,
     fullWidth: true,
     indicators: true,
-    duration: 80
+    duration: 100,
   	}
 
 		);
 		
 		setInterval(function(){
 			$('#home-slider').carousel('next');
-		}, 5000);
+		}, 4000);
 
     // function for next slide
 		$('.next').click(function(){
