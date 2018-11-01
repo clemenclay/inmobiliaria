@@ -310,3 +310,5 @@ input:not([type]):focus:not([readonly])+label, input[type=text]:not(.browser-def
   float: left;
   width: 100%;
 }
+
+.mapa-contacto {display: block}
