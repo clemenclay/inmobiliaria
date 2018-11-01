@@ -18,13 +18,13 @@
 
 										
 												<div class="input-field col s6">
-												<input id="first_name" type="text" class="validate">
+												<input name="first_name" id="first_name" type="text" class="validate">
 												<label for="first_name">Nombre</label>
 												<span class="helper-text" data-error="Comprete Correctamente" data-success="ok"></span>
 												</div>
 
 												<div class="input-field col s6">
-												<input id="last_name" type="text" class="validate">
+												<input name="last_name" id="last_name" type="text" class="validate">
 												<label for="last_name">Apellido</label>
 												<span class="helper-text" data-error="Comprete Correctamente" data-success="ok"></span>
 												</div>
@@ -43,7 +43,7 @@
 											
 											
 												<div class="input-field col s12">
-												<input id="email" type="email" class="validate">
+												<input name="email" id="email" type="email" class="validate">
 												<label for="email">Email</label>
 												<span class="helper-text" data-error="Ingrese un e-mail Válido" data-success="ok"></span>
 												</div>
@@ -111,3 +111,43 @@ $(document).ready(function() {
 	  });
 	  
 </script> --}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
