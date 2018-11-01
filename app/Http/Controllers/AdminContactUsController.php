@@ -29,7 +29,8 @@
 			# END CONFIGURATION DO NOT REMOVE THIS LINE						      
 
 			# START COLUMNS DO NOT REMOVE THIS LINE
-	        $this->col = array();
+			$this->col = array();
+			$this->col[] = array("label"=>"Fecha","name"=>"created_at" );
 			$this->col[] = array("label"=>"Full Name","name"=>"full_name" );
 		$this->col[] = array("label"=>"Email","name"=>"email" );
 		$this->col[] = array("label"=>"Message","name"=>"message" );
