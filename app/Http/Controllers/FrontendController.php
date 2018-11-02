@@ -159,9 +159,29 @@ namespace App\Http\Controllers;
 			$save['email'] = Request::get('email');
 			$save['message'] = Request::get('message');
 			DB::table('contact_us')->insert($save);
-
-			Session::flash('message', "Message has been send");
+			CRUDBooster::sendEmail(['to'=>$email->email,'data'=>$message,'template'=>'forgot_password_backend']);
+			Session::flash('message', "Mensaje enviado OK");
 			return redirect()->back();
 		}
+
+		// public function hook_after_edit($id) {
+		// 	if(Request::get('status') == 'Paid') {
+		// 		$row = CRUDBooster::first($this->table,$id);
+		// 		$member = CRUDBooster::first('member',$row->member_id);
+		// 		$data = ['name'=>$member->name ];
+		// 		CRUDBooster::sendEmail(['to'=>$member->email,'data'=>$data,'template'=>'email_after_paid');
+		// 	}
+		// }
+
+
+		public function toMail($notifiable)
+    	{
+        return (new MailMessage)
+                    ->subject(config('admin.name') . ", you got a new message!")
+                    ->greeting(" ")
+                    ->salutation(" ")
+                    ->from($this->message->email, $this->message->name)
+					->line($this->message->message);
+    	}
 	}
 ?>
