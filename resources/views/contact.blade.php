@@ -66,7 +66,7 @@
 											<textarea name="message" id="message" cols="30" class="form-control" rows="10" required=""></textarea>
 										</div> --}}
 										<div class="form-group">
-											<button type="submit" class="btn blue darken-3 waves-effect">Enviar</button>
+											<button type="submit" class="btn blue darken-3 waves-effect">{{trans("crudbooster.button_submit")}}</button>
 										</div>
 									
 						

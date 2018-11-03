@@ -164,7 +164,8 @@ return [
     'List_Email_Template' => 'Ver Plantillas de Correo',
     'Email_Templates'     => 'Plantillas de Correo',
     'Log_User_Access'     => 'Log de Accesos (Usuarios)',
-    'SUPERADMIN'          => 'SUPERADMIN',
+	'SUPERADMIN'          => 'SUPERADMIN',
+	'email_footer'        => '',
     'click_here' => 'Haz click aquí',
     /*
      * this is for html direction to use in html and css classes like :
