@@ -20,13 +20,13 @@
 												<div class="input-field col s12 l6">
 												<input name="first_name" id="first_name" type="text" class="validate" required>
 												<label for="first_name">Nombre</label>
-												<span class="helper-text" data-error="Comprete Correctamente" data-success="ok"></span>
+												<span class="helper-text" data-error="Complete Correctamente" data-success="ok"></span>
 												</div>
 
 												<div class="input-field col s12 l6">
 												<input name="last_name" id="last_name" type="text" class="validate" required>
 												<label for="last_name">Apellido</label>
-												<span class="helper-text" data-error="Comprete Correctamente" data-success="ok"></span>
+												<span class="helper-text" data-error="Complete Correctamente" data-success="ok"></span>
 												</div>
 										
 									{{-- <div class="col-md-6">
@@ -57,7 +57,7 @@
 												<div class="input-field col s12">
 												<textarea name="message" id="message" class="materialize-textarea validate" type="text" required></textarea>
 												<label for="message">Escriba su mensaje aquí</label>
-												<span class="helper-text" data-error="Comprete Correctamente" data-success="ok"></span>
+												<span class="helper-text" data-error="Complete Correctamente" data-success="ok"></span>
 												</div>
 											
 											
@@ -66,8 +66,9 @@
 											<textarea name="message" id="message" cols="30" class="form-control" rows="10" required=""></textarea>
 										</div> --}}
 										<div class="form-group">
-											<button type="submit" class="btn blue darken-3 waves-effect">{{trans("crudbooster.button_submit")}}</button>
+											<button id="enviarcontacto" type="submit" class="btn blue darken-3 waves-effect">{{trans("crudbooster.button_submit")}}</button>
 										</div>
+										<div class="alert alert-success" style="display:none"></div>
 									
 						
 							</form>
@@ -85,10 +86,10 @@
         		
         	</div>
 
-			<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+			{{-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> --}}
 
 
-@if(Session::has('message'))
+{{-- @if(Session::has('message'))
 	<script type="text/javascript">
 		$(document).ready(function(){
 			swal({
@@ -101,16 +102,34 @@
 
 		
 	</script>
-@endif
+@endif --}}
+
+<script>
+	jQuery(document).ready(function(){
+		   jQuery('#enviarcontacto').click(function(e){
+			  e.preventDefault();
+			  $.ajaxSetup({
+				 headers: {
+					 'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
+				 }
+			 });
+			  jQuery.ajax({
+				 url: "{{ url('/contact') }}",
+				 method: 'post',
+				 data: {
+					name: jQuery('#first_name').val(),
+					type: jQuery('#first_name').val(),
+					price: jQuery('#email').val(),
+					price: jQuery('#message').val()
+				 },
+				 success: function(result){
+					jQuery('.alert').show();
+					jQuery('.alert').html(result.success);
+				 }});
+			  });
+		   });
+</script>
 @endsection
-
-{{-- <script>
-
-$(document).ready(function() {
-		$('input#input_text, textarea#textarea2').characterCounter();
-	  });
-	  
-</script> --}}
 
 
 

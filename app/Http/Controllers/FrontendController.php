@@ -166,7 +166,8 @@ namespace App\Http\Controllers;
 			$data['message'] = Request::get('message');
 			CRUDBooster::sendEmail(['to'=>'clemenclay@gmail.com','data'=>$data,'template'=>'formulariocontacto']);
 			Session::flash('message', "Mensaje enviado OK");
-			return redirect()->back();
+			// return redirect()->back();
+			return response()->json(['success'=>'Data is successfully added']);
 		}
 
 	}
