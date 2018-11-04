@@ -17,14 +17,14 @@
 									</div> --}}
 
 										
-												<div class="input-field col s6">
-												<input name="first_name" id="first_name" type="text" class="validate">
+												<div class="input-field col s12 l6">
+												<input name="first_name" id="first_name" type="text" class="validate" required>
 												<label for="first_name">Nombre</label>
 												<span class="helper-text" data-error="Comprete Correctamente" data-success="ok"></span>
 												</div>
 
-												<div class="input-field col s6">
-												<input name="last_name" id="last_name" type="text" class="validate">
+												<div class="input-field col s12 l6">
+												<input name="last_name" id="last_name" type="text" class="validate" required>
 												<label for="last_name">Apellido</label>
 												<span class="helper-text" data-error="Comprete Correctamente" data-success="ok"></span>
 												</div>
@@ -43,7 +43,7 @@
 											
 											
 												<div class="input-field col s12">
-												<input name="email" id="email" type="email" class="validate">
+												<input name="email" id="email" type="email" class="validate" required>
 												<label for="email">Email</label>
 												<span class="helper-text" data-error="Ingrese un e-mail Válido" data-success="ok"></span>
 												</div>
@@ -55,7 +55,7 @@
 											
 											
 												<div class="input-field col s12">
-												<textarea name="message" id="message" class="materialize-textarea validate" type="text"></textarea>
+												<textarea name="message" id="message" class="materialize-textarea validate" type="text" required></textarea>
 												<label for="message">Escriba su mensaje aquí</label>
 												<span class="helper-text" data-error="Comprete Correctamente" data-success="ok"></span>
 												</div>
