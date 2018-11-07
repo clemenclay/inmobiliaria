@@ -86,10 +86,9 @@
         		
         	</div>
 
-			{{-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> --}}
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
-
-{{-- @if(Session::has('message'))
+@if(Session::has('message'))
 	<script type="text/javascript">
 		$(document).ready(function(){
 			swal({
@@ -102,8 +101,8 @@
 
 		
 	</script>
-@endif --}}
-
+@endif
+{{-- 
 <script>
 	jQuery(document).ready(function(){
 		   jQuery('#enviarcontacto').click(function(e){
@@ -128,7 +127,7 @@
 				 }});
 			  });
 		   });
-</script>
+</script> --}}
 @endsection
 
 
