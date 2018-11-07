@@ -101,10 +101,19 @@ namespace App\Http\Controllers;
 			return view('listadoventa',$data);
 		}
 
+// listadoalquiler?tipooperacion_id=1&tipopropiedad_id=7
+
 		public function getListadoalquiler(){
 			$title =DB::table('cms_settings')->where('name','appname')->First();
 			$data['title'] = $title->content;
 			$data['active'] = 'listadoalquiler';
+
+			//filtros
+			$tipooperacion_id = Request::get('tipooperacion_id');
+			$tipopropiedad_id = Request::get('tipopropiedad_id');
+//			$barrio_propiedad_id = Request::get('barrio_propiedad_id');
+
+
 			$data['listadoalquiler'] = DB::table('propiedad')
 			->join('moneda','propiedad.moneda_id','=','moneda.id')
 			->join('localidad_propiedad','propiedad.localidad_propiedad_id','=','localidad_propiedad.id')
@@ -123,7 +132,9 @@ namespace App\Http\Controllers;
 				'tipooperacion.name as operacion'
 			)
 			->where('publicado',1)
-			->where('tipooperacion_id',2)
+			->where('tipooperacion_id', '=', $tipooperacion_id)
+			->where('tipopropiedad_id', '=', $tipopropiedad_id)
+		//	->where('barrio_propiedad_id', '=', $barrio_propiedad_id)
 			->orderby('propiedad.id','desc')->get();
 			return view('listadoalquiler',$data);
 		}
