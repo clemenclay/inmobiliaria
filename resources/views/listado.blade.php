@@ -212,5 +212,57 @@
 	<!-- end content -->
 	@endsection
 
+	{{-- https://codepen.io/j_holtslander/pen/YvOWLq --}}
+	<script>
+	
+	
+	
+	// MATERIALIZE FRAMEWORK - https://materializecss.com
+$(document).ready(function(){
+	//FORM SELECT
+	$('select').formSelect(); // https://materializecss.com/select.html
+	// MODAL
+	$('.modal').modal();
+  // TABS
+  $('ul.tabs').tabs();
+  // SCROLLSPY
+  $('.scrollspy').scrollSpy();
+});
 
-	<script></script>
+// LazySizes
+window.lazySizesConfig = window.lazySizesConfig || {};
+window.lazySizesConfig.expand;
+
+// MixItUp 3
+$(function(){
+  $('#Container').mixItUp({
+    load: {
+      // filter: 'all'
+      filter: 'all'
+    },
+    controls: {
+      toggleFilterButtons: false
+    }
+  });
+});
+
+
+
+// DROPDOWN SELECT
+$(function(){
+  var $filterSelect = $('#FilterSelect'),
+      // $sortSelect = $('#SortSelect'),
+      $container = $('#Container');
+  
+  $container.mixItUp();
+  
+  $filterSelect.on('change', function(){
+    $container.mixItUp('filter', this.value);
+  });
+});
+	
+	
+	
+	
+	
+	</script>
