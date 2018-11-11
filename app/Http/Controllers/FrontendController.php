@@ -70,6 +70,56 @@ namespace App\Http\Controllers;
 		}
 
 
+		
+
+// listadoalquiler?tipooperacion_id=1&tipopropiedad_id=7
+
+		public function getListado(){
+			$title =DB::table('cms_settings')->where('name','appname')->First();
+			$data['title'] = $title->content;
+			$data['active'] = 'listadocompleto';
+
+			//filtros
+			$operacion = Request::get('operacion');
+			$barrio = Request::get('barrio');
+			$tipopropiedad = Request::get('tipopropiedad');
+
+
+//			$this->button_filter = true;
+
+
+			$data['listadocompleto'] = DB::table('propiedad')
+			->join('moneda','propiedad.moneda_id','=','moneda.id')
+			->join('localidad_propiedad','propiedad.localidad_propiedad_id','=','localidad_propiedad.id')
+			->join('tipooperacion','propiedad.tipooperacion_id','=','tipooperacion.id')
+			->join('barrio_propiedad','propiedad.barrio_propiedad_id','=','barrio_propiedad.id')
+			->join('tipopropiedad','propiedad.tipopropiedad_id','=','tipopropiedad.id')
+			
+			->select(
+				'propiedad.*',
+				'imagen',
+				'titulo',
+				'descripcion',
+				'precio_compra',
+				'precio_compra',
+				'moneda',
+				'barrio_propiedad.name as barrio',
+				'localidad_propiedad.name as localidad',
+				'tipooperacion.name as operacion',
+				'tipopropiedad.name as tipopropiedad'
+			)
+			->where('publicado',1)	
+
+			// ->where('tipooperacion.name', '=', $operacion)
+			// ->orwhere('barrio_propiedad.name', '=', $barrio)
+			// ->orwhere('tipopropiedad.name', '=', $tipopropiedad)
+
+
+			->orderby('propiedad.id','desc')
+			->get();
+			return view('listado',$data);
+		}
+
 		public function getListadoventa(){
 			$title =DB::table('cms_settings')->where('name','appname')->First();
 			$data['title'] = $title->content;
@@ -101,24 +151,18 @@ namespace App\Http\Controllers;
 			return view('listadoventa',$data);
 		}
 
-// listadoalquiler?tipooperacion_id=1&tipopropiedad_id=7
+
 
 		public function getListadoalquiler(){
 			$title =DB::table('cms_settings')->where('name','appname')->First();
 			$data['title'] = $title->content;
 			$data['active'] = 'listadoalquiler';
-
-			//filtros
-			$operacion = Request::get('operacion');
-//			$tipopropiedad_id = Request::get('tipopropiedad_id');
-//			$barrio_propiedad_id = Request::get('barrio_propiedad_id');
-
-
 			$data['listadoalquiler'] = DB::table('propiedad')
 			->join('moneda','propiedad.moneda_id','=','moneda.id')
 			->join('localidad_propiedad','propiedad.localidad_propiedad_id','=','localidad_propiedad.id')
 			->join('tipooperacion','propiedad.tipooperacion_id','=','tipooperacion.id')
 			->join('barrio_propiedad','propiedad.barrio_propiedad_id','=','barrio_propiedad.id')
+	
 			->select(
 				'propiedad.*',
 				'imagen',
@@ -129,25 +173,16 @@ namespace App\Http\Controllers;
 				'moneda',
 				'barrio_propiedad.name as barrio',
 				'localidad_propiedad.name as localidad',
+				'localidad_propiedad.name as localidad',
+				'localidad_propiedad.name as localidad',
 				'tipooperacion.name as operacion'
 			)
+
 			->where('publicado',1)
-			->where('tipooperacion.name', '=', $operacion)
-		//	->where('tipopropiedad_id', '=', $tipopropiedad_id)
-		//	->where('barrio_propiedad_id', '=', $barrio_propiedad_id)
+			->where('tipooperacion_id',2)
 			->orderby('propiedad.id','desc')->get();
 			return view('listadoalquiler',$data);
 		}
-
-//		DB::table('table1')
-//		->select('data.ID') // Add a select so only one column shows up.
-//		->join('table2','table1.table2ID','=','table2.ID')
-//		->join('thisTable', 'table2.thisTableID', '=', 'thisTable.ID')
-//		->lists('ID'); // Now list that one column
-
-
-
-	//	select * from propiedad inner join moneda on propiedad.moneda_id = moneda.id
 
 		// about
 		public function getAbout(){

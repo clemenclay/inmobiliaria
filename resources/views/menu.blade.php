@@ -10,6 +10,7 @@
 				</ul>
 
 		  <ul class="left hide-on-med-and-down">
+					<li <?php if($active == 'listadocompleto'){ echo 'class="active"'; } ?> ><a class="waves-effect" href="{{url('listado')}}"><i class="material-icons left">view_list</i> Listado</a></li>				
 							<li <?php if($active == 'listadoventa'){ echo 'class="active"'; } ?> ><a class="waves-effect" href="{{url('listadoventa')}}"><i class="material-icons left">store</i> Venta</a></li>
 							<li <?php if($active == 'listadoalquiler'){ echo 'class="active"'; } ?> ><a class="waves-effect" href="{{url('listadoalquiler')}}"><i class="material-icons left">event</i> Alquiler</a></li>
 		  </ul>
@@ -20,6 +21,7 @@
 
 		  <!--   MENU izquierda mobil -->
 		  <ul id="nav-mobile" class="sidenav" style="transform: translateX(-105%);">
+					<li <?php if($active == 'listadocompleto'){ echo 'class="active"'; } ?> ><a class="collapsible-header waves-effect" href="{{url('listado')}}"><i class="material-icons">view_list</i> Listado</a></li>
 				<li <?php if($active == 'index'){ echo 'class="active"'; } ?> ><a class="collapsible-header waves-effect" href="{{url('/')}}"><i class="material-icons">home</i> Inicio</a></li>
 				<li <?php if($active == 'listadoventa'){ echo 'class="active"'; } ?> ><a class="collapsible-header waves-effect" href="{{url('listadoventa')}}"><i class="material-icons">store</i> Venta</a></li>
 				<li <?php if($active == 'listadoalquiler'){ echo 'class="active"'; } ?> ><a class="collapsible-header waves-effect" href="{{url('listadoalquiler')}}"><i class="material-icons">event</i> Alquiler</a></li>
