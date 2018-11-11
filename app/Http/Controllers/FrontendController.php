@@ -75,6 +75,7 @@ namespace App\Http\Controllers;
 // listadoalquiler?tipooperacion_id=1&tipopropiedad_id=7
 
 		public function getListado(){
+
 			$title =DB::table('cms_settings')->where('name','appname')->First();
 			$data['title'] = $title->content;
 			$data['active'] = 'listadocompleto';
@@ -85,39 +86,89 @@ namespace App\Http\Controllers;
 			$tipopropiedad = Request::get('tipopropiedad');
 
 
-//			$this->button_filter = true;
+			 if (Request::exists('barrio')
+				
+			 	) {
+					
+		
+		
+		//			$this->button_filter = true;
+		
+		
+					$data['listadocompleto'] = DB::table('propiedad')
+					->join('moneda','propiedad.moneda_id','=','moneda.id')
+					->join('localidad_propiedad','propiedad.localidad_propiedad_id','=','localidad_propiedad.id')
+					->join('tipooperacion','propiedad.tipooperacion_id','=','tipooperacion.id')
+					->join('barrio_propiedad','propiedad.barrio_propiedad_id','=','barrio_propiedad.id')
+					->join('tipopropiedad','propiedad.tipopropiedad_id','=','tipopropiedad.id')
+					
+					->select(
+						'propiedad.*',
+						'imagen',
+						'titulo',
+						'descripcion',
+						'precio_compra',
+						'precio_compra',
+						'moneda',
+						'barrio_propiedad.name as barrio',
+						'localidad_propiedad.name as localidad',
+						'tipooperacion.name as operacion',
+						'tipopropiedad.name as tipopropiedad'
+					)
+					->where('publicado',1)	
+		
+					->where('barrio_propiedad.name', '=', $barrio)
+					
+					
+					// ->orwhere('tipopropiedad.name', '=', $tipopropiedad)
+		
+		
+					->orderby('propiedad.id','desc')
+					->get();
+					return view('listado',$data);
+				
+			 }
+
+			else 
+			{ 
+
+	
+	
+				$data['listadocompleto'] = DB::table('propiedad')
+				->join('moneda','propiedad.moneda_id','=','moneda.id')
+				->join('localidad_propiedad','propiedad.localidad_propiedad_id','=','localidad_propiedad.id')
+				->join('tipooperacion','propiedad.tipooperacion_id','=','tipooperacion.id')
+				->join('barrio_propiedad','propiedad.barrio_propiedad_id','=','barrio_propiedad.id')
+				->join('tipopropiedad','propiedad.tipopropiedad_id','=','tipopropiedad.id')
+				
+				->select(
+					'propiedad.*',
+					'imagen',
+					'titulo',
+					'descripcion',
+					'precio_compra',
+					'precio_compra',
+					'moneda',
+					'barrio_propiedad.name as barrio',
+					'localidad_propiedad.name as localidad',
+					'tipooperacion.name as operacion',
+					'tipopropiedad.name as tipopropiedad'
+				)
+				->where('publicado',1)	
+	
+				// ->where('tipooperacion.name', '=', $operacion)
+				
+				
+				// ->orwhere('tipopropiedad.name', '=', $tipopropiedad)
+	
+	
+				->orderby('propiedad.id','desc')
+				->get();
+				return view('listado',$data);
+			} 
 
 
-			$data['listadocompleto'] = DB::table('propiedad')
-			->join('moneda','propiedad.moneda_id','=','moneda.id')
-			->join('localidad_propiedad','propiedad.localidad_propiedad_id','=','localidad_propiedad.id')
-			->join('tipooperacion','propiedad.tipooperacion_id','=','tipooperacion.id')
-			->join('barrio_propiedad','propiedad.barrio_propiedad_id','=','barrio_propiedad.id')
-			->join('tipopropiedad','propiedad.tipopropiedad_id','=','tipopropiedad.id')
-			
-			->select(
-				'propiedad.*',
-				'imagen',
-				'titulo',
-				'descripcion',
-				'precio_compra',
-				'precio_compra',
-				'moneda',
-				'barrio_propiedad.name as barrio',
-				'localidad_propiedad.name as localidad',
-				'tipooperacion.name as operacion',
-				'tipopropiedad.name as tipopropiedad'
-			)
-			->where('publicado',1)	
 
-			// ->where('tipooperacion.name', '=', $operacion)
-			// ->orwhere('barrio_propiedad.name', '=', $barrio)
-			// ->orwhere('tipopropiedad.name', '=', $tipopropiedad)
-
-
-			->orderby('propiedad.id','desc')
-			->get();
-			return view('listado',$data);
 		}
 
 		public function getListadoventa(){

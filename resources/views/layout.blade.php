@@ -27,9 +27,15 @@
 	<!-- <link rel="stylesheet" href="{{asset('frontend/css/custom.css')}}"> -->
 	<script src="{{asset('frontend/materialize/js/modernizr-2.6.2-respond-1.1.0.min.js')}}"></script>
 	
-	{{-- <script src="{{asset('frontend/materialize/js/jquery-3.2.1.min.js')}}"></script> --}}
-	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-	{{-- <script src="{{asset('frontend/materialize/js/pace.min.js')}}"></script> --}}
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
+		<script src="https://afarkas.github.io/lazysizes/lazysizes.min.js"></script>
+		
+		{{-- <script src="{{asset('frontend/materialize/js/materialize.js')}}"></script> --}}
+		{{-- <script src="{{asset('frontend/materialize/js/init.js')}}"></script> --}}
+		
+		<script src="//code.tidio.co/sk4iuwxfeabvtqpwirjoll7s1ln6uxbd.js')}}"></script>
 	
 	
 		<style>

@@ -36,10 +36,10 @@
 		{{-- <script src="{{asset('frontend/materialize/js/app.js')}}"></script> --}}
 		{{-- <script src="{{asset('frontend/materialize/js/controllers.js')}}"></script>  --}}
 		
-		<script src="{{asset('frontend/materialize/js/materialize.js')}}"></script>
-		{{-- <script src="{{asset('frontend/materialize/js/init.js')}}"></script> --}}
-		
-		<script src="//code.tidio.co/sk4iuwxfeabvtqpwirjoll7s1ln6uxbd.js')}}"></script>
+
+
+	
+	
 
 
 
@@ -67,3 +67,54 @@ M.AutoInit()
 	});
 
 </script>
+
+<script>
+	// MATERIALIZE FRAMEWORK - https://materializecss.com
+$(document).ready(function(){
+	//FORM SELECT
+	$('select').formSelect(); // https://materializecss.com/select.html
+	// MODAL
+	$('.modal').modal();
+	// TABS
+	$('ul.tabs').tabs();
+	// SCROLLSPY
+	$('.scrollspy').scrollSpy();
+});
+
+// LazySizes
+window.lazySizesConfig = window.lazySizesConfig || {};
+window.lazySizesConfig.expand;
+
+// MixItUp 3
+$(function(){
+	$('#Container').mixItUp({
+	load: {
+		// filter: 'all'
+		filter: 'all'
+	},
+	controls: {
+		toggleFilterButtons: false
+	}
+	});
+});
+
+
+
+// DROPDOWN SELECT
+$(function(){
+	var $filterSelect = $('#FilterSelect'),
+		// $sortSelect = $('#SortSelect'),
+		$container = $('#Container');
+	
+	$container.mixItUp();
+	
+	$filterSelect.on('change', function(){
+	$container.mixItUp('filter', this.value);
+	});
+});
+	
+	
+	
+	
+	
+	</script>

@@ -75,21 +75,18 @@
 					<div class="select-wrapper">
 						<i class="material-icons prefix">filter_list</i>
 						<select id="FilterSelect">
-							<option class="filter" selected disabled>Filter Category</option>
-							<option class="filter" value="all" data-filter="all" selected>All</option>
-							<option class="filter" value=".venta">venta</option>
-							<option class="filter" value=".category-code">Code</option>
-							<option class="filter" value=".category-versions">Version control</option>
-							<option class="filter" value=".category-publishing">Publishing</option>
-							<option class="filter" value=".category-prototyping">Prototyping</option>
-							<option class="filter" value=".category-servers">Servers</option>
+							<option class="filter" selected disabled>Filtros</option>
+							<option class="filter" value="all" data-filter="all" selected>Todos</option>
+							<option class="filter" value=".Venta">Venta</option>
+							<option class="filter" value=".Alquiler">Alquiler</option>
+							
 						</select>
 					</div>
 				</div>
 			
 				<div class="input-field col s10 m6">
 					<span class="right">
-						<label>Sort:</label>
+						<label>Orden</label>
 						<button class="sort btn btn-floating waves-effect btn-flat grey-text text-darken-1" data-sort="name:asc">A-Z</button>
 						<button class="sort btn btn-floating waves-effect btn-flat grey-text text-darken-1" data-sort="name:desc">Z-A</button>
 						<button class="sort btn btn-floating waves-effect btn-flat grey-text text-darken-1" data-sort="myorder:asc"><i class="material-icons">arrow_upward</i></button>
@@ -106,10 +103,11 @@
 	
 	<!-- start content -->
 	<div class="row">	
+			<div id="Container" class="project-cards-container">	
 					@foreach($listadocompleto as $q)
 		
 					
-					<div class="col s12 m6 l3 {{ $q->operacion }}">
+					<div class="col s12 m6 l3 mix {{ $q->operacion }}" data-myorder="{{ $q->id }}" data-name="{!! $q->titulo !!}">
 					<div class="card hoverable">
 						<div class="card-image waves-effect waves-block waves-light">
 								<div class="card-mapa-imagen">
@@ -207,62 +205,14 @@
 		
 	  </div>
 					@endforeach	
-					
+				</div>					
 	</div>
 	<!-- end content -->
+
+
+
+	
+	
 	@endsection
 
 	{{-- https://codepen.io/j_holtslander/pen/YvOWLq --}}
-	<script>
-	
-	
-	
-	// MATERIALIZE FRAMEWORK - https://materializecss.com
-$(document).ready(function(){
-	//FORM SELECT
-	$('select').formSelect(); // https://materializecss.com/select.html
-	// MODAL
-	$('.modal').modal();
-  // TABS
-  $('ul.tabs').tabs();
-  // SCROLLSPY
-  $('.scrollspy').scrollSpy();
-});
-
-// LazySizes
-window.lazySizesConfig = window.lazySizesConfig || {};
-window.lazySizesConfig.expand;
-
-// MixItUp 3
-$(function(){
-  $('#Container').mixItUp({
-    load: {
-      // filter: 'all'
-      filter: 'all'
-    },
-    controls: {
-      toggleFilterButtons: false
-    }
-  });
-});
-
-
-
-// DROPDOWN SELECT
-$(function(){
-  var $filterSelect = $('#FilterSelect'),
-      // $sortSelect = $('#SortSelect'),
-      $container = $('#Container');
-  
-  $container.mixItUp();
-  
-  $filterSelect.on('change', function(){
-    $container.mixItUp('filter', this.value);
-  });
-});
-	
-	
-	
-	
-	
-	</script>
