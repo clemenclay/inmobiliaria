@@ -68,53 +68,13 @@ M.AutoInit()
 
 </script>
 
+<script src="{{asset('frontend/materialize/js/mixitup.min.js')}}"></script>
 <script>
-	// MATERIALIZE FRAMEWORK - https://materializecss.com
-$(document).ready(function(){
-	//FORM SELECT
-	$('select').formSelect(); // https://materializecss.com/select.html
-	// MODAL
-	$('.modal').modal();
-	// TABS
-	$('ul.tabs').tabs();
-	// SCROLLSPY
-	$('.scrollspy').scrollSpy();
-});
+            var containerEl = document.querySelector('.container');
 
-// LazySizes
-window.lazySizesConfig = window.lazySizesConfig || {};
-window.lazySizesConfig.expand;
-
-// MixItUp 3
-$(function(){
-	$('#Container').mixItUp({
-	load: {
-		// filter: 'all'
-		filter: 'all'
-	},
-	controls: {
-		toggleFilterButtons: false
-	}
-	});
-});
-
-
-
-// DROPDOWN SELECT
-$(function(){
-	var $filterSelect = $('#FilterSelect'),
-		// $sortSelect = $('#SortSelect'),
-		$container = $('#Container');
-	
-	$container.mixItUp();
-	
-	$filterSelect.on('change', function(){
-	$container.mixItUp('filter', this.value);
-	});
-});
-	
-	
-	
-	
-	
-	</script>
+            var mixer = mixitup(containerEl, {
+                controls: {
+                    toggleLogic: 'and'
+                }
+            });
+</script>
