@@ -54,6 +54,7 @@
 
 <div class="l12">
 	<h5>Listado Completo</h5>
+	
 	</div>
 
 
@@ -71,7 +72,7 @@
 			
 			
 				<!-- MATERIALIZE'S DROPDOWN SELECT FOR DESKTOP USERS -->
-				<div class="input-field col s12 m6 hide-on-med-and-down">
+				<div class="input-field col s12 m6">
 					<div class="select-wrapper">
 						<i class="material-icons prefix">filter_list</i>
 						<select id="FilterSelect">
@@ -82,10 +83,20 @@
 							
 						</select>
 					</div>
+					
 				</div>
-			
-				<div class="input-field col s10 m6">
+				<div class="col s2 m3">
+					<div class="select-wrapper">
+						<div class="chips" data-index="0" data-initialized="true">
+							<div class="chip">{!! $barrio = Request::get('barrio') !!}<i class="material-icons close">close</i></div>
+						
+						</div>
+					</div>
+					
+				</div>				
+				<div class="input-field col s10 m3">
 					<span class="right">
+							
 						<label>Orden</label>
 						<button class="sort btn btn-floating waves-effect btn-flat grey-text text-darken-1" data-sort="name:asc">A-Z</button>
 						<button class="sort btn btn-floating waves-effect btn-flat grey-text text-darken-1" data-sort="name:desc">Z-A</button>
@@ -171,6 +182,17 @@
 		
 						$(document).ready(function() {
 						
+							// $("i.material-icons.close").click(function(){
+							//  	parent.history.back();
+							// 	return false;					
+							//  });
+
+
+						$('.chips').on('chip.delete', function(e, chip){
+							parent.history.back();
+							});
+
+
 							$("#ver-mapa-{{ $q->id }}").click(function(){
 							$("#ver-mapa-{{ $q->id }}").addClass("scale-out");
 							$("#ver-fotos-{{ $q->id }}").removeClass("scale-out");

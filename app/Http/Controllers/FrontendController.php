@@ -76,20 +76,18 @@ namespace App\Http\Controllers;
 
 		public function getListado(){
 
-			$title =DB::table('cms_settings')->where('name','appname')->First();
-			$data['title'] = $title->content;
-			$data['active'] = 'listadocompleto';
-
-			//filtros
-			$operacion = Request::get('operacion');
-			$barrio = Request::get('barrio');
-			$tipopropiedad = Request::get('tipopropiedad');
-
 
 			 if (Request::exists('barrio')
 				
 			 	) {
-					
+					$title =DB::table('cms_settings')->where('name','appname')->First();
+					$data['title'] = $title->content;
+					$data['active'] = 'listadocompleto';
+		
+					//filtros
+					$operacion = Request::get('operacion');
+					$barrio = Request::get('barrio');
+					$tipopropiedad = Request::get('tipopropiedad');
 		
 		
 		//			$this->button_filter = true;
@@ -131,7 +129,17 @@ namespace App\Http\Controllers;
 
 			else 
 			{ 
-
+				$title =DB::table('cms_settings')->where('name','appname')->First();
+				$data['title'] = $title->content;
+				$data['active'] = 'listadocompleto';
+	
+				//filtros
+				$operacion = Request::get('operacion');
+				$barrio = Request::get('barrio');
+				$tipopropiedad = Request::get('tipopropiedad');
+	
+	
+	//			$this->button_filter = true;
 	
 	
 				$data['listadocompleto'] = DB::table('propiedad')
