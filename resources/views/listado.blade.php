@@ -9,22 +9,10 @@
 /* Controls
 ---------------------------------------------------------------------- */
 
-.controls {
-    padding: 1rem;
-    background: #333;
-    font-size: 0.1px;
-}
+
 
 .control {
-    position: relative;
-    display: inline-block;
-    width: 2.7rem;
-    height: 2.7rem;
-    background: #444;
-    cursor: pointer;
-    font-size: 0.1px;
-    color: white;
-    transition: background 150ms;
+
 }
 
 .control:hover {
@@ -34,19 +22,13 @@
 .control[data-filter]:after,
 .control[data-toggle]:after {
     content: '';
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    top: calc(50% - 6px);
-    left: calc(50% - 6px);
-    border: 2px solid currentColor;
-    border-radius: 2px;
-    background: currentColor;
     transition: background-color 150ms, border-color 150ms;
 }
 
-.mixitup-control-active {
-    background: #393939;
+li:has(> a.mixitup-control-active) {  background: #1565c0 !important; }
+.mixitup-control-active:parent
+ {
+   
 }
 
 .mixitup-control-active[data-toggle]:after {
@@ -114,24 +96,38 @@
 	<h5>Listado Completo</h5>
 </div>
 
-<div class="controls">
-	<button type="button" class="control waves-effect waves-light btn" data-filter="all">All</button>
-	<button type="button" class="control" data-toggle=".Venta">Venta</button>venta
-	<button type="button" class="control" data-toggle=".Alquiler">Alquiler</button>alquiler
+<div class="row">
+	<div class="col s12 m6 l4">
+		<div class="controls">
+			{{-- <button type="button" class="control waves-effect waves-light btn" data-filter="all">All</button> --}}
+			<li class="tab btn-floating waves-effect waves-light btn white">
+					<a class="" href="#" data-filter="all"><i class="material-icons blue-text text-darken-2">filter_list</i></a>
+				</li>
 
+
+			<button type="button" class="control waves-effect waves-light btn" data-toggle=".Venta"><i class="material-icons">store</i></button>
+			<button type="button" class="control waves-effect waves-light btn" data-toggle=".Alquiler"><i class="material-icons">event</i></button>
+		</div>
+	</div>
+
+	<div class="col s12 m6 l4">
+		<div class="controls">
+			<button type="button" class="control waves-effect btn" data-filter="all">All</button>
+			<button type="button" class="control waves-effect btn" data-toggle=".Belgrano">Belgrano</button>
+			<button type="button" class="control waves-effect btn" data-toggle=".Abasto">Abasto</button>
+			
+		</div>
+	</div>
+	<div class="col s12 m6 l4">
+		<div class="controls">
+			<button class="control waves-effect waves-light btn" type="button" data-sort="order:asc">Ascending</button>
+			<button class="control waves-effect waves-light btn" type="button" data-sort="order:descending">Descending</button>
+			<button class="control waves-effect waves-light btn" type="button" data-sort="random">Random</button>
+		</div>
+	</div>		
 </div>
 
-<div class="controls">
-	<button type="button" class="control waves-effect waves-light btn" data-filter="all">All</button>
-	<button type="button" class="" data-toggle=".Belgrano">Belgrano</button>
-	<button type="button" class="control" data-toggle=".Abasto">Abasto</button>
 
-</div>
-<div class="controls">
-<button type="button" data-sort="order:asc">Ascending</button>
-<button type="button" data-sort="order:descending">Descending</button>
-<button type="button" data-sort="random">Random</button>
-</div>	
 	<!-- start content -->
 	<div class="row">
 			<div class="containers">	
@@ -251,7 +247,7 @@
 
 
 
-	<script src="../mixitup.min.js"></script>
+	
 
 	<script>
 		var containerEl = document.querySelector('.containers');
