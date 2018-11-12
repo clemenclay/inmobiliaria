@@ -85,11 +85,11 @@
 					</div>
 					
 				</div>
-				<div class="col s2 m3">
+				<div class=" col s2 m3">
 					<div class="select-wrapper">
 						<div class="chips" data-index="0" data-initialized="true">
 							<div class="chip">{!! $barrio = Request::get('barrio') !!}<i class="material-icons close">close</i></div>
-						
+							{{-- <input id="79572ad0-4a30-921b-7ca2-bc885c8c3dca" class="input" placeholder=""> --}}
 						</div>
 					</div>
 					
@@ -182,15 +182,15 @@
 		
 						$(document).ready(function() {
 						
-							// $("i.material-icons.close").click(function(){
-							//  	parent.history.back();
-							// 	return false;					
-							//  });
+							$("i.material-icons.close").click(function(){
+							  	parent.history.back();
+							 	return false;					
+							 });
 
 
-						$('.chips').on('chip.delete', function(e, chip){
-							parent.history.back();
-							});
+						// $('.chips').on('chip.delete', function(e, chip){
+						// 	parent.history.back();
+						// 	});
 
 
 							$("#ver-mapa-{{ $q->id }}").click(function(){
