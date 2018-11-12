@@ -3,122 +3,142 @@
 
 
 
-<style>#sorting-row {
-		padding-top:0px;
-		@media only screen and (max-width: 992px) {
-			padding-top:46px;
-		}
-	}
-	.lazyload {
-	  opacity: 0;
-	}
-	.lazyloading {
-	  opacity: 1;
-	  transition: 600ms opacity;
-	  background: #f7f7f7 url(https://afarkas.github.io/lazysizes/assets/imgs/loader.gif) no-repeat center;
-	  min-height: 60px;
-	}
-	#Container .mix{
-		display: none;
-	}
-	.project-cards-container {
-		-webkit-backface-visibility: hidden;
-		.mix {
-		display: inline-block;
-	  }
-	}
-	
-	
-	
-	
+<style>
 
-	
-	
-	
-	
-	
-	
-	// ======== DEMO STYLES - NOT REQUIRED ==========
-	
-	// CUSTOM CARD BADGES
-	.card-image {.card-badge {position:absolute;top:-5px;right:-24px;width:0;height:0;transform:rotate(45deg);border-left:36px solid transparent;border-right:  36px solid transparent;&.new {border-bottom: 36px solid rgba(255, 165, 0, 1);}&.certified {border-bottom: 36px solid #00c853;}&.fav {border-bottom: 36px solid rgba(244, 67, 55, 1);}.material-icons {color: #fff;position: absolute;right:-12px;top: 9px;transform: rotate(-45deg);}}}
-	// CARD IMAGE OPACITY ON HOVER
-	.card-image {background-color: #555;img {opacity:0.8;transition: opacity 0.5s ease;}&:hover{img {opacity:1;transition: opacity 0.5s ease;}}}
-	// CARD SHADOW ON HOVER
-	.card {&:hover {box-shadow: 0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12), 0 8px 10px -7px rgba(0,0,0,0.2);}}
-	// FIX MATERIALIZE'S NAV BAR ROWS
-	nav{.row{margin-bottom:0;}}
-	// FIX MATERIALIZE'S FLOATING BUTTON ICON COLORS
-	.controls {.btn-floating {font-weight:600;i {color:#757575;}&:hover{background-color:#e0e0e0;}}}</style>
+
+/* Controls
+---------------------------------------------------------------------- */
+
+.controls {
+    padding: 1rem;
+    background: #333;
+    font-size: 0.1px;
+}
+
+.control {
+    position: relative;
+    display: inline-block;
+    width: 2.7rem;
+    height: 2.7rem;
+    background: #444;
+    cursor: pointer;
+    font-size: 0.1px;
+    color: white;
+    transition: background 150ms;
+}
+
+.control:hover {
+    background: #3f3f3f;
+}
+
+.control[data-filter]:after,
+.control[data-toggle]:after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: calc(50% - 6px);
+    left: calc(50% - 6px);
+    border: 2px solid currentColor;
+    border-radius: 2px;
+    background: currentColor;
+    transition: background-color 150ms, border-color 150ms;
+}
+
+.mixitup-control-active {
+    background: #393939;
+}
+
+.mixitup-control-active[data-toggle]:after {
+    background: transparent;
+}
+
+.control:first-of-type {
+    border-radius: 3px 0 0 3px;
+}
+
+.control:last-of-type {
+    border-radius: 0 3px 3px 0;
+}
+
+.control[data-filter=".green"],
+.control[data-toggle=".green"] {
+    color: #91e6c7;
+}
+
+.control[data-filter=".blue"],
+.control[data-toggle=".blue"] {
+    color: #5ecdde;
+}
+
+.control[data-filter=".pink"],
+.control[data-toggle=".pink"] {
+    color: #d595aa;
+}
+
+/* Container
+---------------------------------------------------------------------- */
+
+/* .container {
+    padding: 1rem;
+    text-align: justify;
+    font-size: 0.1px;
+}
+
+.container:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+} */
+
+/* Target Elements
+---------------------------------------------------------------------- */
+
+.mix,
+.gap {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.mix {
+       position: relative;
+}
+
+
+
+
+</style>
 
 
 <div class="l12">
 	<h5>Listado Completo</h5>
-	
-	</div>
+</div>
 
+<div class="controls">
+	<button type="button" class="control waves-effect waves-light btn" data-filter="all">All</button>
+	<button type="button" class="control" data-toggle=".Venta">Venta</button>venta
+	<button type="button" class="control" data-toggle=".Alquiler">Alquiler</button>alquiler
 
-	
-	<!-- 	SORTING BUTTON'S ROW	 -->
-<div id="sorting-row" class="row">
-		<div class="controls">
-			
-			<div class="col s12">
-				<div class="input-field col s2 m6 hide-on-large-only">
-					<a class="modal-trigger btn btn-floating waves-effect btn-flat grey-text text-darken-1" href="#modal1">
-						<i class="material-icons">info</i>
-					</a>
-				</div>
-			
-			
-				<!-- MATERIALIZE'S DROPDOWN SELECT FOR DESKTOP USERS -->
-				<div class="input-field col s12 m6">
-					<div class="select-wrapper">
-						<i class="material-icons prefix">filter_list</i>
-						<select id="FilterSelect">
-							<option class="filter" selected disabled>Filtros</option>
-							<option class="filter" value="all" data-filter="all" selected>Todos</option>
-							<option class="filter" value=".Venta">Venta</option>
-							<option class="filter" value=".Alquiler">Alquiler</option>
-							
-						</select>
-					</div>
-					
-				</div>
-				<div class=" col s2 m3">
-					<div class="select-wrapper">
-						<div class="chips" data-index="0" data-initialized="true">
-							<div class="chip">{!! $barrio = Request::get('barrio') !!}<i class="material-icons close">close</i></div>
-							{{-- <input id="79572ad0-4a30-921b-7ca2-bc885c8c3dca" class="input" placeholder=""> --}}
-						</div>
-					</div>
-					
-				</div>				
-				<div class="input-field col s10 m3">
-					<span class="right">
-							
-						<label>Orden</label>
-						<button class="sort btn btn-floating waves-effect btn-flat grey-text text-darken-1" data-sort="name:asc">A-Z</button>
-						<button class="sort btn btn-floating waves-effect btn-flat grey-text text-darken-1" data-sort="name:desc">Z-A</button>
-						<button class="sort btn btn-floating waves-effect btn-flat grey-text text-darken-1" data-sort="myorder:asc"><i class="material-icons">arrow_upward</i></button>
-						<button class="sort btn btn-floating waves-effect btn-flat grey-text text-darken-1" data-sort="myorder:desc"><i class="material-icons">arrow_downward</i></button>	
-					</span>
-				</div>
-			
-			
-		</div>
-	</div>
+</div>
 
+<div class="controls">
+	<button type="button" class="control waves-effect waves-light btn" data-filter="all">All</button>
+	<button type="button" class="" data-toggle=".Belgrano">Belgrano</button>
+	<button type="button" class="control" data-toggle=".Abasto">Abasto</button>
 
-
-	
+</div>
+<div class="controls">
+<button type="button" data-sort="order:asc">Ascending</button>
+<button type="button" data-sort="order:descending">Descending</button>
+<button type="button" data-sort="random">Random</button>
+</div>	
 	<!-- start content -->
-	<div class="row">	
-			<div id="Container" class="project-cards-container">	
+	<div class="row">
+			<div class="containers">	
 					@foreach($listadocompleto as $q)
 		
 					
-					<div class="col s12 m6 l3 mix {{ $q->operacion }}" data-myorder="{{ $q->id }}" data-name="{!! $q->titulo !!}">
+					<div class="col s12 m6 l3 mix {{ $q->operacion }} {{ $q->barrio }}">
 					<div class="card hoverable">
 						<div class="card-image waves-effect waves-block waves-light">
 								<div class="card-mapa-imagen">
@@ -218,23 +238,34 @@
 
 
 						</script>
-	<!-- Modal Structure -->
-	<div id="fotos-modal-{{ $q->id }}" class="modal modalfullheigth">
-		
-		
-		  <a href="#!" class="modal-close waves-effect"><i class="material-icons blue-text text-darken-2">close</i></a>
-		  <img style="width: 100%;" src="{{asset('/')}}{{$q->imagen}}">
-		
-	  </div>
+						<!-- Modal Structure -->
+						<div id="fotos-modal-{{ $q->id }}" class="modal modalfullheigth">
+							<a href="#!" class="modal-close waves-effect"><i class="material-icons blue-text text-darken-2">close</i></a>
+							<img style="width: 100%;" src="{{asset('/')}}{{$q->imagen}}">
+						</div>
 					@endforeach	
-				</div>					
-	</div>
+			</div>					
+		</div>
 	<!-- end content -->
 
 
 
-	
+
+	<script src="../mixitup.min.js"></script>
+
+	<script>
+		var containerEl = document.querySelector('.containers');
+
+		var mixer = mixitup(containerEl, {
+			controls: {
+				toggleLogic: 'and'
+			}
+		});
+	</script>
+
+
 	
 	@endsection
 
-	{{-- https://codepen.io/j_holtslander/pen/YvOWLq --}}
+	
+	

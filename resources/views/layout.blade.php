@@ -120,7 +120,7 @@
 	<!-- END .header -->
 	<!-- content -->
 	<main>
-	<section class="container">	
+	<section class="containers">	
 	@yield('content')
 	</section>
 	</main>
