@@ -76,6 +76,16 @@ namespace App\Http\Controllers;
 
 		public function getListado(){
 
+			$data['verbarrios'] = DB::table('propiedad')
+			->join('barrio_propiedad','propiedad.barrio_propiedad_id','=','barrio_propiedad.id')
+	
+			->select(
+				
+				'barrio_propiedad.name as barrio'
+			)
+			->groupBy('barrio')
+			->get();
+
 
 			 if (Request::exists('barrio')
 				

@@ -25,38 +25,22 @@
     transition: background-color 150ms, border-color 150ms;
 }
 
-li:has(> a.mixitup-control-active) {  background: #1565c0 !important; }
-.mixitup-control-active:parent
+
+.mixitup-control-active
  {
-   
+    background: #1565c0 !important;
+}
+
+
+.mixitup-control-active i.material-icons.blue-text.text-darken-2 {
+    color: white !important;
 }
 
 .mixitup-control-active[data-toggle]:after {
     background: transparent;
 }
 
-.control:first-of-type {
-    border-radius: 3px 0 0 3px;
-}
 
-.control:last-of-type {
-    border-radius: 0 3px 3px 0;
-}
-
-.control[data-filter=".green"],
-.control[data-toggle=".green"] {
-    color: #91e6c7;
-}
-
-.control[data-filter=".blue"],
-.control[data-toggle=".blue"] {
-    color: #5ecdde;
-}
-
-.control[data-filter=".pink"],
-.control[data-toggle=".pink"] {
-    color: #d595aa;
-}
 
 /* Container
 ---------------------------------------------------------------------- */
@@ -96,29 +80,34 @@ li:has(> a.mixitup-control-active) {  background: #1565c0 !important; }
 	<h5>Listado Completo</h5>
 </div>
 
+
+
 <div class="row">
 	<div class="col s12 m6 l4">
 		<div class="controls">
-			{{-- <button type="button" class="control waves-effect waves-light btn" data-filter="all">All</button> --}}
-			<li class="tab btn-floating waves-effect waves-light btn white">
-					<a class="" href="#" data-filter="all"><i class="material-icons blue-text text-darken-2">filter_list</i></a>
-				</li>
-
-
-			<button type="button" class="control waves-effect waves-light btn" data-toggle=".Venta"><i class="material-icons">store</i></button>
-			<button type="button" class="control waves-effect waves-light btn" data-toggle=".Alquiler"><i class="material-icons">event</i></button>
+			<button type="button" class="control tab btn-floating waves-effect waves-light btn white" data-filter="all"><i class="material-icons blue-text text-darken-2">filter_list</i></button>
+			<button type="button" class="control tab btn-floating waves-effect waves-light btn white" data-toggle=".Venta"><i class="material-icons blue-text text-darken-2">store</i></button>
+			<button type="button" class="control tab btn-floating waves-effect waves-light btn white" data-toggle=".Alquiler"><i class="material-icons blue-text text-darken-2">event</i></button>
 		</div>
 	</div>
 
-	<div class="col s12 m6 l4">
+	<div class="col s12 m6 l6">
 		<div class="controls">
-			<button type="button" class="control waves-effect btn" data-filter="all">All</button>
-			<button type="button" class="control waves-effect btn" data-toggle=".Belgrano">Belgrano</button>
-			<button type="button" class="control waves-effect btn" data-toggle=".Abasto">Abasto</button>
-			
+
+	
+						
+					<fieldset data-filter-group style="display: contents;">
+							<select multiple>
+  								<option value="" disabled="" selected="">Elija el Barrio: </option>
+						  	@foreach($verbarrios as $q)
+						  		<option value=".{{ $q->barrio }}">{{ $q->barrio }}</option>
+						  	@endforeach
+						</select>
+					</fieldset>
+
 		</div>
 	</div>
-	<div class="col s12 m6 l4">
+	<div class="col s12 m6 l4 hide">
 		<div class="controls">
 			<button class="control waves-effect waves-light btn" type="button" data-sort="order:asc">Ascending</button>
 			<button class="control waves-effect waves-light btn" type="button" data-sort="order:descending">Descending</button>
