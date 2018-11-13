@@ -74,8 +74,22 @@ M.AutoInit()
 				multifilter: {
 					enable: true // enable the multifilter extension for the mixer
 				}
-				controls: {
-                    toggleLogic: 'and'
-                }
+				
 			});
+
+
+			
+</script>
+
+<script>
+// var mixer = mixitup('.container', {
+// 	multifilter: {
+// 			enable: true
+// 	},
+// 	callbacks: {
+// 			onMixStart: function(state, futureState) {
+// 					console.log(futureState.activeFilter.selector);
+// 			}
+// 	}
+// });
 </script>
