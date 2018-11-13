@@ -69,12 +69,13 @@ M.AutoInit()
 </script>
 
 
-<script src="{{asset('frontend/materialize/js/mixitup.min.js')}}"></script>
-<script src="{{asset('frontend/materialize/js/mixitup-multifilter.min.js')}}"></script>
 <script>
 			var mixer = mixitup(containerEl, {
 				multifilter: {
 					enable: true // enable the multifilter extension for the mixer
 				}
+				controls: {
+                    toggleLogic: 'and'
+                }
 			});
 </script>

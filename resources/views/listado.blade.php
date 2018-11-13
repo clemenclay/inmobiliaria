@@ -75,11 +75,11 @@
 
 </style>
 
-
+<div class="row">
 <div class="l12">
 	<h5>Listado Completo</h5>
 </div>
-
+</div>
 
 
 <div class="row">

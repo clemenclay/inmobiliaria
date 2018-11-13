@@ -1,9 +1,14 @@
 body {
   font-family: 'Poppins', sans-serif;
-  background: #eee;
+
+  background: #0277bd;
 }
 
-main {min-height: calc(100vh - 332px);}
+main {
+  min-height: calc(100vh - 332px);
+  background: #eee;
+  padding: 1px;
+}
 
 img.card-img-top {
     width: 100%;

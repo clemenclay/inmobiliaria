@@ -76,6 +76,16 @@ namespace App\Http\Controllers;
 
 		public function getListado(){
 
+			$title =DB::table('cms_settings')->where('name','appname')->First();
+			$data['title'] = $title->content;
+			$data['active'] = 'listadocompleto';
+
+			//filtros
+			$operacion = Request::get('operacion');
+			$barrio = Request::get('barrio');
+			$tipopropiedad = Request::get('tipopropiedad');
+
+
 			$data['verbarrios'] = DB::table('propiedad')
 			->join('barrio_propiedad','propiedad.barrio_propiedad_id','=','barrio_propiedad.id')
 	
@@ -84,20 +94,14 @@ namespace App\Http\Controllers;
 				'barrio_propiedad.name as barrio'
 			)
 			->groupBy('barrio')
+			->where('publicado',1)
 			->get();
 
 
 			 if (Request::exists('barrio')
 				
 			 	) {
-					$title =DB::table('cms_settings')->where('name','appname')->First();
-					$data['title'] = $title->content;
-					$data['active'] = 'listadocompleto';
-		
-					//filtros
-					$operacion = Request::get('operacion');
-					$barrio = Request::get('barrio');
-					$tipopropiedad = Request::get('tipopropiedad');
+					
 		
 		
 		//			$this->button_filter = true;
@@ -139,15 +143,7 @@ namespace App\Http\Controllers;
 
 			else 
 			{ 
-				$title =DB::table('cms_settings')->where('name','appname')->First();
-				$data['title'] = $title->content;
-				$data['active'] = 'listadocompleto';
-	
-				//filtros
-				$operacion = Request::get('operacion');
-				$barrio = Request::get('barrio');
-				$tipopropiedad = Request::get('tipopropiedad');
-	
+				
 	
 	//			$this->button_filter = true;
 	
