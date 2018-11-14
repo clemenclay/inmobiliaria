@@ -37,8 +37,7 @@
 
 		
 
-		<script src="{{asset('frontend/materialize/js/mixitup.min.js')}}"></script>
-		<script src="{{asset('frontend/materialize/js/mixitup-multifilter.min.js')}}"></script>
+
 
 		
 		<script src="//code.tidio.co/sk4iuwxfeabvtqpwirjoll7s1ln6uxbd.js"></script>
@@ -170,5 +169,9 @@
 		
 		@include('footer')	
 
+		<script src="{{asset('frontend/materialize/js/mixitup.min.js')}}"></script>
+		<script src="{{asset('frontend/materialize/js/mixitup-multifilter.min.js')}}"></script>
+		
+		
 	</body>
 </html>

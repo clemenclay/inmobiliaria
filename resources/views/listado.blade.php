@@ -85,9 +85,17 @@
 <div class="row">
 	<div class="col s12 m6 l4">
 		<div class="controls">
-			<button type="button" class="control tab btn-floating waves-effect waves-light btn white" data-filter="all"><i class="material-icons blue-text text-darken-2">filter_list</i></button>
-			<button type="button" class="control tab btn-floating waves-effect waves-light btn white" data-toggle=".Venta"><i class="material-icons blue-text text-darken-2">store</i></button>
-			<button type="button" class="control tab btn-floating waves-effect waves-light btn white" data-toggle=".Alquiler"><i class="material-icons blue-text text-darken-2">event</i></button>
+			<button type="button" class="control tab btn-floating waves-effect waves-light btn white" data-filter="all">
+				<i class="material-icons blue-text text-darken-2">filter_list</i>
+			</button>
+			<button type="button" class="control tab btn-floating waves-effect waves-light btn white" data-toggle=".Venta">
+				<i class="material-icons blue-text text-darken-2">store</i>
+			</button>
+			<label>
+					<span>Venta</span>
+			</label>
+			<button type="button" class="control tab btn-floating waves-effect waves-light btn white" data-toggle=".Alquiler">
+				<i class="material-icons blue-text text-darken-2">event</i></button>Alquiler
 		</div>
 	</div>
 
@@ -107,13 +115,13 @@
 
 		</div>
 	</div>
-	<div class="col s12 m6 l4 hide">
+	{{-- <div class="col s12 m6 l4">
 		<div class="controls">
 			<button class="control waves-effect waves-light btn" type="button" data-sort="order:asc">Ascending</button>
 			<button class="control waves-effect waves-light btn" type="button" data-sort="order:descending">Descending</button>
 			<button class="control waves-effect waves-light btn" type="button" data-sort="random">Random</button>
 		</div>
-	</div>		
+	</div>		 --}}
 </div>
 
 
@@ -239,14 +247,21 @@
 	
 
 	<script>
-		var containerEl = document.querySelector('.containers');
 
-		var mixer = mixitup(containerEl, {
-			controls: {
-				toggleLogic: 'and'
-			}
-		});
-	</script>
+			$( document ).ready(function() {
+			
+			
+
+
+			var containerEl = document.querySelector('.containers');
+			var mixer = mixitup(containerEl, {
+				multifilter: {
+					enable: true // enable the multifilter extension for the mixer
+				}
+			});
+
+			})
+		</script>
 
 
 	
