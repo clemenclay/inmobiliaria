@@ -11,8 +11,8 @@
 
 
 
-.control {
-
+.controls {
+    line-height: 3rem;
 }
 
 .control:hover {
@@ -95,10 +95,14 @@
 					<i class="material-icons blue-text text-darken-2">store</i>
 				</button>
 				<label>
-						<span>Venta</span>
+						<span> Venta</span>
 				</label>
 				<button type="button" class="control tab btn-floating waves-effect waves-light btn white" data-toggle=".Alquiler">
-					<i class="material-icons blue-text text-darken-2">event</i></button>Alquiler
+					<i class="material-icons blue-text text-darken-2">event</i>
+				</button>
+				<label>
+					<span> Alquiler</span>
+				</label>
 			</div>
 		</div>
 
