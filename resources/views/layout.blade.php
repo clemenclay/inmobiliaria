@@ -125,7 +125,7 @@
 	<!-- END .header -->
 	<!-- content -->
 	<main>
-	<section class="containers">	
+	<section class="filtrado">	
 	@yield('content')
 	</section>
 	</main>

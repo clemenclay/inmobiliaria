@@ -21,7 +21,7 @@
               </div>
             </div>
           </div>
-
+					
 </footer>
 
 
@@ -31,15 +31,15 @@
 		{{-- <script src="{{asset('frontend/materialize/js/rotate.js')}}"></script> --}}
 		{{-- <script src="{{asset('frontend/materialize/js/twitter-feed.js')}}"></script> --}}
 		{{-- <script type="text/javascript" src="{{asset('frontend/materialize/js/menu.js')}}"></script> --}}
-
+		
 		{{-- <script src="{{asset('frontend/materialize/js/angular.js')}}"></script> --}}
 		{{-- <script src="{{asset('frontend/materialize/js/app.js')}}"></script> --}}
 		{{-- <script src="{{asset('frontend/materialize/js/controllers.js')}}"></script>  --}}
+		
 
 
-
-
-
+	
+	
 
 
 
@@ -51,10 +51,10 @@ M.AutoInit()
 	$('.carousel.carousel-slider').carousel({fullWidth: true});
 	function autoplay() {
 		$('.carousel').carousel('next');
-
-
+	
+		
 	}
-
+	
 </script>
 
 <script>
@@ -67,5 +67,3 @@ M.AutoInit()
 	});
 
 </script>
-
-

@@ -76,58 +76,55 @@
 </style>
 
 <div class="row">
-<div class="l12">
-	<h5>Listado Completo</h5>
-</div>
+	<div class="container">
+		<div class="l12">
+			<h5>Listado Completo</h5>
+		</div>
+	</div>
 </div>
 
 
 <div class="row">
-	<div class="col s12 m6 l4">
-		<div class="controls">
-			<button type="button" class="control tab btn-floating waves-effect waves-light btn white" data-filter="all">
-				<i class="material-icons blue-text text-darken-2">filter_list</i>
-			</button>
-			<button type="button" class="control tab btn-floating waves-effect waves-light btn white" data-toggle=".Venta">
-				<i class="material-icons blue-text text-darken-2">store</i>
-			</button>
-			<label>
-					<span>Venta</span>
-			</label>
-			<button type="button" class="control tab btn-floating waves-effect waves-light btn white" data-toggle=".Alquiler">
-				<i class="material-icons blue-text text-darken-2">event</i></button>Alquiler
+	<div class="container">
+		<div class="col s12 m6 l4"  data-filter-group>
+			<div class="controls">
+				<button type="button" class="control tab btn-floating waves-effect waves-light btn white" data-filter="all">
+					<i class="material-icons blue-text text-darken-2">filter_list</i>
+				</button>
+				<button type="button" class="control tab btn-floating waves-effect waves-light btn white" data-toggle=".Venta">
+					<i class="material-icons blue-text text-darken-2">store</i>
+				</button>
+				<label>
+						<span>Venta</span>
+				</label>
+				<button type="button" class="control tab btn-floating waves-effect waves-light btn white" data-toggle=".Alquiler">
+					<i class="material-icons blue-text text-darken-2">event</i></button>Alquiler
+			</div>
+		</div>
+
+		<div class="col s12 m6 l6">
+			<div class="controls">
+
+		
+							
+						<fieldset data-filter-group style="display: contents;">
+								<select multiple>
+									<option value="" disabled="" selected="">Elija el Barrio: </option>
+								@foreach($verbarrios as $q)
+									<option value=".{{ $q->barrio }}">{{ $q->barrio }}</option>
+								@endforeach
+							</select>
+						</fieldset>
+
+			</div>
 		</div>
 	</div>
-
-	<div class="col s12 m6 l6">
-		<div class="controls">
-
-	
-						
-					<fieldset data-filter-group style="display: contents;">
-							<select multiple>
-  								<option value="" disabled="" selected="">Elija el Barrio: </option>
-						  	@foreach($verbarrios as $q)
-						  		<option value=".{{ $q->barrio }}">{{ $q->barrio }}</option>
-						  	@endforeach
-						</select>
-					</fieldset>
-
-		</div>
-	</div>
-	{{-- <div class="col s12 m6 l4">
-		<div class="controls">
-			<button class="control waves-effect waves-light btn" type="button" data-sort="order:asc">Ascending</button>
-			<button class="control waves-effect waves-light btn" type="button" data-sort="order:descending">Descending</button>
-			<button class="control waves-effect waves-light btn" type="button" data-sort="random">Random</button>
-		</div>
-	</div>		 --}}
 </div>
 
 
 	<!-- start content -->
 	<div class="row">
-			<div class="containers">	
+			<div class="container">	
 					@foreach($listadocompleto as $q)
 		
 					
@@ -246,25 +243,40 @@
 
 	
 
-	<script>
+	{{-- <script>
 
 			$( document ).ready(function() {
 			
 			
-
-
-			var containerEl = document.querySelector('.containers');
-			var mixer = mixitup(containerEl, {
-				multifilter: {
-					enable: true // enable the multifilter extension for the mixer
-				}
-			});
+				var mixer = mixitup('.filtrado', {
+							multifilter: {
+								enable: true
+							},
+							callbacks: {
+								onMixStart: function(state, futureState) {
+									console.log(futureState.activeFilter.selector);
+								}
+							}
+						});
 
 			})
-		</script>
+		</script> --}}
 
+<script>
 
-	
+			$( document ).ready(function() {
+var mixer = mixitup('.filtrado', {
+    multifilter: {
+        enable: true
+    },
+    callbacks: {
+        onMixStart: function(state, futureState) {
+            console.log(futureState.activeFilter.selector);
+        }
+    }
+});
+})
+</script>
 	@endsection
 
 	
