@@ -317,3 +317,75 @@ input:not([type]):focus:not([readonly])+label, input[type=text]:not(.browser-def
 }
 
 .mapa-contacto {display: block}
+
+
+
+
+
+
+
+/* Estilos filtros MIXITUP */
+
+
+
+.controls {
+  line-height: 3rem;
+margin-bottom: 10px;
+}
+
+.control:hover {
+  background: #3f3f3f;
+}
+
+.control[data-filter]:after,
+.control[data-toggle]:after {
+  content: '';
+  transition: background-color 150ms, border-color 150ms;
+}
+
+
+.mixitup-control-active
+{
+  background: #1565c0 !important;
+}
+
+
+.mixitup-control-active i.material-icons.blue-text.text-darken-2 {
+  color: white !important;
+}
+
+.mixitup-control-active[data-toggle]:after {
+  background: transparent;
+}
+
+
+
+/* Container
+---------------------------------------------------------------------- */
+
+/* .container {
+  padding: 1rem;
+  text-align: justify;
+  font-size: 0.1px;
+}
+
+.container:after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+} */
+
+/* Target Elements
+---------------------------------------------------------------------- */
+
+.mix,
+.gap {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.mix {
+     position: relative;
+}
+
+/*  FIN Estilos filtros MIXITUP */

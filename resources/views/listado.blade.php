@@ -1,85 +1,10 @@
 @extends('layout')
 @section('content')
 
-
-
-<style>
-
-
-/* Controls
----------------------------------------------------------------------- */
-
-
-
-.controls {
-    line-height: 3rem;
-	margin-bottom: 10px;
-}
-
-.control:hover {
-    background: #3f3f3f;
-}
-
-.control[data-filter]:after,
-.control[data-toggle]:after {
-    content: '';
-    transition: background-color 150ms, border-color 150ms;
-}
-
-
-.mixitup-control-active
- {
-    background: #1565c0 !important;
-}
-
-
-.mixitup-control-active i.material-icons.blue-text.text-darken-2 {
-    color: white !important;
-}
-
-.mixitup-control-active[data-toggle]:after {
-    background: transparent;
-}
-
-
-
-/* Container
----------------------------------------------------------------------- */
-
-/* .container {
-    padding: 1rem;
-    text-align: justify;
-    font-size: 0.1px;
-}
-
-.container:after {
-    content: '';
-    display: inline-block;
-    width: 100%;
-} */
-
-/* Target Elements
----------------------------------------------------------------------- */
-
-.mix,
-.gap {
-    display: inline-block;
-    vertical-align: top;
-}
-
-.mix {
-       position: relative;
-}
-
-
-
-
-</style>
-
 <div class="row">
 	<div class="container">
 		<div class="col l12">
-			<h5>Listado Completo</h5>
+			<h5>Propiedades</h5>
 		</div>
 	</div>
 </div>
@@ -245,27 +170,6 @@
 
 
 
-
-	
-
-	{{-- <script>
-
-			$( document ).ready(function() {
-			
-			
-				var mixer = mixitup('.filtrado', {
-							multifilter: {
-								enable: true
-							},
-							callbacks: {
-								onMixStart: function(state, futureState) {
-									console.log(futureState.activeFilter.selector);
-								}
-							}
-						});
-
-			})
-		</script> --}}
 
 <script>
 
