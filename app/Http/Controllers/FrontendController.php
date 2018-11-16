@@ -83,12 +83,11 @@ namespace App\Http\Controllers;
 			//filtros
 			$operacion = Request::get('operacion');
 			$barrio = Request::get('barrio');
-			$tipopropiedad = Request::get('tipopropiedad');
-			$data['active'] = 'listadocompleto';
+			
+			
 
 			$data['verbarrios'] = DB::table('propiedad')
 			->join('barrio_propiedad','propiedad.barrio_propiedad_id','=','barrio_propiedad.id')
-	
 			->select(
 				
 				'barrio_propiedad.name as barrio'
@@ -96,8 +95,6 @@ namespace App\Http\Controllers;
 			->groupBy('barrio')
 			->where('publicado',1)
 			->get();
-
-
 
 			
 			$query = DB::table('propiedad')
@@ -124,31 +121,27 @@ namespace App\Http\Controllers;
 
 
 
-			 if (Request::exists('barrio')) {
-					$query = $query->where('barrio_propiedad.name', '=', $barrio);
-			 }
-
-			else 
-			{ 
-				
-					
-			} 
-
-
-
+			if (Request::exists('barrio')) {
+				$query = $query->where('barrio_propiedad.name', '=', $barrio);
+			}
 			if (Request::exists('operacion')) {
 				$query = $query->where('tipooperacion.name', '=', $operacion);
 			}
 
-		 	if (Request::exists('operacion=alquiler')) {
-			$data['active'] = 'listadoalquiler';
-			 }
+			// menu
 
-			 
+			if (Request::exists('operacion') && $operacion == 'venta') {
+				$data['active'] = 'listadoventa';
+			}
 
-				 
+		 	if (Request::exists('operacion') && $operacion == 'alquiler') {
+				$data['active'] = 'listadoalquiler';
+			}
+			else{
+				$data['active'] = 'listadocompleto';
+			}
+
 			$query = $query->orderby('propiedad.id','desc')->get();
-			// ->orwhere('tipopropiedad.name', '=', $tipopropiedad)
 			$data['listadocompleto'] = $query;
 			return view('listado',$data);
 
