@@ -118,7 +118,7 @@ namespace App\Http\Controllers;
 				'tipopropiedad.name as tipopropiedad'
 			)
 			->where('publicado',1);
-
+			$data['active'] = 'listadocompleto';
 
 
 			if (Request::exists('barrio')) {
@@ -138,7 +138,7 @@ namespace App\Http\Controllers;
 				$data['active'] = 'listadoalquiler';
 			}
 			else{
-				$data['active'] = 'listadocompleto';
+				
 			}
 
 			$query = $query->orderby('propiedad.id','desc')->get();

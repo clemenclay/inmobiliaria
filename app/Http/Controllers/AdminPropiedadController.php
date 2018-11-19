@@ -43,9 +43,9 @@
 
 
 
-			$this->col[] = ["label"=>"barrio_propiedad_id","name"=>"tipopropiedad_id","join"=>"barrio_propiedad,name"];
-			$this->col[] = ["label"=>"localidad_propiedad_id","name"=>"tipopropiedad_id","join"=>"localidad_propiedad,name"];
-			$this->col[] = ["label"=>"provincia_propiedad_id","name"=>"tipopropiedad_id","join"=>"provincia_propiedad,name"];
+			$this->col[] = ["label"=>"Barrio","name"=>"barrio_propiedad_id","join"=>"barrio_propiedad,name"];
+			$this->col[] = ["label"=>"Localidad","name"=>"localidad_propiedad_id","join"=>"localidad_propiedad,name"];
+			$this->col[] = ["label"=>"Provincia","name"=>"provincia_propiedad_id","join"=>"provincia_propiedad,name"];
 
 #			$this->col[] = ["label"=>"Maps","name"=>"maps"];
 #			$this->col[] = ["label"=>"Map Latitude","name"=>"map_latitude"];
