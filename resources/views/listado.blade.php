@@ -72,7 +72,7 @@
 									</ul>
 									<div id="mapa-{{ $q->id }}" class="tabs-content carousel carousel-slider">
 											<div class="carousel-item">
-												<iframe width="100%" height="250" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q={{ $q->map_latitude }},{{ $q->map_longitude }}&zoom=15&key=AIzaSyAOCzRBIJRykPBCzw_F1eggTD4uCxCwVRg" allowfullscreen="false"></iframe>
+												<iframe width="100%" height="250" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q={{ $q->calle }},{{ $q->altura }},{{ $q->localidad }}&zoom=15&key=AIzaSyAOCzRBIJRykPBCzw_F1eggTD4uCxCwVRg" allowfullscreen="false"></iframe>
 											</div>	
 									</div>
 									<div id="fotos-{{ $q->id }}" class="tabs-content carousel carousel-slider">
@@ -96,7 +96,7 @@
 						  <span class="card-title activator indigo-text">
 								<i class="material-icons right">more_vert</i>
 								{!! $q->titulo !!}</span>
-							<b>Localidad: {{ $q->barrio }}</b>
+							<b>Barrio: {{ $q->barrio }}</b>
 							<br>
 							<b>Operacion: {{ $q->operacion }}</b>
 							@if($q->precio_compra != 0 )
